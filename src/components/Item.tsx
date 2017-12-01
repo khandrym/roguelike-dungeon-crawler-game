@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '../theme/styled-components';
-import PlayerName from '../containers/PlayerName';
+import ItemName from '../components/ItemName';
 
 const Wrapper = styled.div`
   display: flex;
@@ -8,13 +8,13 @@ const Wrapper = styled.div`
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-right: 100px;
+  color: ${props => props.theme.colorEnemy}
 `;
 
 export default () => {
   return (
     <Wrapper>
-      <PlayerName />
+      <ItemName />
     </Wrapper>
   );
 };

@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 export default () => {
   return (
     <Wrapper>
-      Brave Hero
+      Item
     </Wrapper>
   );
 };
