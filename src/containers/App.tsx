@@ -3,6 +3,8 @@ import { ThemeProvider } from '../theme/styled-components';
 import { theme } from '../theme/theme';
 import AppWrapper from '../components/AppWrapper';
 import Title from '../components/Title';
+import Map from '../components/Map';
+import Info from '../components/Info';
 
 class App extends React.Component {
   render() {
@@ -10,6 +12,8 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <AppWrapper >
           <Title />
+          <Map />
+          <Info />
         </AppWrapper>
       </ThemeProvider>
     );

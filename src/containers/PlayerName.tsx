@@ -2,14 +2,13 @@ import * as React from 'react';
 import styled from '../theme/styled-components';
 
 const Wrapper = styled.div`
-  font-size: ${props => props.theme.fontSizeTitle};
-  margin: 30px;
+  font-size: ${props => props.theme.fontSizePlayerName};
 `;
 
-export default function Title() {
+export default () => {
   return (
     <Wrapper>
-      Roguelike Dungeon Crawler Game
+      Brave Hero
     </Wrapper>
   );
-}
+};

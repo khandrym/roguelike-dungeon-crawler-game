@@ -6,5 +6,5 @@ export default styled.div`
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  color: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.colorPrimary};
 `;

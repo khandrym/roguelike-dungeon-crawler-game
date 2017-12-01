@@ -1,3 +1,3 @@
-* Add map
-* Add info
-* Add player info and item info
+* Add Item and Item name elements
+* Correct player name style
+* Add player health element
