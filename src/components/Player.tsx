@@ -1,20 +1,12 @@
 import * as React from 'react';
-import styled from '../theme/styled-components';
-import PlayerName from '../containers/PlayerName';
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-right: 100px;
-`;
+import Item from '../components/Item';
+import { ItemTypes } from '../components/Item';
+import PlayerName from '../components/PlayerName';
 
 export default () => {
   return (
-    <Wrapper>
+    <Item itemType={ItemTypes.PLAYER}>
       <PlayerName />
-    </Wrapper>
+    </Item>
   );
 };

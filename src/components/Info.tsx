@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from '../theme/styled-components';
 import Player from '../components/Player';
-import Item from '../components/Item';
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,7 +15,6 @@ export default () => {
   return (
     <Wrapper>
       <Player />
-      <Item />
     </Wrapper>
   );
 };
