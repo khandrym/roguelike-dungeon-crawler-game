@@ -46,4 +46,5 @@ export default styled(Item) `
         return props.theme.colorPrimary;
     }
   }};
+  margin: 0 50px;
 `;
