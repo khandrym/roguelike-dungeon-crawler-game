@@ -1,6 +1,6 @@
 import { AnyAction } from 'redux';
 import { Location } from './model';
-import { ActionTypes } from './actionTypes';
+import ActionTypes from './actionTypes';
 
 export interface Add extends AnyAction {
   type: ActionTypes.ADD;
@@ -34,6 +34,70 @@ export function del(id: string): Delete {
   };
 }
 
+export interface MoveRight extends AnyAction {
+  type: ActionTypes.MOVE_RIGHT;
+  payload: {
+    id: string;
+  };
+}
+
+export function moveRight(id: string): MoveRight {
+  return {
+    type: ActionTypes.MOVE_RIGHT,
+    payload: {
+      id: id
+    }
+  };
+}
+
+export interface MoveLeft extends AnyAction {
+  type: ActionTypes.MOVE_LEFT;
+  payload: {
+    id: string;
+  };
+}
+
+export function moveLeft(id: string): MoveLeft {
+  return {
+    type: ActionTypes.MOVE_LEFT,
+    payload: {
+      id: id
+    }
+  };
+}
+
+export interface MoveUp extends AnyAction {
+  type: ActionTypes.MOVE_UP;
+  payload: {
+    id: string;
+  };
+}
+
+export function moveUp(id: string): MoveUp {
+  return {
+    type: ActionTypes.MOVE_UP,
+    payload: {
+      id: id
+    }
+  };
+}
+
+export interface MoveDown extends AnyAction {
+  type: ActionTypes.MOVE_DOWN;
+  payload: {
+    id: string;
+  };
+}
+
+export function moveDown(id: string): MoveDown {
+  return {
+    type: ActionTypes.MOVE_DOWN,
+    payload: {
+      id: id
+    }
+  };
+}
+
 export interface Other extends AnyAction {
   type: ActionTypes.OTHER;
 }
@@ -41,4 +105,8 @@ export interface Other extends AnyAction {
 export type Action =
   | Add
   | Delete
+  | MoveRight
+  | MoveLeft
+  | MoveUp
+  | MoveDown
   | Other;

@@ -1,8 +1,8 @@
-import { Player } from './model';
+import { State } from './model';
 import * as actions from './actions';
 import ActionTypes from './actionTypes';
 
-function increaseHealthReducer(state: Player, action: actions.IncreaseHealth): Player {
+function increaseHealthReducer(state: State, action: actions.IncreaseHealth): State {
   return {
     name: state.name,
     health: state.health + action.payload.value,
@@ -10,7 +10,7 @@ function increaseHealthReducer(state: Player, action: actions.IncreaseHealth): P
   };
 }
 
-function decreaseHealthReducer(state: Player, action: actions.DecreaseHealth): Player {
+function decreaseHealthReducer(state: State, action: actions.DecreaseHealth): State {
   return {
     name: state.name,
     health: state.health - action.payload.value,
@@ -18,7 +18,13 @@ function decreaseHealthReducer(state: Player, action: actions.DecreaseHealth): P
   };
 }
 
-export default (state: Player, action: actions.Action): Player => {
+const initialState: State = {
+  name: '',
+  health: 0,
+  locationId: ''
+};
+
+export default (state: State = initialState, action: actions.Action): State => {
   switch (action.type) {
     case ActionTypes.INCREASE_HEALTH:
       return increaseHealthReducer(state, action);
@@ -27,4 +33,4 @@ export default (state: Player, action: actions.Action): Player => {
     default:
       return state;
   }
-}
+};

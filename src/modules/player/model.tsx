@@ -1,4 +1,4 @@
-export interface Player {
+export interface State {
   name: string;
   health: number;
   locationId: string;
