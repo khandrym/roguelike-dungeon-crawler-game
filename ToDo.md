@@ -1,1 +1,1 @@
-* Add components and containers to player module and replace olds
+* Add app to the model, use it in the root index.tsx and delete unused folders and files
