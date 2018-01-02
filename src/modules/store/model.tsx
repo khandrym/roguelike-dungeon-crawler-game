@@ -24,7 +24,7 @@ const initialLocations: locations.State = {
 
 const initialPlayer: player.State = {
   name: 'Brave Hero',
-  health: 100,
+  health: 75,
   locationId: initialPlayerLocation.id
 };
 
