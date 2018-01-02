@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled } from '../../theme';
 import * as player from '../../player';
+import * as enemy from '../../enemy';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ export default () => {
   return (
     <Wrapper>
       <player.components.Player />
-      {/* <Enemy /> */}
+      <enemy.components.Enemy />
     </Wrapper>
   );
 };
