@@ -6,10 +6,10 @@ const Wrapper = styled.div`
   margin: 30px;
 `;
 
-export default function Title() {
+export default () => {
   return (
     <Wrapper>
       Roguelike Dungeon Crawler Game
     </Wrapper>
   );
-}
+};
