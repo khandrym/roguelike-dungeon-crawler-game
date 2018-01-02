@@ -3,7 +3,7 @@ import * as theme from '../../theme';
 import ItemTypes from '../itemTypes';
 
 interface Props {
-  itemType: ItemTypes
+  itemType: ItemTypes;
   className?: string;
   theme?: theme.Theme;
 }

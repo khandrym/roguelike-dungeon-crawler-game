@@ -4,9 +4,9 @@ import registerServiceWorker from './registerServiceWorker';
 import * as Redux from 'redux';
 import * as ReactRedux from 'react-redux';
 import { devToolsEnhancer } from 'redux-devtools-extension/logOnlyInProduction';
-import App from './containers/App';
 import './index.css';
 import * as store from './modules/store';
+import * as app from './modules/app';
 
 const appStore = Redux.createStore(
   store.reducer,
@@ -15,7 +15,7 @@ const appStore = Redux.createStore(
 
 ReactDOM.render(
   <ReactRedux.Provider store={appStore}>
-    <App />
+    <app.components.App />
   </ReactRedux.Provider>,
   document.getElementById('root') as HTMLElement
 );
