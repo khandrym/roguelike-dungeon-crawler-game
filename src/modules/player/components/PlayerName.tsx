@@ -18,11 +18,11 @@ function PlayerName(props: Props) {
       {props.name}
     </item.components.ItemName>
   );
-};
+}
 
-function mapStateToProps(store: store.State): StateProps {
+function mapStateToProps(s: store.State): StateProps {
   return {
-    name: store.player.name
+    name: s.player.name
   };
 }
 
