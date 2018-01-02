@@ -1,1 +1,1 @@
-* Connect PlayerName and PlayerHealth components to state
+* Add changing of player location through key strokes

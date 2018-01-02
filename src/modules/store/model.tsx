@@ -9,8 +9,8 @@ export interface State {
 
 const initialPlayerLocation: locations.Location = {
   id: idGenerator.generateId(locations.constants.BASENAME),
-  x: 10,
-  y: 10
+  x: 15,
+  y: 35
 };
 
 const initialLocations: locations.State = {
