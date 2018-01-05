@@ -6,7 +6,8 @@ function increaseHealthReducer(state: State, action: actions.IncreaseHealth): St
   return {
     name: state.name,
     health: state.health + action.payload.value,
-    locationId: state.locationId
+    locationId: state.locationId,
+    weaponId: state.weaponId
   };
 }
 
@@ -14,14 +15,16 @@ function decreaseHealthReducer(state: State, action: actions.DecreaseHealth): St
   return {
     name: state.name,
     health: state.health - action.payload.value,
-    locationId: state.locationId
+    locationId: state.locationId,
+    weaponId: state.weaponId
   };
 }
 
 const initialState: State = {
   name: '',
   health: 0,
-  locationId: ''
+  locationId: '',
+  weaponId: ''
 };
 
 export default (state: State = initialState, action: actions.Action): State => {

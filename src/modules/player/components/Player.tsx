@@ -4,6 +4,7 @@ import * as item from '../../item';
 import PlayerName from './PlayerName';
 import PlayerHealth from './PlayerHealth';
 import PlayerLocation from './PlayerLocation';
+import PlayerWeapon from './PlayerWeapon';
 
 interface Props {
   theme?: theme.Theme;
@@ -15,6 +16,7 @@ export default (props: Props) => {
       <PlayerName />
       <PlayerHealth />
       <PlayerLocation />
+      <PlayerWeapon />
     </item.components.Item>
   );
 };

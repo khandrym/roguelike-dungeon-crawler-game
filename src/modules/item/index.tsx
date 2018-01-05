@@ -4,6 +4,7 @@ import cItemHealth from './components/ItemHealth';
 import cItemLocatin from './components/ItemLocation';
 import cItemName from './components/ItemName';
 import cItemProperty from './components/ItemProperty';
+import cItemWeapon from './components/ItemWeapon';
 
 export const ItemTipes = it;
 
@@ -12,5 +13,6 @@ export const components = {
   ItemHealth: cItemHealth,
   ItemLocation: cItemLocatin,
   ItemName: cItemName,
-  ItemProperty: cItemProperty
+  ItemProperty: cItemProperty,
+  ItemWeapon: cItemWeapon
 };
