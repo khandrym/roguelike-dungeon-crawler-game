@@ -98,7 +98,7 @@ export function moveDown(id: string): MoveDown {
   };
 }
 
-export interface Other extends AnyAction {
+interface Other extends AnyAction {
   type: ActionTypes.OTHER;
 }
 

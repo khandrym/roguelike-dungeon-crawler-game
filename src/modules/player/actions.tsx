@@ -33,7 +33,7 @@ export function decreaseHealth(value: number): DecreaseHealth {
   };
 }
 
-export interface Other extends AnyAction {
+interface Other extends AnyAction {
   type: ActionTypes.OTHER;
 }
 
