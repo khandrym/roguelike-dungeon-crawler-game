@@ -1,1 +1,1 @@
-export const STORENAME = Symbol('player');
+export const STORENAME = 'player';

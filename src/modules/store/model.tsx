@@ -1,12 +1,14 @@
 import * as player from '../player';
 import * as locations from '../locations';
 import * as weapons from '../weapons';
+import * as medicines from '../medicines';
 import idGenerator from '../idGenerator';
 
 export interface State {
   player: player.State;
   locations: locations.State;
   weapons: weapons.State;
+  medicines: medicines.State;
 }
 
 const initialPlayerLocation: locations.Location = {
@@ -83,7 +85,7 @@ const initialWeapons: weapons.State = {
     initialMaceWeapon.id,
     initialSpearWeapon.id,
     initialSwordWeapon.id,
-    initialAxeWeapon.id,
+    initialAxeWeapon.id
   ]
 };
 
@@ -94,10 +96,42 @@ const initialPlayer: player.State = {
   weaponId: initialKnifeWeapon.id
 };
 
+const initialWaterMedicine: medicines.Medicine = {
+  id: idGenerator.generateId(medicines.constants.BASENAME),
+  name: 'Water',
+  health: 10
+};
+
+const initialHerbMedicine: medicines.Medicine = {
+  id: idGenerator.generateId(medicines.constants.BASENAME),
+  name: 'Herb',
+  health: 20
+};
+
+const initialPotionMedicine: medicines.Medicine = {
+  id: idGenerator.generateId(medicines.constants.BASENAME),
+  name: 'Potion',
+  health: 40
+};
+
+const initialMedicines: medicines.State = {
+  byId: {
+    [initialWaterMedicine.id]: initialWaterMedicine,
+    [initialHerbMedicine.id]: initialHerbMedicine,
+    [initialPotionMedicine.id]: initialPotionMedicine
+  },
+  allIds: [
+    initialWaterMedicine.id,
+    initialHerbMedicine.id,
+    initialPotionMedicine.id
+  ]
+};
+
 export const initialState: State = {
   player: initialPlayer,
   locations: initialLocations,
-  weapons: initialWeapons
+  weapons: initialWeapons,
+  medicines: initialMedicines
 };
 
 // const dungeon_Gray: Dungeon = createDungeon('Gray Dungeon', []);
@@ -111,7 +145,3 @@ export const initialState: State = {
 // const enemy_Guard: Enemy = createEnemy('Gray Guard', 30, weapon_Dagger.id);
 // const enemy_Bouncer: Enemy = createEnemy('Dirty Bouncer', 20, weapon_Club.id);
 // const enemy_ViolentDrunkard: Enemy = createEnemy('Violent Drunkard', 10, weapon_Knife.id);
-
-// const medicine_Water: Medicine = createMedicine('Water', 10);
-// const medicine_Herb: Medicine = createMedicine('Herb', 20);
-// const medicine_Potion: Medicine = createMedicine('Potion', 40);

@@ -1,1 +1,0 @@
-* Add medicines to the store
