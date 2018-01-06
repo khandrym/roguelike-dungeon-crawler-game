@@ -3,28 +3,28 @@ import { Weapons } from './model';
 import * as actions from './actions';
 import ActionTypes from './actionTypes';
 
-function addLocationReducerById(state: Weapons, action: actions.Add): Weapons {
+function addWeaponReducerById(state: Weapons, action: actions.Add): Weapons {
   const id = action.payload.weapon.id;
-  const location = action.payload.weapon;
+  const weapon = action.payload.weapon;
   return {
     ...state,
-    [id]: location
+    [id]: weapon
   };
 }
 
-function addLocationReducerAllIds(state: string[], action: actions.Add): string[] {
+function addWeaponReducerAllIds(state: string[], action: actions.Add): string[] {
   const id = action.payload.weapon.id;
   return state.concat(id);
 }
 
-function deleteLocationReducerById(state: Weapons, action: actions.Delete): Weapons {
+function deleteWeaponReducerById(state: Weapons, action: actions.Delete): Weapons {
   const id = action.payload.id;
   const newState = { ...state };
   delete newState[id];
   return newState;
 }
 
-function deleteLocationReducerAllIds(state: string[], action: actions.Delete): string[] {
+function deleteWeaponReducerAllIds(state: string[], action: actions.Delete): string[] {
   const id = action.payload.id;
   return state.filter((val) => {
     return val !== id;
@@ -34,9 +34,9 @@ function deleteLocationReducerAllIds(state: string[], action: actions.Delete): s
 function reducerById(state: Weapons = {}, action: actions.Action): Weapons {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addLocationReducerById(state, action);
+      return addWeaponReducerById(state, action);
     case ActionTypes.DELETE:
-      return deleteLocationReducerById(state, action);
+      return deleteWeaponReducerById(state, action);
     default:
       return state;
   }
@@ -45,9 +45,9 @@ function reducerById(state: Weapons = {}, action: actions.Action): Weapons {
 function reducerAllIds(state: string[] = [], action: actions.Action): string[] {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addLocationReducerAllIds(state, action);
+      return addWeaponReducerAllIds(state, action);
     case ActionTypes.DELETE:
-      return deleteLocationReducerAllIds(state, action);
+      return deleteWeaponReducerAllIds(state, action);
     default:
       return state;
   }
