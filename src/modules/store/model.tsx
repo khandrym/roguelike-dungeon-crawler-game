@@ -2,7 +2,6 @@ import * as player from '../player';
 import * as locations from '../locations';
 import * as weapons from '../weapons';
 import * as medicines from '../medicines';
-import idGenerator from '../idGenerator';
 
 export interface State {
   player: player.State;
@@ -11,127 +10,11 @@ export interface State {
   medicines: medicines.State;
 }
 
-const initialPlayerLocation: locations.Location = {
-  id: idGenerator.generateId(locations.constants.BASENAME),
-  x: 15,
-  y: 35
-};
-
-const initialLocations: locations.State = {
-  byId: {
-    [initialPlayerLocation.id]: initialPlayerLocation
-  },
-  allIds: [
-    initialPlayerLocation.id
-  ]
-};
-
-const initialKnifeWeapon: weapons.Weapon = {
-  id: idGenerator.generateId(weapons.constants.BASENAME),
-  name: 'Knife',
-  attack: 10
-};
-
-const initialClubWeapon: weapons.Weapon = {
-  id: idGenerator.generateId(weapons.constants.BASENAME),
-  name: 'Club',
-  attack: 20
-};
-
-const initialDaggerWeapon: weapons.Weapon = {
-  id: idGenerator.generateId(weapons.constants.BASENAME),
-  name: 'Dagger',
-  attack: 40
-};
-
-const initialMaceWeapon: weapons.Weapon = {
-  id: idGenerator.generateId(weapons.constants.BASENAME),
-  name: 'Mace',
-  attack: 60
-};
-
-const initialSpearWeapon: weapons.Weapon = {
-  id: idGenerator.generateId(weapons.constants.BASENAME),
-  name: 'Spear',
-  attack: 80
-};
-
-const initialSwordWeapon: weapons.Weapon = {
-  id: idGenerator.generateId(weapons.constants.BASENAME),
-  name: 'Sword',
-  attack: 100
-};
-
-const initialAxeWeapon: weapons.Weapon = {
-  id: idGenerator.generateId(weapons.constants.BASENAME),
-  name: 'Axe',
-  attack: 100
-};
-
-const initialWeapons: weapons.State = {
-  byId: {
-    [initialKnifeWeapon.id]: initialKnifeWeapon,
-    [initialClubWeapon.id]: initialClubWeapon,
-    [initialDaggerWeapon.id]: initialDaggerWeapon,
-    [initialMaceWeapon.id]: initialMaceWeapon,
-    [initialSpearWeapon.id]: initialSpearWeapon,
-    [initialSwordWeapon.id]: initialSwordWeapon,
-    [initialAxeWeapon.id]: initialAxeWeapon
-  },
-  allIds: [
-    initialKnifeWeapon.id,
-    initialClubWeapon.id,
-    initialDaggerWeapon.id,
-    initialMaceWeapon.id,
-    initialSpearWeapon.id,
-    initialSwordWeapon.id,
-    initialAxeWeapon.id
-  ]
-};
-
-const initialPlayer: player.State = {
-  name: 'Brave Hero',
-  health: 100,
-  locationId: initialPlayerLocation.id,
-  weaponId: initialKnifeWeapon.id
-};
-
-const initialWaterMedicine: medicines.Medicine = {
-  id: idGenerator.generateId(medicines.constants.BASENAME),
-  name: 'Water',
-  health: 10
-};
-
-const initialHerbMedicine: medicines.Medicine = {
-  id: idGenerator.generateId(medicines.constants.BASENAME),
-  name: 'Herb',
-  health: 20
-};
-
-const initialPotionMedicine: medicines.Medicine = {
-  id: idGenerator.generateId(medicines.constants.BASENAME),
-  name: 'Potion',
-  health: 40
-};
-
-const initialMedicines: medicines.State = {
-  byId: {
-    [initialWaterMedicine.id]: initialWaterMedicine,
-    [initialHerbMedicine.id]: initialHerbMedicine,
-    [initialPotionMedicine.id]: initialPotionMedicine
-  },
-  allIds: [
-    initialWaterMedicine.id,
-    initialHerbMedicine.id,
-    initialPotionMedicine.id
-  ]
-};
-
 export const initialState: State = {
-  player: initialPlayer,
-  locations: initialLocations,
-  weapons: initialWeapons,
-  medicines: initialMedicines
+  player: player.initials.player,
+  locations: locations.initials.locations,
+  weapons: weapons.initials.weapons,
+  medicines: medicines.initials.medicines
 };
 
 // const dungeon_Gray: Dungeon = createDungeon('Gray Dungeon', []);
