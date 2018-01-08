@@ -35,6 +35,7 @@ function moveRightReducerById(state: Locations, action: actions.MoveRight): Loca
   const id = action.payload.id;
   const location = {
     id: id,
+    dungeonId: state[id].dungeonId,
     x: state[id].x + 1,
     y: state[id].y
   };
@@ -52,6 +53,7 @@ function moveLeftReducerById(state: Locations, action: actions.MoveLeft): Locati
   const id = action.payload.id;
   const location = {
     id: id,
+    dungeonId: state[id].dungeonId,
     x: state[id].x - 1,
     y: state[id].y
   };
@@ -69,6 +71,7 @@ function moveUpReducerById(state: Locations, action: actions.MoveUp): Locations 
   const id = action.payload.id;
   const location = {
     id: id,
+    dungeonId: state[id].dungeonId,
     x: state[id].x,
     y: state[id].y + 1
   };
@@ -86,6 +89,7 @@ function moveDownReducerById(state: Locations, action: actions.MoveDown): Locati
   const id = action.payload.id;
   const location = {
     id: id,
+    dungeonId: state[id].dungeonId,
     x: state[id].x,
     y: state[id].y - 1
   };

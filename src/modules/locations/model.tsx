@@ -1,5 +1,6 @@
 export interface Location {
   id: string;
+  dungeonId: string;
   x: number;
   y: number;
 }

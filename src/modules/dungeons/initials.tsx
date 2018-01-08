@@ -17,7 +17,7 @@ export const black: Dungeon = {
   name: 'Black'
 };
 
-export const medicines: State = {
+export const dungeons: State = {
   byId: {
     [gray.id]: gray,
     [durk.id]: durk,

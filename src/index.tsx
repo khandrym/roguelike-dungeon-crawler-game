@@ -10,7 +10,7 @@ import * as app from './modules/app';
 
 const appStore = Redux.createStore(
   store.reducer,
-  store.model.initialState,
+  store.initials.store,
   devToolsEnhancer({}));
 
 ReactDOM.render(
