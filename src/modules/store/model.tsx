@@ -17,11 +17,6 @@ export const initialState: State = {
   medicines: medicines.initials.medicines
 };
 
-// const dungeon_Gray: Dungeon = createDungeon('Gray Dungeon', []);
-// const dungeon_Dark: Dungeon = createDungeon('Durk Dungeon', []);
-// const dungeon_Black: Dungeon = createDungeon('Black Dungeon', []);
-// const dungeons: Dungeon[] = [dungeon_Gray, dungeon_Dark, dungeon_Black];
-
 // const enemy_BlackKing: Enemy = createEnemy('Black King', 100, weapon_Axe.id);
 // const enemy_Knight: Enemy = createEnemy('Dark Knight', 60, weapon_Spear.id);
 // const enemy_Mercenary: Enemy = createEnemy('Ferocious Mercenary', 40, weapon_Mace.id);

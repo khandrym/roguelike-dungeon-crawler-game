@@ -1,42 +1,42 @@
 import { combineReducers } from 'redux';
-import { Medicines } from './model';
+import { Dungeons } from './model';
 import * as actions from './actions';
 import ActionTypes from './actionTypes';
 
-function addMedicineReducerById(state: Medicines, action: actions.Add): Medicines {
-  const id = action.payload.medicine.id;
-  const medicine = action.payload.medicine;
+function addDungeonReducerById(state: Dungeons, action: actions.Add): Dungeons {
+  const id = action.payload.dungeon.id;
+  const medicine = action.payload.dungeon;
   return {
     ...state,
     [id]: medicine
   };
 }
 
-function addMedicineReducerAllIds(state: string[], action: actions.Add): string[] {
-  const id = action.payload.medicine.id;
+function addDungeonReducerAllIds(state: string[], action: actions.Add): string[] {
+  const id = action.payload.dungeon.id;
   return state.concat(id);
 }
 
-function deleteMedicineReducerById(state: Medicines, action: actions.Delete): Medicines {
+function deleteDungeonReducerById(state: Dungeons, action: actions.Delete): Dungeons {
   const id = action.payload.id;
   const newState = { ...state };
   delete newState[id];
   return newState;
 }
 
-function deleteMedicineReducerAllIds(state: string[], action: actions.Delete): string[] {
+function deleteDungeonReducerAllIds(state: string[], action: actions.Delete): string[] {
   const id = action.payload.id;
   return state.filter((val) => {
     return val !== id;
   });
 }
 
-function reducerById(state: Medicines = {}, action: actions.Action): Medicines {
+function reducerById(state: Dungeons = {}, action: actions.Action): Dungeons {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addMedicineReducerById(state, action);
+      return addDungeonReducerById(state, action);
     case ActionTypes.DELETE:
-      return deleteMedicineReducerById(state, action);
+      return deleteDungeonReducerById(state, action);
     default:
       return state;
   }
@@ -45,9 +45,9 @@ function reducerById(state: Medicines = {}, action: actions.Action): Medicines {
 function reducerAllIds(state: string[] = [], action: actions.Action): string[] {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addMedicineReducerAllIds(state, action);
+      return addDungeonReducerAllIds(state, action);
     case ActionTypes.DELETE:
-      return deleteMedicineReducerAllIds(state, action);
+      return deleteDungeonReducerAllIds(state, action);
     default:
       return state;
   }
