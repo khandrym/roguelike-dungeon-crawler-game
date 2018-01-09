@@ -1,5 +1,6 @@
 import it from './itemTypes';
 import cItem from './components/Item';
+import cItemExperience from './components/ItemExperience';
 import cItemHealth from './components/ItemHealth';
 import cItemLocatin from './components/ItemLocation';
 import cItemName from './components/ItemName';
@@ -10,6 +11,7 @@ export const ItemTipes = it;
 
 export const components = {
   Item: cItem,
+  ItemExperience: cItemExperience,
   ItemHealth: cItemHealth,
   ItemLocation: cItemLocatin,
   ItemName: cItemName,
