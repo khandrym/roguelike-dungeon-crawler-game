@@ -5,10 +5,10 @@ import ActionTypes from './actionTypes';
 
 function addDungeonReducerById(state: Dungeons, action: actions.Add): Dungeons {
   const id = action.payload.dungeon.id;
-  const medicine = action.payload.dungeon;
+  const dungeon = action.payload.dungeon;
   return {
     ...state,
-    [id]: medicine
+    [id]: dungeon
   };
 }
 

@@ -3,6 +3,7 @@ import * as theme from '../../theme';
 import * as item from '../../item';
 import PlayerName from './PlayerName';
 import PlayerHealth from './PlayerHealth';
+import PlayerExperience from './PlayerExperience';
 import PlayerLocation from './PlayerLocation';
 import PlayerWeapon from './PlayerWeapon';
 
@@ -15,8 +16,9 @@ export default (props: Props) => {
     <item.components.Item itemType={item.ItemTipes.PLAYER}>
       <PlayerName />
       <PlayerHealth />
-      <PlayerLocation />
+      <PlayerExperience />
       <PlayerWeapon />
+      <PlayerLocation />
     </item.components.Item>
   );
 };
