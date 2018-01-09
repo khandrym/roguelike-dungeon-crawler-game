@@ -33,6 +33,38 @@ export function decreaseHealth(value: number): DecreaseHealth {
   };
 }
 
+export interface IncreaseExperience extends AnyAction {
+  readonly type: ActionTypes.INCREASE_EXPERIENCE;
+  readonly payload: {
+    readonly value: number;
+  };
+}
+
+export function increaseExperience(value: number): IncreaseExperience {
+  return {
+    type: ActionTypes.INCREASE_EXPERIENCE,
+    payload: {
+      value: value
+    }
+  };
+}
+
+export interface DecreaseExperience extends AnyAction {
+  readonly type: ActionTypes.DECREASE_EXPERIENCE;
+  readonly payload: {
+    readonly value: number;
+  };
+}
+
+export function decreaseExperience(value: number): DecreaseExperience {
+  return {
+    type: ActionTypes.DECREASE_EXPERIENCE,
+    payload: {
+      value: value
+    }
+  };
+}
+
 interface Other extends AnyAction {
   type: ActionTypes.OTHER;
 }
@@ -40,4 +72,6 @@ interface Other extends AnyAction {
 export type Action =
   | IncreaseHealth
   | DecreaseHealth
+  | IncreaseExperience
+  | DecreaseExperience
   | Other;

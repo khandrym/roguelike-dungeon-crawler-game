@@ -22,6 +22,26 @@ function decreaseHealthReducer(state: State, action: actions.DecreaseHealth): St
   };
 }
 
+function increaseExperienceReducer(state: State, action: actions.IncreaseExperience): State {
+  return {
+    name: state.name,
+    health: state.health,
+    experience: state.experience + action.payload.value,
+    locationId: state.locationId,
+    weaponId: state.weaponId
+  };
+}
+
+function decreaseExperienceReducer(state: State, action: actions.DecreaseExperience): State {
+  return {
+    name: state.name,
+    health: state.health,
+    experience: state.experience - action.payload.value,
+    locationId: state.locationId,
+    weaponId: state.weaponId
+  };
+}
+
 const initialState: State = {
   name: '',
   health: 0,
@@ -36,6 +56,10 @@ export default (state: State = initialState, action: actions.Action): State => {
       return increaseHealthReducer(state, action);
     case ActionTypes.DECREASE_HEALTH:
       return decreaseHealthReducer(state, action);
+    case ActionTypes.INCREASE_EXPERIENCE:
+      return increaseExperienceReducer(state, action);
+    case ActionTypes.DECREASE_EXPERIENCE:
+      return decreaseExperienceReducer(state, action);
     default:
       return state;
   }
