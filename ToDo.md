@@ -1,6 +1,5 @@
-* Add dungeon medicines
-* Add dungeon weapons
-* Add dungeon enemies
+* Add dungeon weapons module
+* Add dungeon enemies module
 
 * Add gates
 

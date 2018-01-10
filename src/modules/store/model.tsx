@@ -4,6 +4,7 @@ import * as locations from '../locations';
 import * as weapons from '../weapons';
 import * as medicines from '../medicines';
 import * as enemies from '../enemies';
+import * as dungeonMedicines from '../dungeonMedicines';
 
 export interface State {
   player: player.State;
@@ -12,4 +13,5 @@ export interface State {
   weapons: weapons.State;
   medicines: medicines.State;
   enemies: enemies.State;
+  dungeonMedicines: dungeonMedicines.State;
 }
