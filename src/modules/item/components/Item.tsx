@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as theme from '../../theme';
-import ItemTypes from '../itemTypes';
+import ItemTypes from '../../itemTypes';
 
 interface Props {
   itemType: ItemTypes;

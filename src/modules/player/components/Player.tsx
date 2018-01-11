@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as theme from '../../theme';
 import * as item from '../../item';
+import ItemTypes from '../../itemTypes';
 import PlayerName from './PlayerName';
 import PlayerHealth from './PlayerHealth';
 import PlayerLevel from './PlayerLevel';
@@ -14,7 +15,7 @@ interface Props {
 
 export default (props: Props) => {
   return (
-    <item.components.Item itemType={item.ItemTipes.PLAYER}>
+    <item.components.Item itemType={ItemTypes.PLAYER}>
       <PlayerName />
       <PlayerHealth />
       <PlayerLevel />

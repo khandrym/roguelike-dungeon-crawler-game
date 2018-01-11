@@ -3,7 +3,10 @@ import { ThemedStyledComponentsModule } from 'styled-components';
 
 export interface Theme {
   colorPrimary: string;
-  colorMap: string;
+  colorDarkness: string;
+  colorGround: string;
+  colorWall: string;
+  colorBorder: string;
   colorEnemy: string;
   colorWeapon: string;
   colorMedicine: string;
@@ -14,7 +17,10 @@ export interface Theme {
 
 export const theme: Theme = {
   colorPrimary: 'rgb(0,200,0)',
-  colorMap: 'rgb(50,50,50)',
+  colorDarkness: 'rgb(20,20,20)',
+  colorGround: 'rgb(50,50,50)',
+  colorWall: 'rgb(70,70,70)',
+  colorBorder: 'rgb(60,60,60)',
   colorEnemy: 'red',
   colorWeapon: 'orange',
   colorMedicine: 'blud',
