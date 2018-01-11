@@ -1,3 +1,3 @@
-* Add grid to the map module
+* Show user location on the grid of the map
 
 * Delete unused enemy module
