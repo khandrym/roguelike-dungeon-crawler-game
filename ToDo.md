@@ -1,4 +1,3 @@
-* Add dungeon weapons module
 * Add dungeon enemies module
 
 * Add gates
