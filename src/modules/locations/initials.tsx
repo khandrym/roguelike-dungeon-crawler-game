@@ -45,6 +45,20 @@ export const club: Location = {
   y: 10
 };
 
+export const enemy1: Location = {
+  id: idGenerator.generateId(constants.BASENAME),
+  dungeonId: dungeons.initials.gray.id,
+  x: 15,
+  y: 0
+};
+
+export const enemy2: Location = {
+  id: idGenerator.generateId(constants.BASENAME),
+  dungeonId: dungeons.initials.gray.id,
+  x: 20,
+  y: 5
+};
+
 export const locations: State = {
   byId: {
     [playerLocation.id]: playerLocation,
@@ -52,7 +66,9 @@ export const locations: State = {
     [water2Location.id]: water2Location,
     [water3Location.id]: water3Location,
     [knife.id]: knife,
-    [club.id]: club
+    [club.id]: club,
+    [enemy1.id]: enemy1,
+    [enemy2.id]: enemy2
   },
   allIds: [
     playerLocation.id,
@@ -60,6 +76,8 @@ export const locations: State = {
     water2Location.id,
     water3Location.id,
     knife.id,
-    club.id
+    club.id,
+    enemy1.id,
+    enemy2.id
   ]
 };

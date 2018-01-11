@@ -7,6 +7,7 @@ import * as medicines from '../medicines';
 import * as enemies from '../enemies';
 import * as dungeonMedicines from '../dungeonMedicines';
 import * as dungeonWeapons from '../dungeonWeapons';
+import * as dungeonEnemies from '../dungeonEnemies';
 
 export default combineReducers({
   [player.constants.STORENAME]: player.reducer,
@@ -16,5 +17,6 @@ export default combineReducers({
   [medicines.constants.STORENAME]: medicines.reducer,
   [enemies.constants.STORENAME]: enemies.reducer,
   [dungeonMedicines.constants.STORENAME]: dungeonMedicines.reducer,
-  [dungeonWeapons.constants.STORENAME]: dungeonWeapons.reducer
+  [dungeonWeapons.constants.STORENAME]: dungeonWeapons.reducer,
+  [dungeonEnemies.constants.STORENAME]: dungeonEnemies.reducer
 });
