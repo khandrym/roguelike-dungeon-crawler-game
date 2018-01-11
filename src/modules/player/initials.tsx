@@ -6,6 +6,6 @@ export const player: State = {
   name: 'Brave Hero',
   health: 100,
   experience: 10,
-  locationId: locations.initials.playerLocation.id,
+  locationId: locations.initials.player.id,
   weaponId: weapons.initials.knife.id
 };

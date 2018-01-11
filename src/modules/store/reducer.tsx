@@ -8,6 +8,7 @@ import * as enemies from '../enemies';
 import * as dungeonMedicines from '../dungeonMedicines';
 import * as dungeonWeapons from '../dungeonWeapons';
 import * as dungeonEnemies from '../dungeonEnemies';
+import * as dungeonGates from '../dungeonGates';
 
 export default combineReducers({
   [player.constants.STORENAME]: player.reducer,
@@ -18,5 +19,6 @@ export default combineReducers({
   [enemies.constants.STORENAME]: enemies.reducer,
   [dungeonMedicines.constants.STORENAME]: dungeonMedicines.reducer,
   [dungeonWeapons.constants.STORENAME]: dungeonWeapons.reducer,
-  [dungeonEnemies.constants.STORENAME]: dungeonEnemies.reducer
+  [dungeonEnemies.constants.STORENAME]: dungeonEnemies.reducer,
+  [dungeonGates.constants.STORENAME]: dungeonGates.reducer
 });

@@ -3,28 +3,28 @@ import * as constants from './constants';
 import idGenerator from '../idGenerator';
 import * as dungeons from '../dungeons';
 
-export const playerLocation: Location = {
+export const player: Location = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 15,
   y: 35
 };
 
-export const water1Location: Location = {
+export const water1: Location = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 20,
   y: 40
 };
 
-export const water2Location: Location = {
+export const water2: Location = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 25,
   y: 45
 };
 
-export const water3Location: Location = {
+export const water3: Location = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 30,
@@ -59,25 +59,61 @@ export const enemy2: Location = {
   y: 5
 };
 
+export const gate1From: Location = {
+  id: idGenerator.generateId(constants.BASENAME),
+  dungeonId: dungeons.initials.gray.id,
+  x: 1,
+  y: 1
+};
+
+export const gate1To: Location = {
+  id: idGenerator.generateId(constants.BASENAME),
+  dungeonId: dungeons.initials.durk.id,
+  x: 1,
+  y: 1
+};
+
+export const gate2From: Location = {
+  id: idGenerator.generateId(constants.BASENAME),
+  dungeonId: dungeons.initials.durk.id,
+  x: 11,
+  y: 11
+};
+
+export const gate2To: Location = {
+  id: idGenerator.generateId(constants.BASENAME),
+  dungeonId: dungeons.initials.black.id,
+  x: 12,
+  y: 12
+};
+
 export const locations: State = {
   byId: {
-    [playerLocation.id]: playerLocation,
-    [water1Location.id]: water1Location,
-    [water2Location.id]: water2Location,
-    [water3Location.id]: water3Location,
+    [player.id]: player,
+    [water1.id]: water1,
+    [water2.id]: water2,
+    [water3.id]: water3,
     [knife.id]: knife,
     [club.id]: club,
     [enemy1.id]: enemy1,
-    [enemy2.id]: enemy2
+    [enemy2.id]: enemy2,
+    [gate1From.id]: gate1From,
+    [gate1To.id]: gate1To,
+    [gate2From.id]: gate2From,
+    [gate2To.id]: gate2To
   },
   allIds: [
-    playerLocation.id,
-    water1Location.id,
-    water2Location.id,
-    water3Location.id,
+    player.id,
+    water1.id,
+    water2.id,
+    water3.id,
     knife.id,
     club.id,
     enemy1.id,
-    enemy2.id
+    enemy2.id,
+    gate1From.id,
+    gate1To.id,
+    gate2From.id,
+    gate2To.id
   ]
 };

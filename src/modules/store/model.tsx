@@ -7,6 +7,7 @@ import * as enemies from '../enemies';
 import * as dungeonMedicines from '../dungeonMedicines';
 import * as dungeonWeapons from '../dungeonWeapons';
 import * as dungeonEnemies from '../dungeonEnemies';
+import * as dungeonGates from '../dungeonGates';
 
 export interface State {
   player: player.State;
@@ -18,4 +19,5 @@ export interface State {
   dungeonMedicines: dungeonMedicines.State;
   dungeonWeapons: dungeonWeapons.State;
   dungeonEnemies: dungeonEnemies.State;
+  dungeonGates: dungeonGates.State;
 }

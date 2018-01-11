@@ -8,6 +8,7 @@ import * as enemies from '../enemies';
 import * as dungeonMedicines from '../dungeonMedicines';
 import * as dungeonWeapons from '../dungeonWeapons';
 import * as dungeonEnemies from '../dungeonEnemies';
+import * as dungeonGates from '../dungeonGates';
 
 export const store: State = {
   player: player.initials.player,
@@ -18,5 +19,6 @@ export const store: State = {
   enemies: enemies.initials.enemies,
   dungeonMedicines: dungeonMedicines.initials.dungeonMedicines,
   dungeonWeapons: dungeonWeapons.initials.dungeonWeapons,
-  dungeonEnemies: dungeonEnemies.initials.dungeonEnemies
+  dungeonEnemies: dungeonEnemies.initials.dungeonEnemies,
+  dungeonGates: dungeonGates.initials.dungeonGates
 };
