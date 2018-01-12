@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import { styled, Theme } from '../../theme';
 import ItemTypes from '../../itemTypes';
+import * as store from '../../store';
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -51,14 +53,28 @@ const StyledTableData = styled(TableData) `
   }};
 `;
 
-export default () => {
+interface MapStateProps {
+  playerX: number;
+  playerY: number;
+}
+
+interface MapDispatchProps {
+}
+
+interface MapProps extends MapStateProps, MapDispatchProps { }
+
+function Map(props: MapProps) {
   const rows = [];
-  for (let i = 0; i < 100; i++) {
+  for (let j = 0; j < 100; j++) {
     var cells = [];
-    for (let j = 0; j < 100; j++) {
-      cells[j] = <StyledTableData itemType={ItemTypes.GROUND} />;
+    for (let i = 0; i < 100; i++) {
+      if (i === props.playerX && j === props.playerY) {
+        cells[i] = <StyledTableData itemType={ItemTypes.PLAYER} />;
+      } else {
+        cells[i] = <StyledTableData itemType={ItemTypes.GROUND} />;
+      }
     }
-    rows[i] = (
+    rows[j] = (
       <tr>
         {cells}
       </tr>
@@ -69,4 +85,17 @@ export default () => {
       {rows}
     </Table>
   );
-};
+}
+
+function mapStateToProps(s: store.State): MapStateProps {
+  return {
+    playerX: s.locations.byId[s.player.locationId].x,
+    playerY: s.locations.byId[s.player.locationId].y
+  };
+}
+
+function mapDispatchToProps(): MapDispatchProps {
+  return {};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Map);
