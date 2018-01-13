@@ -1,6 +1,6 @@
-* Replace usage of styled-components by ordinary css for app module
+* Replace usage of styled-components by ordinary css for enemy module
 
-* Replace usage of styled-components by ordinary css
+* Remove theme provider component from app component
 
 * Delete unused enemy module
 
