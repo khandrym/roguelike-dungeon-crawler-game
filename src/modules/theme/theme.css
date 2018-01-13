@@ -1,13 +1,13 @@
 :root {
-  --color-primary: 'rgb(0,200,0)';
-  --color-darkness: 'rgb(20,20,20)';
-  --color-ground: 'rgb(50,50,50)';
-  --color-wall: 'rgb(70,70,70)';
-  --color-border: 'rgb(60,60,60)';
-  --color-enemy: 'red';
-  --color-weapon: 'orange';
-  --color-medicine: 'blud';
-  --color-gate: 'pink';
-  --font-size-title: '24px';
-  --font-size-item-name: '18px';
+  --color-primary: rgb(0,200,0);
+  --color-darkness: rgb(20,20,20);
+  --color-ground: rgb(50,50,50);
+  --color-wall: rgb(70,70,70);
+  --color-border: rgb(60,60,60);
+  --color-enemy: red;
+  --color-weapon: orange;
+  --color-medicine: blud;
+  --color-gate: pink;
+  --font-size-title: 24px;
+  --font-size-item-name: 18px;
 }
