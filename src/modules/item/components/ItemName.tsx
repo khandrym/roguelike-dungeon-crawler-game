@@ -1,8 +1,12 @@
-import { styled } from '../../theme';
+import * as React from 'react';
+import './ItemName.css';
 
-export default styled.div`
-  font-size: ${props => props.theme.fontSizeItemName};
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  margin-bottom: 10px;
-`;
+const ItemName: React.StatelessComponent = (props) => {
+  return (
+    <div className="ItemName">
+      {props.children}
+    </div>
+  );
+};
+
+export default ItemName;

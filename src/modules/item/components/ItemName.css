@@ -1,0 +1,6 @@
+.ItemName {
+  font-size: var(--font-size-item-name);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: 10px;
+}

@@ -1,6 +1,12 @@
-import { styled } from '../../theme';
+import * as React from 'react';
+import './ItemProperty.css';
 
-export default styled.div`
-  padding-left: 10px;
-  font-size: 14px;
-`;
+const ItemProperty: React.StatelessComponent = (props) => {
+  return (
+    <div className="ItemProperty">
+      {props.children}
+    </div>
+  );
+};
+
+export default ItemProperty;

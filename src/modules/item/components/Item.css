@@ -1,0 +1,8 @@
+.Item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 50px;
+}
