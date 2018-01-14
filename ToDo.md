@@ -1,4 +1,4 @@
-* Remove theme provider component from app component
+
 
 * Delete unused enemy module
 

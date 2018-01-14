@@ -1,13 +1,8 @@
 import * as React from 'react';
-import * as theme from '../../theme';
 import * as item from '../../item';
 import './Enemy.css';
 
-interface Props {
-  theme?: theme.Theme;
-}
-
-export default (props: Props) => {
+export default () => {
   return (
     <item.components.Item>
       <div className="Enemy">
