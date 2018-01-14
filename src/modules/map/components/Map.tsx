@@ -19,13 +19,13 @@ function Map(props: MapProps) {
     var cells = [];
     for (let i = 0; i < 100; i++) {
       if (i === props.playerX && j === props.playerY) {
-        cells[i] = <td className="MapCell MapCell-player" />;
+        cells[i] = <td className="MapCell MapCell-player" key={i} />;
       } else {
-        cells[i] = <td className="MapCell MapCell-ground" />;
+        cells[i] = <td className="MapCell MapCell-ground" key={i} />;
       }
     }
     rows[j] = (
-      <tr>
+      <tr key={j}>
         {cells}
       </tr>
     );

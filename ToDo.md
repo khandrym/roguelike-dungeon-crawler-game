@@ -1,4 +1,5 @@
-
+* Add item wrapper component instead of item component
+* Add player wrapper components based on item wrapper component
 
 * Delete unused enemy module
 
