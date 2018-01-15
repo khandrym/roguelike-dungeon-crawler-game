@@ -1,19 +1,19 @@
-import cItem from './components/Item';
-import cItemExperience from './components/ItemExperience';
-import cItemHealth from './components/ItemHealth';
-import cItemLevel from './components/ItemLevel';
-import cItemLocatin from './components/ItemLocation';
-import cItemName from './components/ItemName';
-import cItemProperty from './components/ItemProperty';
-import cItemWeapon from './components/ItemWeapon';
+import Wrapper from './components/Wrapper';
+import ItemExperience from './components/ItemExperience';
+import ItemHealth from './components/ItemHealth';
+import ItemLevel from './components/ItemLevel';
+import ItemLocatin from './components/ItemLocation';
+import ItemName from './components/ItemName';
+import ItemProperty from './components/ItemProperty';
+import ItemWeapon from './components/ItemWeapon';
 
 export const components = {
-  Item: cItem,
-  ItemExperience: cItemExperience,
-  ItemHealth: cItemHealth,
-  ItemLevel: cItemLevel,
-  ItemLocation: cItemLocatin,
-  ItemName: cItemName,
-  ItemProperty: cItemProperty,
-  ItemWeapon: cItemWeapon
+  Wrapper: Wrapper,
+  ItemExperience: ItemExperience,
+  ItemHealth: ItemHealth,
+  ItemLevel: ItemLevel,
+  ItemLocation: ItemLocatin,
+  ItemName: ItemName,
+  ItemProperty: ItemProperty,
+  ItemWeapon: ItemWeapon
 };

@@ -10,7 +10,7 @@ import './Player.css';
 
 export default () => {
   return (
-    <item.components.Item>
+    <item.components.Wrapper>
       <div className="Player">
         <PlayerName />
         <PlayerHealth />
@@ -19,6 +19,6 @@ export default () => {
         <PlayerWeapon />
         <PlayerLocation />
       </div>
-    </item.components.Item>
+    </item.components.Wrapper>
   );
 };
