@@ -1,5 +1,5 @@
-import cInfo from './components/Info';
+import Info from './components/Info';
 
 export const components = {
-  Info: cInfo
+  Info: Info
 };
