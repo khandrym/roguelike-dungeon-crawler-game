@@ -1,12 +1,7 @@
-export interface Location {
-  id: string;
-  dungeonId: string;
-  x: number;
-  y: number;
-}
+import * as location from '../location';
 
 export interface Locations {
-  [index: string]: Location;
+  [index: string]: location.State;
 }
 
 export interface State {

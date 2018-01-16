@@ -14,4 +14,3 @@ export const initials = i;
 
 export interface State extends m.State { }
 export interface Locations extends m.Locations { }
-export interface Location extends m.Location { }

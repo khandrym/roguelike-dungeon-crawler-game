@@ -1,86 +1,87 @@
-import { Location, State } from './model';
+import { State } from './model';
+import * as location from '../location';
 import * as constants from './constants';
 import idGenerator from '../idGenerator';
 import * as dungeons from '../dungeons';
 
-export const player: Location = {
+export const player: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 15,
   y: 35
 };
 
-export const water1: Location = {
+export const water1: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 20,
   y: 40
 };
 
-export const water2: Location = {
+export const water2: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 25,
   y: 45
 };
 
-export const water3: Location = {
+export const water3: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 30,
   y: 50
 };
 
-export const knife: Location = {
+export const knife: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 10,
   y: 15
 };
 
-export const club: Location = {
+export const club: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 15,
   y: 10
 };
 
-export const enemy1: Location = {
+export const enemy1: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 15,
   y: 0
 };
 
-export const enemy2: Location = {
+export const enemy2: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 20,
   y: 5
 };
 
-export const gate1From: Location = {
+export const gate1From: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.gray.id,
   x: 1,
   y: 1
 };
 
-export const gate1To: Location = {
+export const gate1To: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.durk.id,
   x: 1,
   y: 1
 };
 
-export const gate2From: Location = {
+export const gate2From: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.durk.id,
   x: 11,
   y: 11
 };
 
-export const gate2To: Location = {
+export const gate2To: location.State = {
   id: idGenerator.generateId(constants.BASENAME),
   dungeonId: dungeons.initials.black.id,
   x: 12,

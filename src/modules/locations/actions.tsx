@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { Location } from './model';
+import * as location from '../location';
 import ActionTypes from './actionTypes';
 
 export interface Add extends AnyAction {
   type: ActionTypes.ADD;
   payload: {
-    location: Location;
+    location: location.State;
   };
 }
 
-export function add(location: Location): Add {
+export function add(newLocation: location.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      location: location
+      location: newLocation
     }
   };
 }
