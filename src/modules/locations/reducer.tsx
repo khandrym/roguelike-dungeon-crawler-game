@@ -2,13 +2,14 @@ import { combineReducers } from 'redux';
 import { Locations } from './model';
 import * as actions from './actions';
 import ActionTypes from './actionTypes';
+import * as location from '../location';
 
 function addLocationReducerById(state: Locations, action: actions.Add): Locations {
   const id = action.payload.location.id;
-  const location = action.payload.location;
+  const newLocation = action.payload.location;
   return {
     ...state,
-    [id]: location
+    [id]: newLocation
   };
 }
 
@@ -33,13 +34,10 @@ function deleteLocationReducerAllIds(state: string[], action: actions.Delete): s
 
 function moveRightReducerById(state: Locations, action: actions.MoveRight): Locations {
   const id = action.payload.id;
-  const location = {
-    ...state[id],
-    x: state[id].x + 1
-  };
+  const movedLocation = location.reducer(state[id], location.actions.moveRight());
   return {
     ...state,
-    [id]: location
+    [id]: movedLocation
   };
 }
 
@@ -49,13 +47,10 @@ function moveRightReducerAllIds(state: string[], action: actions.MoveRight): str
 
 function moveLeftReducerById(state: Locations, action: actions.MoveLeft): Locations {
   const id = action.payload.id;
-  const location = {
-    ...state[id],
-    x: state[id].x - 1
-  };
+  const movedLocation = location.reducer(state[id], location.actions.moveLeft());
   return {
     ...state,
-    [id]: location
+    [id]: movedLocation
   };
 }
 
@@ -65,13 +60,10 @@ function moveLeftReducerAllIds(state: string[], action: actions.MoveLeft): strin
 
 function moveUpReducerById(state: Locations, action: actions.MoveUp): Locations {
   const id = action.payload.id;
-  const location = {
-    ...state[id],
-    y: state[id].y + 1
-  };
+  const movedLocation = location.reducer(state[id], location.actions.moveUp());
   return {
     ...state,
-    [id]: location
+    [id]: movedLocation
   };
 }
 
@@ -81,13 +73,10 @@ function moveUpReducerAllIds(state: string[], action: actions.MoveUp): string[] 
 
 function moveDownReducerById(state: Locations, action: actions.MoveDown): Locations {
   const id = action.payload.id;
-  const location = {
-    ...state[id],
-    y: state[id].y - 1
-  };
+  const movedLocation = location.reducer(state[id], location.actions.moveDown());
   return {
     ...state,
-    [id]: location
+    [id]: movedLocation
   };
 }
 

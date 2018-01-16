@@ -1,5 +1,3 @@
-* Refactor reducer of locations module based on reducer of location module
-
 * Delete unused enemy module
 
 

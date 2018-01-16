@@ -7,7 +7,7 @@ export interface MoveRight extends AnyAction {
   };
 }
 
-export function moveRight(id: string): MoveRight {
+export function moveRight(): MoveRight {
   return {
     type: ActionTypes.MOVE_RIGHT,
     payload: {
@@ -21,7 +21,7 @@ export interface MoveLeft extends AnyAction {
   };
 }
 
-export function moveLeft(id: string): MoveLeft {
+export function moveLeft(): MoveLeft {
   return {
     type: ActionTypes.MOVE_LEFT,
     payload: {
@@ -35,7 +35,7 @@ export interface MoveUp extends AnyAction {
   };
 }
 
-export function moveUp(id: string): MoveUp {
+export function moveUp(): MoveUp {
   return {
     type: ActionTypes.MOVE_UP,
     payload: {
@@ -49,7 +49,7 @@ export interface MoveDown extends AnyAction {
   };
 }
 
-export function moveDown(id: string): MoveDown {
+export function moveDown(): MoveDown {
   return {
     type: ActionTypes.MOVE_DOWN,
     payload: {

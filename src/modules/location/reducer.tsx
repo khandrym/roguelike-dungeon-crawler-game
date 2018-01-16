@@ -43,4 +43,4 @@ export default (state: State, action: actions.Action): State => {
     default:
       return state;
   }
-}
+};
