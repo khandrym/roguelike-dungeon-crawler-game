@@ -1,22 +1,22 @@
 import * as React from 'react';
 import Wrapper from './Wrapper';
-import PlayerName from './PlayerName';
-import PlayerHealth from './PlayerHealth';
-import PlayerLevel from './PlayerLevel';
-import PlayerExperience from './PlayerExperience';
-import PlayerLocation from './PlayerLocation';
-import PlayerWeapon from './PlayerWeapon';
+import Name from './Name';
+import Health from './Health';
+import Level from './Level';
+import Experience from './Experience';
+import Location from './Location';
+import Weapon from './Weapon';
 import './Player.css';
 
 export default () => {
   return (
     <Wrapper>
-      <PlayerName />
-      <PlayerHealth />
-      <PlayerLevel />
-      <PlayerExperience />
-      <PlayerWeapon />
-      <PlayerLocation />
+      <Name />
+      <Health />
+      <Level />
+      <Experience />
+      <Weapon />
+      <Location />
     </Wrapper>
   );
 };

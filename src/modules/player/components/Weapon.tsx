@@ -4,7 +4,8 @@ import * as item from '../../item';
 import * as store from '../../store';
 
 interface StateProps {
-  value: number;
+  name: string;
+  attack: number;
 }
 
 interface DispatchProps {
@@ -12,15 +13,16 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function PlayerLevel(props: Props) {
+function Weapon(props: Props) {
   return (
-    <item.components.Level value={props.value} />
+    <item.components.Weapon name={props.name} attack={props.attack} />
   );
 }
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    value: Math.floor(s.player.experience / 10.0)
+    name: s.weapons.byId[s.player.weaponId].name,
+    attack: s.weapons.byId[s.player.weaponId].attack
   };
 }
 
@@ -28,4 +30,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayerLevel);
+export default connect(mapStateToProps, mapDispatchToProps)(Weapon);

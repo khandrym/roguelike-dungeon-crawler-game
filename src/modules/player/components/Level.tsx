@@ -4,7 +4,7 @@ import * as item from '../../item';
 import * as store from '../../store';
 
 interface StateProps {
-  name: string;
+  value: number;
 }
 
 interface DispatchProps {
@@ -12,17 +12,15 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function PlayerName(props: Props) {
+function Level(props: Props) {
   return (
-    <item.components.Name>
-      {props.name}
-    </item.components.Name>
+    <item.components.Level value={props.value} />
   );
 }
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    name: s.player.name
+    value: Math.floor(s.player.experience / 10.0)
   };
 }
 
@@ -30,4 +28,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayerName);
+export default connect(mapStateToProps, mapDispatchToProps)(Level);

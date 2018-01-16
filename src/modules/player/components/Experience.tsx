@@ -12,15 +12,15 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function PlayerHealth(props: Props) {
+function Experience(props: Props) {
   return (
-    <item.components.Health value={props.value} />
+    <item.components.Experience value={props.value} />
   );
 }
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    value: s.player.health
+    value: s.player.experience
   };
 }
 
@@ -28,4 +28,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayerHealth);
+export default connect(mapStateToProps, mapDispatchToProps)(Experience);

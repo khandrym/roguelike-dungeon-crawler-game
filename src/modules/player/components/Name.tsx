@@ -5,7 +5,6 @@ import * as store from '../../store';
 
 interface StateProps {
   name: string;
-  attack: number;
 }
 
 interface DispatchProps {
@@ -13,16 +12,17 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function PlayerWeapon(props: Props) {
+function Name(props: Props) {
   return (
-    <item.components.Weapon name={props.name} attack={props.attack} />
+    <item.components.Name>
+      {props.name}
+    </item.components.Name>
   );
 }
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    name: s.weapons.byId[s.player.weaponId].name,
-    attack: s.weapons.byId[s.player.weaponId].attack
+    name: s.player.name
   };
 }
 
@@ -30,4 +30,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayerWeapon);
+export default connect(mapStateToProps, mapDispatchToProps)(Name);
