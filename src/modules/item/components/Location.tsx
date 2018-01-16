@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ItemProperty from './ItemProperty';
+import Property from './Property';
 
 interface Props {
   dungeonName: string;
@@ -9,17 +9,17 @@ interface Props {
 
 export default (props: Props) => {
   return (
-    <ItemProperty>
+    <Property>
       Location:
-      <ItemProperty>
+      <Property>
         dungeon: {props.dungeonName}
-      </ItemProperty>
-      <ItemProperty>
+      </Property>
+      <Property>
         x: {props.x}
-      </ItemProperty>
-      <ItemProperty>
+      </Property>
+      <Property>
         y: {props.y}
-      </ItemProperty>
-    </ItemProperty>
+      </Property>
+    </Property>
   );
 };

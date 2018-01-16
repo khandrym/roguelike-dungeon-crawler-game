@@ -14,7 +14,7 @@ interface Props extends StateProps, DispatchProps { }
 
 function PlayerLevel(props: Props) {
   return (
-    <item.components.ItemLevel value={props.value} />
+    <item.components.Level value={props.value} />
   );
 }
 

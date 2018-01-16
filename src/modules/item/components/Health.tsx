@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ItemProperty from './ItemProperty';
+import Property from './Property';
 
 interface Props {
   value: number;
@@ -7,8 +7,8 @@ interface Props {
 
 export default (props: Props) => {
   return (
-    <ItemProperty>
-      Level: {props.value}
-    </ItemProperty>
+    <Property>
+      Health: {props.value}
+    </Property>
   );
 };

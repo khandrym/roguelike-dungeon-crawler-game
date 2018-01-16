@@ -1,9 +1,9 @@
 import * as React from 'react';
-import './ItemProperty.css';
+import './Property.css';
 
 const ItemProperty: React.StatelessComponent = (props) => {
   return (
-    <div className="ItemProperty">
+    <div className="item-Property">
       {props.children}
     </div>
   );

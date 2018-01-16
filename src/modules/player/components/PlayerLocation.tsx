@@ -37,7 +37,7 @@ class PlayerLocation extends React.Component<MergeProps, object> {
 
   public render() {
     return (
-      <item.components.ItemLocation
+      <item.components.Location
         x={this.props.x}
         y={this.props.y}
         dungeonName={this.props.dungeonName}

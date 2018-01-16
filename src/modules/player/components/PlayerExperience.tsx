@@ -14,7 +14,7 @@ interface Props extends StateProps, DispatchProps { }
 
 function PlayerExperience(props: Props) {
   return (
-    <item.components.ItemExperience value={props.value} />
+    <item.components.Experience value={props.value} />
   );
 }
 

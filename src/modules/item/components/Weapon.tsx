@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ItemProperty from './ItemProperty';
+import Property from './Property';
 
 interface Props {
   name: string;
@@ -8,14 +8,14 @@ interface Props {
 
 export default (props: Props) => {
   return (
-    <ItemProperty>
+    <Property>
       Weapon:
-      <ItemProperty>
+      <Property>
         name: {props.name}
-      </ItemProperty>
-      <ItemProperty>
+      </Property>
+      <Property>
         attack: {props.attack}
-      </ItemProperty>
-    </ItemProperty>
+      </Property>
+    </Property>
   );
 };

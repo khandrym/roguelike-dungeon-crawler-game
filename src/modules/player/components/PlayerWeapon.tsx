@@ -15,7 +15,7 @@ interface Props extends StateProps, DispatchProps { }
 
 function PlayerWeapon(props: Props) {
   return (
-    <item.components.ItemWeapon name={props.name} attack={props.attack} />
+    <item.components.Weapon name={props.name} attack={props.attack} />
   );
 }
 

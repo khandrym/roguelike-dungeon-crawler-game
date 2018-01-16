@@ -14,7 +14,7 @@ interface Props extends StateProps, DispatchProps { }
 
 function PlayerHealth(props: Props) {
   return (
-    <item.components.ItemHealth value={props.value} />
+    <item.components.Health value={props.value} />
   );
 }
 

@@ -6,10 +6,10 @@ export default () => {
   return (
     <item.components.Wrapper>
       <div className="Enemy">
-        <item.components.ItemName>
+        <item.components.Name>
           Mad Enemy
-        </item.components.ItemName>
-        <item.components.ItemHealth value={100} />
+        </item.components.Name>
+        <item.components.Health value={100} />
       </div>
     </item.components.Wrapper>
   );
