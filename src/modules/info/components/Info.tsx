@@ -6,7 +6,7 @@ import './Info.css';
 export default () => {
   return (
     <div className="Info">
-      <player.components.Player />
+      <player.containers.Player />
       <enemy.components.Enemy />
     </div>
   );
