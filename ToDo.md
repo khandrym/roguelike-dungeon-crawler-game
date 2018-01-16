@@ -1,4 +1,4 @@
-* Move Wrapper component to components folder inside player module
+
 
 * Delete unused enemy module
 
