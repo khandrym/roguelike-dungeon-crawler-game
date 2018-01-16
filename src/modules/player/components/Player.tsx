@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as item from '../../item';
+import Wrapper from './Wrapper';
 import PlayerName from './PlayerName';
 import PlayerHealth from './PlayerHealth';
 import PlayerLevel from './PlayerLevel';
@@ -10,15 +10,13 @@ import './Player.css';
 
 export default () => {
   return (
-    <item.components.Wrapper>
-      <div className="Player">
-        <PlayerName />
-        <PlayerHealth />
-        <PlayerLevel />
-        <PlayerExperience />
-        <PlayerWeapon />
-        <PlayerLocation />
-      </div>
-    </item.components.Wrapper>
+    <Wrapper>
+      <PlayerName />
+      <PlayerHealth />
+      <PlayerLevel />
+      <PlayerExperience />
+      <PlayerWeapon />
+      <PlayerLocation />
+    </Wrapper>
   );
 };
