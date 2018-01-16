@@ -1,4 +1,4 @@
-
+* Refactor locations module based on location module
 
 * Delete unused enemy module
 
