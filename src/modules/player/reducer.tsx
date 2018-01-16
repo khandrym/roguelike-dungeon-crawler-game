@@ -4,41 +4,29 @@ import ActionTypes from './actionTypes';
 
 function increaseHealthReducer(state: State, action: actions.IncreaseHealth): State {
   return {
-    name: state.name,
-    health: state.health + action.payload.value,
-    experience: state.experience,
-    locationId: state.locationId,
-    weaponId: state.weaponId
+    ...state,
+    health: state.health + action.payload.value
   };
 }
 
 function decreaseHealthReducer(state: State, action: actions.DecreaseHealth): State {
   return {
-    name: state.name,
-    health: state.health - action.payload.value,
-    experience: state.experience,
-    locationId: state.locationId,
-    weaponId: state.weaponId
+    ...state,
+    health: state.health - action.payload.value
   };
 }
 
 function increaseExperienceReducer(state: State, action: actions.IncreaseExperience): State {
   return {
-    name: state.name,
-    health: state.health,
-    experience: state.experience + action.payload.value,
-    locationId: state.locationId,
-    weaponId: state.weaponId
+    ...state,
+    experience: state.experience + action.payload.value
   };
 }
 
 function decreaseExperienceReducer(state: State, action: actions.DecreaseExperience): State {
   return {
-    name: state.name,
-    health: state.health,
-    experience: state.experience - action.payload.value,
-    locationId: state.locationId,
-    weaponId: state.weaponId
+    ...state,
+    experience: state.experience - action.payload.value
   };
 }
 
