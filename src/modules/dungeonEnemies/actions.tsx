@@ -3,9 +3,9 @@ import ActionTypes from './actionTypes';
 import * as dungeonEnemy from '../dungeonEnemy';
 
 export interface Add extends AnyAction {
-  type: ActionTypes.ADD;
-  payload: {
-    dungeonEnemy: dungeonEnemy.State;
+  readonly type: ActionTypes.ADD;
+  readonly payload: {
+    readonly dungeonEnemy: dungeonEnemy.State;
   };
 }
 
@@ -19,9 +19,9 @@ export function add(newDungeonEnemy: dungeonEnemy.State): Add {
 }
 
 export interface Delete extends AnyAction {
-  type: ActionTypes.DELETE;
-  payload: {
-    id: string;
+  readonly type: ActionTypes.DELETE;
+  readonly payload: {
+    readonly id: string;
   };
 }
 
@@ -35,7 +35,8 @@ export function del(id: string): Delete {
 }
 
 interface Other extends AnyAction {
-  type: ActionTypes.OTHER;
+  readonly type: ActionTypes.OTHER;
+  readonly payload: {};
 }
 
 export type Action =

@@ -3,9 +3,9 @@ import { Medicine } from './model';
 import ActionTypes from './actionTypes';
 
 export interface Add extends AnyAction {
-  type: ActionTypes.ADD;
-  payload: {
-    medicine: Medicine;
+  readonly type: ActionTypes.ADD;
+  readonly payload: {
+    readonly medicine: Medicine;
   };
 }
 
@@ -19,9 +19,9 @@ export function add(medicine: Medicine): Add {
 }
 
 export interface Delete extends AnyAction {
-  type: ActionTypes.DELETE;
-  payload: {
-    id: string;
+  readonly type: ActionTypes.DELETE;
+  readonly payload: {
+    readonly id: string;
   };
 }
 
@@ -35,7 +35,8 @@ export function del(id: string): Delete {
 }
 
 interface Other extends AnyAction {
-  type: ActionTypes.OTHER;
+  readonly type: ActionTypes.OTHER;
+  readonly payload: {};
 }
 
 export type Action =

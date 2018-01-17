@@ -3,9 +3,9 @@ import * as location from '../location';
 import ActionTypes from './actionTypes';
 
 export interface Add extends AnyAction {
-  type: ActionTypes.ADD;
-  payload: {
-    location: location.State;
+  readonly type: ActionTypes.ADD;
+  readonly payload: {
+    readonly location: location.State;
   };
 }
 
@@ -19,9 +19,9 @@ export function add(newLocation: location.State): Add {
 }
 
 export interface Delete extends AnyAction {
-  type: ActionTypes.DELETE;
-  payload: {
-    id: string;
+  readonly type: ActionTypes.DELETE;
+  readonly payload: {
+    readonly id: string;
   };
 }
 
@@ -35,9 +35,9 @@ export function del(id: string): Delete {
 }
 
 export interface MoveRight extends AnyAction {
-  type: ActionTypes.MOVE_RIGHT;
-  payload: {
-    id: string;
+  readonly type: ActionTypes.MOVE_RIGHT;
+  readonly payload: {
+    readonly id: string;
   };
 }
 
@@ -51,9 +51,9 @@ export function moveRight(id: string): MoveRight {
 }
 
 export interface MoveLeft extends AnyAction {
-  type: ActionTypes.MOVE_LEFT;
-  payload: {
-    id: string;
+  readonly type: ActionTypes.MOVE_LEFT;
+  readonly payload: {
+    readonly id: string;
   };
 }
 
@@ -67,9 +67,9 @@ export function moveLeft(id: string): MoveLeft {
 }
 
 export interface MoveUp extends AnyAction {
-  type: ActionTypes.MOVE_UP;
-  payload: {
-    id: string;
+  readonly type: ActionTypes.MOVE_UP;
+  readonly payload: {
+    readonly id: string;
   };
 }
 
@@ -83,9 +83,9 @@ export function moveUp(id: string): MoveUp {
 }
 
 export interface MoveDown extends AnyAction {
-  type: ActionTypes.MOVE_DOWN;
-  payload: {
-    id: string;
+  readonly type: ActionTypes.MOVE_DOWN;
+  readonly payload: {
+    readonly id: string;
   };
 }
 
@@ -99,7 +99,8 @@ export function moveDown(id: string): MoveDown {
 }
 
 interface Other extends AnyAction {
-  type: ActionTypes.OTHER;
+  readonly type: ActionTypes.OTHER;
+  readonly payload: {};
 }
 
 export type Action =

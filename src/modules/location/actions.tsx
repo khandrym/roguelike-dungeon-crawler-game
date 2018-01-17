@@ -2,63 +2,56 @@ import { AnyAction } from 'redux';
 import ActionTypes from './actionTypes';
 
 export interface MoveRight extends AnyAction {
-  type: ActionTypes.MOVE_RIGHT;
-  payload: {
-  };
+  readonly type: ActionTypes.MOVE_RIGHT;
+  readonly payload: {};
 }
 
 export function moveRight(): MoveRight {
   return {
     type: ActionTypes.MOVE_RIGHT,
-    payload: {
-    }
+    payload: {}
   };
 }
 
 export interface MoveLeft extends AnyAction {
-  type: ActionTypes.MOVE_LEFT;
-  payload: {
-  };
+  readonly type: ActionTypes.MOVE_LEFT;
+  readonly payload: {};
 }
 
 export function moveLeft(): MoveLeft {
   return {
     type: ActionTypes.MOVE_LEFT,
-    payload: {
-    }
+    payload: {}
   };
 }
 
 export interface MoveUp extends AnyAction {
-  type: ActionTypes.MOVE_UP;
-  payload: {
-  };
+  readonly type: ActionTypes.MOVE_UP;
+  readonly payload: {};
 }
 
 export function moveUp(): MoveUp {
   return {
     type: ActionTypes.MOVE_UP,
-    payload: {
-    }
+    payload: {}
   };
 }
 
 export interface MoveDown extends AnyAction {
-  type: ActionTypes.MOVE_DOWN;
-  payload: {
-  };
+  readonly type: ActionTypes.MOVE_DOWN;
+  readonly payload: {};
 }
 
 export function moveDown(): MoveDown {
   return {
     type: ActionTypes.MOVE_DOWN,
-    payload: {
-    }
+    payload: {}
   };
 }
 
 interface Other extends AnyAction {
-  type: ActionTypes.OTHER;
+  readonly type: ActionTypes.OTHER;
+  readonly payload: {};
 }
 
 export type Action =

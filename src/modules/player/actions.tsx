@@ -66,7 +66,8 @@ export function decreaseExperience(value: number): DecreaseExperience {
 }
 
 interface Other extends AnyAction {
-  type: ActionTypes.OTHER;
+  readonly type: ActionTypes.OTHER;
+  readonly payload: {};
 }
 
 export type Action =
