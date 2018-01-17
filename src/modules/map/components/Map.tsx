@@ -30,12 +30,20 @@ function Map(props: MapProps) {
       </tr>
     );
   }
+
   return (
-    <table className="Map">
-      <tbody>
-        {rows}
-      </tbody>
-    </table>
+    <div>
+      <table className="Map">
+        <tbody>
+          {rows}
+        </tbody>
+      </table>
+      <table className="Map">
+        <tbody>
+          {}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
