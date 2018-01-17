@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { DungeonEnemy } from './model';
 import ActionTypes from './actionTypes';
+import * as dungeonEnemy from '../dungeonEnemy';
 
 export interface Add extends AnyAction {
   type: ActionTypes.ADD;
   payload: {
-    dungeonEnemy: DungeonEnemy;
+    dungeonEnemy: dungeonEnemy.State;
   };
 }
 
-export function add(dungeonEnemy: DungeonEnemy): Add {
+export function add(newDungeonEnemy: dungeonEnemy.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      dungeonEnemy: dungeonEnemy
+      dungeonEnemy: newDungeonEnemy
     }
   };
 }

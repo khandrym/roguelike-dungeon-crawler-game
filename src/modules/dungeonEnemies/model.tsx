@@ -1,12 +1,7 @@
-export interface DungeonEnemy {
-  id: string;
-  health: number;
-  enemyId: string;
-  locationId: string;
-}
+import * as dungeonEnemy from '../dungeonEnemy';
 
 export interface DungeonEnemies {
-  [index: string]: DungeonEnemy;
+  [index: string]: dungeonEnemy.State;
 }
 
 export interface State {
