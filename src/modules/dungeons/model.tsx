@@ -1,10 +1,7 @@
-export interface Dungeon {
-  id: string;
-  name: string;
-}
+import * as dungeon from '../dungeon';
 
 export interface Dungeons {
-  [index: string]: Dungeon;
+  [index: string]: dungeon.State;
 }
 
 export interface State {

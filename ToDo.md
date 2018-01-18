@@ -1,5 +1,3 @@
-* Refactor dungeons module based on dungeon module
-
 * Add dungeonWeapon module
 * Refactor dungeonWeapons module based on dungeonWeapon module
 

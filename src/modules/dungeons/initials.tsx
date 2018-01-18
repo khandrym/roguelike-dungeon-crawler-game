@@ -1,31 +1,15 @@
-import { Dungeon, State } from './model';
-import * as constants from './constants';
-import idGenerator from '../idGenerator';
-
-export const gray: Dungeon = {
-  id: idGenerator.generateId(constants.BASENAME),
-  name: 'Gray'
-};
-
-export const durk: Dungeon = {
-  id: idGenerator.generateId(constants.BASENAME),
-  name: 'Durk'
-};
-
-export const black: Dungeon = {
-  id: idGenerator.generateId(constants.BASENAME),
-  name: 'Black'
-};
+import { State } from './model';
+import * as dungeon from '../dungeon';
 
 export const dungeons: State = {
   byId: {
-    [gray.id]: gray,
-    [durk.id]: durk,
-    [black.id]: black
+    [dungeon.initials.gray.id]: dungeon.initials.gray,
+    [dungeon.initials.durk.id]: dungeon.initials.durk,
+    [dungeon.initials.black.id]: dungeon.initials.black
   },
   allIds: [
-    gray.id,
-    durk.id,
-    black.id
+    dungeon.initials.gray.id,
+    dungeon.initials.durk.id,
+    dungeon.initials.black.id
   ]
 };
