@@ -1,4 +1,3 @@
-* Add weapon module
 * Refactor weapons module based on weapon module
 
 
