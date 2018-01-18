@@ -1,11 +1,7 @@
-export interface Weapon {
-  id: string;
-  name: string;
-  attack: number;
-}
+import * as weapon from '../weapon';
 
 export interface Weapons {
-  [index: string]: Weapon;
+  [index: string]: weapon.State;
 }
 
 export interface State {

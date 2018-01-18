@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { Weapon } from './model';
 import ActionTypes from './actionTypes';
+import * as weapon from '../weapon';
 
 export interface Add extends AnyAction {
   type: ActionTypes.ADD;
   payload: {
-    weapon: Weapon;
+    weapon: weapon.State;
   };
 }
 
-export function add(weapon: Weapon): Add {
+export function add(newWeapon: weapon.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      weapon: weapon
+      weapon: newWeapon
     }
   };
 }
