@@ -1,6 +1,3 @@
-* Add enemy module
-* Refactor enemies module based on enemy module
-
 * Add medicine module
 * Refactor medicines module based on medicine module
 

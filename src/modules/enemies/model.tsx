@@ -1,12 +1,7 @@
-export interface Enemy {
-  id: string;
-  name: string;
-  experience: number;
-  weaponId: string;
-}
+import * as enemy from '../enemy';
 
 export interface Enemies {
-  [index: string]: Enemy;
+  [index: string]: enemy.State;
 }
 
 export interface State {

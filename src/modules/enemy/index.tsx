@@ -13,4 +13,3 @@ export const reducer = r;
 export const initials = i;
 
 export interface State extends m.State { }
-export interface Enemies extends m.Enemies { }

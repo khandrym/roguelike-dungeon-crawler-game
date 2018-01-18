@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { Enemy } from './model';
 import ActionTypes from './actionTypes';
+import * as enemy from '../enemy';
 
 export interface Add extends AnyAction {
   readonly type: ActionTypes.ADD;
   readonly payload: {
-    readonly enemy: Enemy;
+    readonly enemy: enemy.State;
   };
 }
 
-export function add(enemy: Enemy): Add {
+export function add(newEnemy: enemy.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      enemy: enemy
+      enemy: newEnemy
     }
   };
 }
