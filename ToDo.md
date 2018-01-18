@@ -1,4 +1,3 @@
-* Add dungeonWeapon module
 * Refactor dungeonWeapons module based on dungeonWeapon module
 
 * Add enemy module
