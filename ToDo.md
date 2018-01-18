@@ -1,4 +1,3 @@
-* Add medicine module
 * Refactor medicines module based on medicine module
 
 * Add weapon module
