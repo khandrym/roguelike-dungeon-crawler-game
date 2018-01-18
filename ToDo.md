@@ -1,3 +1,16 @@
+* Refactor dungeons module based on dungeon module
+
+* Add dungeonWeapon module
+* Refactor dungeonWeapons module based on dungeonWeapon module
+
+* Add enemy module
+* Refactor enemies module based on enemy module
+
+* Add medicine module
+* Refactor medicines module based on medicine module
+
+* Add weapon module
+* Refactor weapons module based on weapon module
 
 
 
