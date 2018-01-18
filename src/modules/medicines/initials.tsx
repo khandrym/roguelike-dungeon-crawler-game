@@ -1,34 +1,15 @@
-import { Medicine, State } from './model';
-import * as constants from './constants';
-import idGenerator from '../idGenerator';
-
-export const water: Medicine = {
-  id: idGenerator.generateId(constants.BASENAME),
-  name: 'Water',
-  health: 10
-};
-
-export const herb: Medicine = {
-  id: idGenerator.generateId(constants.BASENAME),
-  name: 'Herb',
-  health: 20
-};
-
-export const potion: Medicine = {
-  id: idGenerator.generateId(constants.BASENAME),
-  name: 'Potion',
-  health: 40
-};
+import { State } from './model';
+import * as medicine from '../medicine';
 
 export const medicines: State = {
   byId: {
-    [water.id]: water,
-    [herb.id]: herb,
-    [potion.id]: potion
+    [medicine.initials.water.id]: medicine.initials.water,
+    [medicine.initials.herb.id]: medicine.initials.herb,
+    [medicine.initials.potion.id]: medicine.initials.potion
   },
   allIds: [
-    water.id,
-    herb.id,
-    potion.id
+    medicine.initials.water.id,
+    medicine.initials.herb.id,
+    medicine.initials.potion.id
   ]
 };

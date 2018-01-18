@@ -14,4 +14,3 @@ export const initials = i;
 
 export interface State extends m.State { }
 export interface Medicines extends m.Medicines { }
-export interface Medicine extends m.Medicine { }

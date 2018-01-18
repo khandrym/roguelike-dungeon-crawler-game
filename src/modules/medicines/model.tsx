@@ -1,11 +1,7 @@
-export interface Medicine {
-  id: string;
-  name: string;
-  health: number;
-}
+import * as medicine from '../medicine';
 
 export interface Medicines {
-  [index: string]: Medicine;
+  [index: string]: medicine.State;
 }
 
 export interface State {

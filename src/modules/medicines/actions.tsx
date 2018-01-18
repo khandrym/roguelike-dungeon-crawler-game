@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { Medicine } from './model';
 import ActionTypes from './actionTypes';
+import * as medicine from '../medicine';
 
 export interface Add extends AnyAction {
   readonly type: ActionTypes.ADD;
   readonly payload: {
-    readonly medicine: Medicine;
+    readonly medicine: medicine.State;
   };
 }
 
-export function add(medicine: Medicine): Add {
+export function add(newMedicine: medicine.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      medicine: medicine
+      medicine: newMedicine
     }
   };
 }
