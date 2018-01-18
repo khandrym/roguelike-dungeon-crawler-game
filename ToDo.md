@@ -1,5 +1,3 @@
-* Refactor dungeonWeapons module based on dungeonWeapon module
-
 * Add enemy module
 * Refactor enemies module based on enemy module
 

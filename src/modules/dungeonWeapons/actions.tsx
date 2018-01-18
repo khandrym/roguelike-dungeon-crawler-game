@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { DungeonWeapon } from './model';
 import ActionTypes from './actionTypes';
+import * as dungeonWeapon from '../dungeonWeapon';
 
 export interface Add extends AnyAction {
   readonly type: ActionTypes.ADD;
   readonly payload: {
-    readonly dungeonWeapon: DungeonWeapon;
+    readonly dungeonWeapon: dungeonWeapon.State;
   };
 }
 
-export function add(dungeonWeapon: DungeonWeapon): Add {
+export function add(newDungeonWeapon: dungeonWeapon.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      dungeonWeapon: dungeonWeapon
+      dungeonWeapon: newDungeonWeapon
     }
   };
 }

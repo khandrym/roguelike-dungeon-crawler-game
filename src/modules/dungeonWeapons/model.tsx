@@ -1,11 +1,7 @@
-export interface DungeonWeapon {
-  id: string;
-  weaponId: string;
-  locationId: string;
-}
+import * as dungeonWeapon from '../dungeonWeapon';
 
 export interface DungeonWeapons {
-  [index: string]: DungeonWeapon;
+  [index: string]: dungeonWeapon.State;
 }
 
 export interface State {
