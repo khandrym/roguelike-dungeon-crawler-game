@@ -1,12 +1,7 @@
-export interface DungeonMedicine {
-  id: string;
-  health: number;
-  medicineId: string;
-  locationId: string;
-}
+import * as dungeonMedicine from '../dungeonMedicine';
 
 export interface DungeonMedicines {
-  [index: string]: DungeonMedicine;
+  [index: string]: dungeonMedicine.State;
 }
 
 export interface State {

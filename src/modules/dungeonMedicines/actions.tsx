@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { DungeonMedicine } from './model';
 import ActionTypes from './actionTypes';
+import * as dungeonMedicine from '../dungeonMedicine';
 
 export interface Add extends AnyAction {
   readonly type: ActionTypes.ADD;
   readonly payload: {
-    readonly dungeonMedicine: DungeonMedicine;
+    readonly dungeonMedicine: dungeonMedicine.State;
   };
 }
 
-export function add(dungeonMedicine: DungeonMedicine): Add {
+export function add(newDungeonMedicine: dungeonMedicine.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      dungeonMedicine: dungeonMedicine
+      dungeonMedicine: newDungeonMedicine
     }
   };
 }
@@ -34,6 +34,24 @@ export function del(id: string): Delete {
   };
 }
 
+export interface DecreaseHealth extends AnyAction {
+  readonly type: ActionTypes.DECREASE_HEALTH;
+  readonly payload: {
+    readonly id: string;
+    readonly value: number;
+  };
+}
+
+export function decreaseHealth(id: string, value: number): DecreaseHealth {
+  return {
+    type: ActionTypes.DECREASE_HEALTH,
+    payload: {
+      id: id,
+      value: value
+    }
+  };
+}
+
 interface Other extends AnyAction {
   readonly type: ActionTypes.OTHER;
   readonly payload: {};
@@ -42,4 +60,5 @@ interface Other extends AnyAction {
 export type Action =
   | Add
   | Delete
+  | DecreaseHealth
   | Other;
