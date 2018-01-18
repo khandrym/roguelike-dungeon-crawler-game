@@ -1,1 +1,1 @@
-export const BASENAME = 'Location';
+export const NAME = 'location';

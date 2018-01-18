@@ -1,4 +1,3 @@
-* Rename BASENAME and STORENAME to NAME in constants files
 
 
 

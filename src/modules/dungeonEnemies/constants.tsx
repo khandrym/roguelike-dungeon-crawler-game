@@ -1,3 +1,1 @@
-export const STORENAME = 'dungeonEnemies';
-
-export const BASENAME = 'Dungeon enemy';
+export const NAME = 'dungeonEnemies';

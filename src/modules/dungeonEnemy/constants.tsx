@@ -1,1 +1,1 @@
-export const BASENAME = 'Dungeon enemy';
+export const NAME = 'dungeonEnemy';

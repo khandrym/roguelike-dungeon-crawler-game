@@ -1,1 +1,1 @@
-export const STORENAME = 'dungeonWeapons';
+export const NAME = 'dungeonWeapons';
