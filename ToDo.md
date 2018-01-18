@@ -1,6 +1,7 @@
+* Refactor dungeonGates module based on dungeonGate module
 
 
-
+* Rename BASENAME and STORENAME to NAME in constants files
 
 * Read info about map generation (chapter 3):
   http://pcgbook.com/
