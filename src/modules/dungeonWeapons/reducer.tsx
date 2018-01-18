@@ -3,28 +3,28 @@ import { DungeonWeapons } from './model';
 import * as actions from './actions';
 import ActionTypes from './actionTypes';
 
-function addDungeonWeaponReducerById(state: DungeonWeapons, action: actions.Add): DungeonWeapons {
+function addReducerById(state: DungeonWeapons, action: actions.Add): DungeonWeapons {
   const id = action.payload.dungeonWeapon.id;
-  const dungeonWeapon = action.payload.dungeonWeapon;
+  const newItem = action.payload.dungeonWeapon;
   return {
     ...state,
-    [id]: dungeonWeapon
+    [id]: newItem
   };
 }
 
-function addDungeonWeaponReducerAllIds(state: string[], action: actions.Add): string[] {
+function addReducerAllIds(state: string[], action: actions.Add): string[] {
   const id = action.payload.dungeonWeapon.id;
   return state.concat(id);
 }
 
-function deleteDungeonWeaponReducerById(state: DungeonWeapons, action: actions.Delete): DungeonWeapons {
+function deleteReducerById(state: DungeonWeapons, action: actions.Delete): DungeonWeapons {
   const id = action.payload.id;
   const newState = { ...state };
   delete newState[id];
   return newState;
 }
 
-function deleteDungeonWeaponReducerAllIds(state: string[], action: actions.Delete): string[] {
+function deleteReducerAllIds(state: string[], action: actions.Delete): string[] {
   const id = action.payload.id;
   return state.filter((val) => {
     return val !== id;
@@ -34,9 +34,9 @@ function deleteDungeonWeaponReducerAllIds(state: string[], action: actions.Delet
 function reducerById(state: DungeonWeapons = {}, action: actions.Action): DungeonWeapons {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addDungeonWeaponReducerById(state, action);
+      return addReducerById(state, action);
     case ActionTypes.DELETE:
-      return deleteDungeonWeaponReducerById(state, action);
+      return deleteReducerById(state, action);
     default:
       return state;
   }
@@ -45,9 +45,9 @@ function reducerById(state: DungeonWeapons = {}, action: actions.Action): Dungeo
 function reducerAllIds(state: string[] = [], action: actions.Action): string[] {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addDungeonWeaponReducerAllIds(state, action);
+      return addReducerAllIds(state, action);
     case ActionTypes.DELETE:
-      return deleteDungeonWeaponReducerAllIds(state, action);
+      return deleteReducerAllIds(state, action);
     default:
       return state;
   }

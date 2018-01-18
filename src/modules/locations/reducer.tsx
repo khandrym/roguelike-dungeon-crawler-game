@@ -4,28 +4,28 @@ import * as actions from './actions';
 import ActionTypes from './actionTypes';
 import * as location from '../location';
 
-function addLocationReducerById(state: Locations, action: actions.Add): Locations {
+function addReducerById(state: Locations, action: actions.Add): Locations {
   const id = action.payload.location.id;
-  const newLocation = action.payload.location;
+  const newItem = action.payload.location;
   return {
     ...state,
-    [id]: newLocation
+    [id]: newItem
   };
 }
 
-function addLocationReducerAllIds(state: string[], action: actions.Add): string[] {
+function addReducerAllIds(state: string[], action: actions.Add): string[] {
   const id = action.payload.location.id;
   return state.concat(id);
 }
 
-function deleteLocationReducerById(state: Locations, action: actions.Delete): Locations {
+function deleteReducerById(state: Locations, action: actions.Delete): Locations {
   const id = action.payload.id;
   const newState = { ...state };
   delete newState[id];
   return newState;
 }
 
-function deleteLocationReducerAllIds(state: string[], action: actions.Delete): string[] {
+function deletReducerAllIds(state: string[], action: actions.Delete): string[] {
   const id = action.payload.id;
   return state.filter((val) => {
     return val !== id;
@@ -87,9 +87,9 @@ function moveDownReducerAllIds(state: string[], action: actions.MoveDown): strin
 function reducerById(state: Locations = {}, action: actions.Action): Locations {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addLocationReducerById(state, action);
+      return addReducerById(state, action);
     case ActionTypes.DELETE:
-      return deleteLocationReducerById(state, action);
+      return deleteReducerById(state, action);
     case ActionTypes.MOVE_RIGHT:
       return moveRightReducerById(state, action);
     case ActionTypes.MOVE_LEFT:
@@ -106,9 +106,9 @@ function reducerById(state: Locations = {}, action: actions.Action): Locations {
 function reducerAllIds(state: string[] = [], action: actions.Action): string[] {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addLocationReducerAllIds(state, action);
+      return addReducerAllIds(state, action);
     case ActionTypes.DELETE:
-      return deleteLocationReducerAllIds(state, action);
+      return deletReducerAllIds(state, action);
     case ActionTypes.MOVE_RIGHT:
       return moveRightReducerAllIds(state, action);
     case ActionTypes.MOVE_LEFT:

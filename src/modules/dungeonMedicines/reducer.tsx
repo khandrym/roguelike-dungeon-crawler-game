@@ -4,28 +4,28 @@ import * as actions from './actions';
 import ActionTypes from './actionTypes';
 import * as dungeonMedicine from '../dungeonMedicine';
 
-function addDungeonMedicineReducerById(state: DungeonMedicines, action: actions.Add): DungeonMedicines {
+function addReducerById(state: DungeonMedicines, action: actions.Add): DungeonMedicines {
   const id = action.payload.dungeonMedicine.id;
-  const newDungeonMedicine = action.payload.dungeonMedicine;
+  const newItem = action.payload.dungeonMedicine;
   return {
     ...state,
-    [id]: newDungeonMedicine
+    [id]: newItem
   };
 }
 
-function addDungeonMedicineReducerAllIds(state: string[], action: actions.Add): string[] {
+function addReducerAllIds(state: string[], action: actions.Add): string[] {
   const id = action.payload.dungeonMedicine.id;
   return state.concat(id);
 }
 
-function deleteDungeonMedicineReducerById(state: DungeonMedicines, action: actions.Delete): DungeonMedicines {
+function deleteReducerById(state: DungeonMedicines, action: actions.Delete): DungeonMedicines {
   const id = action.payload.id;
   const newState = { ...state };
   delete newState[id];
   return newState;
 }
 
-function deleteDungeonMedicineReducerAllIds(state: string[], action: actions.Delete): string[] {
+function deleteReducerAllIds(state: string[], action: actions.Delete): string[] {
   const id = action.payload.id;
   return state.filter((val) => {
     return val !== id;
@@ -49,9 +49,9 @@ function decreaseHealthReducerAllIds(state: string[], action: actions.DecreaseHe
 function reducerById(state: DungeonMedicines = {}, action: actions.Action): DungeonMedicines {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addDungeonMedicineReducerById(state, action);
+      return addReducerById(state, action);
     case ActionTypes.DELETE:
-      return deleteDungeonMedicineReducerById(state, action);
+      return deleteReducerById(state, action);
     case ActionTypes.DECREASE_HEALTH:
       return decreaseHealthReducerById(state, action);
     default:
@@ -62,9 +62,9 @@ function reducerById(state: DungeonMedicines = {}, action: actions.Action): Dung
 function reducerAllIds(state: string[] = [], action: actions.Action): string[] {
   switch (action.type) {
     case ActionTypes.ADD:
-      return addDungeonMedicineReducerAllIds(state, action);
+      return addReducerAllIds(state, action);
     case ActionTypes.DELETE:
-      return deleteDungeonMedicineReducerAllIds(state, action);
+      return deleteReducerAllIds(state, action);
     case ActionTypes.DECREASE_HEALTH:
       return decreaseHealthReducerAllIds(state, action);
     default:
