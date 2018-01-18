@@ -1,11 +1,7 @@
-export interface DungeonGate {
-  id: string;
-  locationIdFrom: string;
-  locationIdTo: string;
-}
+import * as dungeonGate from '../dungeonGate';
 
 export interface DungeonGates {
-  [index: string]: DungeonGate;
+  [index: string]: dungeonGate.State;
 }
 
 export interface State {

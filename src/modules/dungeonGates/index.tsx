@@ -14,4 +14,3 @@ export const initials = i;
 
 export interface State extends m.State { }
 export interface DungeonGates extends m.DungeonGates { }
-export interface DungeonGate extends m.DungeonGate { }

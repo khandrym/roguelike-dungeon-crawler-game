@@ -1,19 +1,19 @@
 import { AnyAction } from 'redux';
-import { DungeonGate } from './model';
 import ActionTypes from './actionTypes';
+import * as dungeonGate from '../dungeonGate';
 
 export interface Add extends AnyAction {
   readonly type: ActionTypes.ADD;
   readonly payload: {
-    readonly dungeonGate: DungeonGate;
+    readonly dungeonGate: dungeonGate.State;
   };
 }
 
-export function add(dungeonGate: DungeonGate): Add {
+export function add(newDungeonGate: dungeonGate.State): Add {
   return {
     type: ActionTypes.ADD,
     payload: {
-      dungeonGate: dungeonGate
+      dungeonGate: newDungeonGate
     }
   };
 }

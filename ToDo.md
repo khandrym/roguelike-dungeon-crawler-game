@@ -1,4 +1,4 @@
-* Refactor dungeonGates module based on dungeonGate module
+
 
 
 * Rename BASENAME and STORENAME to NAME in constants files
