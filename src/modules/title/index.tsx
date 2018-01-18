@@ -1,5 +1,5 @@
-import cTitle from './components/Title';
+import Title from './components/Title';
 
 export const components = {
-  Title: cTitle
+  Title: Title
 };

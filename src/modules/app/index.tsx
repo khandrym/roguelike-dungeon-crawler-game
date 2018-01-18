@@ -1,5 +1,5 @@
-import cApp from './components/App';
+import App from './components/App';
 
 export const components = {
-  App: cApp
+  App: App
 };
