@@ -4,7 +4,7 @@ import * as a from './actions';
 import at from './actionTypes';
 import r from './reducer';
 import * as i from './initials';
-import Player from './containers/Player';
+import Player from './components/Player';
 
 export const model = m;
 export const constants = c;
@@ -15,6 +15,6 @@ export const initials = i;
 
 export interface State extends m.State { }
 
-export const containers = {
+export const components = {
   Player: Player
 };

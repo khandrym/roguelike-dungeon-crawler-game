@@ -2,8 +2,6 @@
 * Add DungeonMedicine component
 * Add DungeonWeapon component
 
-* Move Player from containers to components inside player module
-
 
 
 * Read info about map generation (chapter 3):

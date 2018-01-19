@@ -5,7 +5,7 @@ import * as player from '../../player';
 export default () => {
   return (
     <Wrapper>
-      <player.containers.Player />
+      <player.components.Player />
     </Wrapper>
   );
 };
