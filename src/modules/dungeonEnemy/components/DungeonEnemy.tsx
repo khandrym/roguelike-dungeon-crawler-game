@@ -5,7 +5,6 @@ import * as item from '../../item';
 interface Props {
   readonly name: string;
   readonly health: number;
-  readonly level: number;
   readonly experience: number;
   readonly weaponName: string;
   readonly attack: number;
@@ -19,7 +18,7 @@ export default (props: Props) => {
     <Wrapper>
       <item.components.Name name={props.name} />
       <item.components.Health value={props.health} />
-      <item.components.Level value={props.level} />
+      <item.components.Level experience={props.experience} />
       <item.components.Experience value={props.experience} />
       <item.components.Weapon name={props.weaponName} attack={props.attack} />
       <item.components.Location

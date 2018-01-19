@@ -4,7 +4,7 @@ import * as item from '../../item';
 import * as store from '../../store';
 
 interface StateProps {
-  value: number;
+  experience: number;
 }
 
 interface DispatchProps {
@@ -14,13 +14,13 @@ interface Props extends StateProps, DispatchProps { }
 
 function Level(props: Props) {
   return (
-    <item.components.Level value={props.value} />
+    <item.components.Level experience={props.experience} />
   );
 }
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    value: Math.floor(s.player.experience / 10.0)
+    experience: s.player.experience
   };
 }
 
