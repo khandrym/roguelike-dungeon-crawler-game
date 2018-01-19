@@ -1,4 +1,7 @@
-* Add selectors to store module
+* Add selectors to medicines module
+* Add selectors to locations module
+
+
 
 
 * Add DungeonGate component
