@@ -14,9 +14,7 @@ interface Props extends StateProps, DispatchProps { }
 
 function Name(props: Props) {
   return (
-    <item.components.Name>
-      {props.name}
-    </item.components.Name>
+    <item.components.Name name={props.name} />
   );
 }
 

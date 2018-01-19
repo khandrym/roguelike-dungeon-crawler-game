@@ -1,12 +1,14 @@
 import * as React from 'react';
 import './Name.css';
 
-const Name: React.StatelessComponent = (props) => {
+interface Props {
+  name: string;
+}
+
+export default (props: Props) => {
   return (
     <div className="item-Name">
-      {props.children}
+      {props.name}
     </div>
   );
 };
-
-export default Name;

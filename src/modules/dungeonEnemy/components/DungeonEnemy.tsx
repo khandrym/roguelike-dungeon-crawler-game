@@ -17,9 +17,7 @@ interface Props {
 export default (props: Props) => {
   return (
     <Wrapper>
-      <item.components.Name>
-        {props.name}
-      </item.components.Name>
+      <item.components.Name name={props.name} />
       <item.components.Health value={props.health} />
       <item.components.Level value={props.level} />
       <item.components.Experience value={props.experience} />
