@@ -1,4 +1,3 @@
-* Add selectors to locations module
 * Add selectors to enemies module
 * Add selectors to dungeonWeapons module
 * Add selectors to dungeons module
