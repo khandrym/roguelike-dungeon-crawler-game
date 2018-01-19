@@ -1,5 +1,8 @@
+* Add DungeonGate component
+* Add DungeonMedicine component
+* Add DungeonWeapon component
 
-
+* Move Player from containers to components inside player module
 
 
 
