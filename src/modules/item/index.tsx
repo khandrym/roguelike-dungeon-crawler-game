@@ -4,6 +4,7 @@ import Health from './components/Health';
 import Level from './components/Level';
 import Locatin from './components/Location';
 import Name from './components/Name';
+import Property from './components/Property';
 import Weapon from './components/Weapon';
 
 export const components = {
@@ -13,5 +14,6 @@ export const components = {
   Level: Level,
   Location: Locatin,
   Name: Name,
+  Property: Property,
   Weapon: Weapon
 };
