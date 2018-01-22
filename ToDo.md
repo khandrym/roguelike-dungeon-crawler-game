@@ -1,4 +1,3 @@
-* Add DungeonMedicine component
 * Add DungeonWeapon component
 
 
