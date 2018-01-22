@@ -10,7 +10,7 @@ interface Props {
   readonly attack: number;
   readonly x: number;
   readonly y: number;
-  readonly dungeonName: string
+  readonly dungeonName: string;
 }
 
 export default (props: Props) => {
@@ -28,4 +28,4 @@ export default (props: Props) => {
       />
     </Wrapper>
   );
-}
+};
