@@ -1,8 +1,3 @@
-* Add selectors to dungeonEnemies module
-
-
-
-
 * Add DungeonGate component
 * Add DungeonMedicine component
 * Add DungeonWeapon component
