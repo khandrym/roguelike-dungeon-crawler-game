@@ -1,4 +1,3 @@
-* Add selectors to dungeonWeapons module
 * Add selectors to dungeons module
 * Add selectors to dungeonMedicines module
 * Add selectors to dungeonGates module
