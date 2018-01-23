@@ -6,8 +6,7 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "node_modules": true,
-    "yarn.lock": true,
-    "**/.vscode": true
+    "yarn.lock": true
   },
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }

@@ -1,4 +1,8 @@
+* Move all initials to initials module
 
+
+
+* Add DungeonItem connector with position property according to player's position to dungeonItem module
 
 
 
