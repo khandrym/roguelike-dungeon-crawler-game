@@ -1,7 +1,7 @@
-import * as locations from '../locations';
+import { State } from '../locations/model';
 import * as location from './location';
 
-export const all: locations.State = {
+export const all: State = {
   byId: {
     [location.player.id]: location.player,
     [location.water1.id]: location.water1,

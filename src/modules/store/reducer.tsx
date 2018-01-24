@@ -11,14 +11,14 @@ import * as dungeonEnemies from '../dungeonEnemies';
 import * as dungeonGates from '../dungeonGates';
 
 export default combineReducers({
-  [player.constants.NAME]: player.reducer,
-  [dungeons.constants.NAME]: dungeons.reducer,
-  [locations.constants.NAME]: locations.reducer,
-  [weapons.constants.NAME]: weapons.reducer,
-  [medicines.constants.NAME]: medicines.reducer,
-  [enemies.constants.NAME]: enemies.reducer,
-  [dungeonMedicines.constants.NAME]: dungeonMedicines.reducer,
-  [dungeonWeapons.constants.NAME]: dungeonWeapons.reducer,
-  [dungeonEnemies.constants.NAME]: dungeonEnemies.reducer,
-  [dungeonGates.constants.NAME]: dungeonGates.reducer
+  [player.model.NAME]: player.reducer,
+  [dungeons.model.NAME]: dungeons.reducer,
+  [locations.model.NAME]: locations.reducer,
+  [weapons.model.NAME]: weapons.reducer,
+  [medicines.model.NAME]: medicines.reducer,
+  [enemies.model.NAME]: enemies.reducer,
+  [dungeonMedicines.model.NAME]: dungeonMedicines.reducer,
+  [dungeonWeapons.model.NAME]: dungeonWeapons.reducer,
+  [dungeonEnemies.model.NAME]: dungeonEnemies.reducer,
+  [dungeonGates.model.NAME]: dungeonGates.reducer
 });

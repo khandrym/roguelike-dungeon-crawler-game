@@ -1,7 +1,7 @@
-import * as dungeonMedicines from '../dungeonMedicines';
+import { State } from '../dungeonMedicines/model';
 import * as dungeonMedicine from './dungeonMedicine';
 
-export const all: dungeonMedicines.State = {
+export const all: State = {
   byId: {
     [dungeonMedicine.water1.id]: dungeonMedicine.water1,
     [dungeonMedicine.water2.id]: dungeonMedicine.water2,

@@ -1,8 +1,8 @@
-import * as player from '../player';
+import { State } from '../player/model';
 import * as location from './location';
 import * as weapon from './weapon';
 
-export const hero: player.State = {
+export const hero: State = {
   name: 'Brave Hero',
   health: 100,
   experience: 10,

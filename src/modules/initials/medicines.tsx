@@ -1,7 +1,7 @@
-import * as medicines from '../medicines';
+import { State } from '../medicines/model';
 import * as medicine from './medicine';
 
-export const all: medicines.State = {
+export const all: State = {
   byId: {
     [medicine.water.id]: medicine.water,
     [medicine.herb.id]: medicine.herb,

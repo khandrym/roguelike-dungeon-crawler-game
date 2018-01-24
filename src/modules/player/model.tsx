@@ -1,3 +1,5 @@
+export const NAME = 'player';
+
 export interface State {
   name: string;
   health: number;

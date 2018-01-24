@@ -1,7 +1,7 @@
-import * as weapons from '../weapons';
+import { State } from '../weapons/model';
 import * as weapon from './weapon';
 
-export const all: weapons.State = {
+export const all: State = {
   byId: {
     [weapon.knife.id]: weapon.knife,
     [weapon.club.id]: weapon.club,

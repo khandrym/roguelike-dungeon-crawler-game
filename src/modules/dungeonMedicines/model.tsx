@@ -1,5 +1,7 @@
 import * as dungeonMedicine from '../dungeonMedicine';
 
+export const NAME = 'dungeonMedicines';
+
 export interface DungeonMedicines {
   [index: string]: dungeonMedicine.State;
 }

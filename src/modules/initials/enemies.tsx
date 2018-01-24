@@ -1,7 +1,7 @@
-import * as enemies from '../enemies';
+import { State } from '../enemies/model';
 import * as enemy from './enemy';
 
-export const all: enemies.State = {
+export const all: State = {
   byId: {
     [enemy.violentDrunkard.id]: enemy.violentDrunkard,
     [enemy.dirtyBouncer.id]: enemy.dirtyBouncer,

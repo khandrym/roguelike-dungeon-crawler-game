@@ -1,16 +1,16 @@
-import * as dungeonWeapon from '../dungeonWeapon';
+import { State, NAME } from '../dungeonWeapon/model';
 import * as weapon from './weapon';
 import * as location from './location';
 import idGenerator from '../idGenerator';
 
-export const knife: dungeonWeapon.State = {
-  id: idGenerator.generateId(dungeonWeapon.constants.NAME),
+export const knife: State = {
+  id: idGenerator.generateId(NAME),
   weaponId: weapon.knife.id,
   locationId: location.knife.id
 };
 
-export const club: dungeonWeapon.State = {
-  id: idGenerator.generateId(dungeonWeapon.constants.NAME),
+export const club: State = {
+  id: idGenerator.generateId(NAME),
   weaponId: weapon.club.id,
   locationId: location.club.id
 };

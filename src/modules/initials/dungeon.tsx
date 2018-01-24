@@ -1,17 +1,17 @@
-import * as dungeon from '../dungeon';
+import { State, NAME } from '../dungeon/model';
 import idGenerator from '../idGenerator';
 
-export const gray: dungeon.State = {
-  id: idGenerator.generateId(dungeon.constants.NAME),
+export const gray: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Gray'
 };
 
-export const durk: dungeon.State = {
-  id: idGenerator.generateId(dungeon.constants.NAME),
+export const durk: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Durk'
 };
 
-export const black: dungeon.State = {
-  id: idGenerator.generateId(dungeon.constants.NAME),
+export const black: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Black'
 };

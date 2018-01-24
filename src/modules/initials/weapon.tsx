@@ -1,44 +1,44 @@
-import * as weapon from '../weapon';
+import { State, NAME } from '../weapon/model';
 import idGenerator from '../idGenerator';
 
-export const knife: weapon.State = {
-  id: idGenerator.generateId(weapon.constants.NAME),
+export const knife: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Knife',
   attack: 10
 };
 
-export const club: weapon.State = {
-  id: idGenerator.generateId(weapon.constants.NAME),
+export const club: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Club',
   attack: 20
 };
 
-export const dagger: weapon.State = {
-  id: idGenerator.generateId(weapon.constants.NAME),
+export const dagger: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Dagger',
   attack: 40
 };
 
-export const mace: weapon.State = {
-  id: idGenerator.generateId(weapon.constants.NAME),
+export const mace: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Mace',
   attack: 60
 };
 
-export const spear: weapon.State = {
-  id: idGenerator.generateId(weapon.constants.NAME),
+export const spear: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Spear',
   attack: 80
 };
 
-export const sword: weapon.State = {
-  id: idGenerator.generateId(weapon.constants.NAME),
+export const sword: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Sword',
   attack: 100
 };
 
-export const axe: weapon.State = {
-  id: idGenerator.generateId(weapon.constants.NAME),
+export const axe: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Axe',
   attack: 100
 };

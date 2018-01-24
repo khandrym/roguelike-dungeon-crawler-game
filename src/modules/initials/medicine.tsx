@@ -1,20 +1,20 @@
-import * as medicine from '../medicine';
+import { State, NAME } from '../medicine/model';
 import idGenerator from '../idGenerator';
 
-export const water: medicine.State = {
-  id: idGenerator.generateId(medicine.constants.NAME),
+export const water: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Water',
   health: 10
 };
 
-export const herb: medicine.State = {
-  id: idGenerator.generateId(medicine.constants.NAME),
+export const herb: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Herb',
   health: 20
 };
 
-export const potion: medicine.State = {
-  id: idGenerator.generateId(medicine.constants.NAME),
+export const potion: State = {
+  id: idGenerator.generateId(NAME),
   name: 'Potion',
   health: 40
 };

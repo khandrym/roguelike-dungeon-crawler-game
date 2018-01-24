@@ -1,4 +1,4 @@
-import * as _store from '../store';
+import { State } from '../store/model';
 import * as player from './player';
 import * as dungeons from './dungeons';
 import * as locations from './locations';
@@ -10,7 +10,7 @@ import * as dungeonWeapons from './dungeonWeapons';
 import * as dungeonEnemies from './dungeonEnemies';
 import * as dungeonGates from './dungeonGates';
 
-export const store: _store.State = {
+export const store: State = {
   player: player.hero,
   dungeons: dungeons.all,
   locations: locations.all,

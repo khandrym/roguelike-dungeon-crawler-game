@@ -1,3 +1,5 @@
+export const NAME = 'dungeonEnemy';
+
 export interface State {
   id: string;
   health: number;
