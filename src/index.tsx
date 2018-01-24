@@ -6,11 +6,12 @@ import * as ReactRedux from 'react-redux';
 import { devToolsEnhancer } from 'redux-devtools-extension/logOnlyInProduction';
 import './index.css';
 import * as store from './modules/store';
+import * as initials from './modules/initials';
 import * as app from './modules/app';
 
 const appStore = Redux.createStore(
   store.reducer,
-  store.initials.store,
+  initials.store,
   devToolsEnhancer({}));
 
 ReactDOM.render(
