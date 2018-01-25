@@ -34,7 +34,7 @@ function deletReducerAllIds(state: string[], action: actions.Delete): string[] {
 
 function moveRightReducerById(state: Locations, action: actions.MoveRight): Locations {
   const id = action.payload.id;
-  const movedLocation = location.reducer(state[id], location.actions.moveRight());
+  const movedLocation = location.reducer(state[id], location.moveRight());
   return {
     ...state,
     [id]: movedLocation
@@ -47,7 +47,7 @@ function moveRightReducerAllIds(state: string[], action: actions.MoveRight): str
 
 function moveLeftReducerById(state: Locations, action: actions.MoveLeft): Locations {
   const id = action.payload.id;
-  const movedLocation = location.reducer(state[id], location.actions.moveLeft());
+  const movedLocation = location.reducer(state[id], location.moveLeft());
   return {
     ...state,
     [id]: movedLocation
@@ -60,7 +60,7 @@ function moveLeftReducerAllIds(state: string[], action: actions.MoveLeft): strin
 
 function moveUpReducerById(state: Locations, action: actions.MoveUp): Locations {
   const id = action.payload.id;
-  const movedLocation = location.reducer(state[id], location.actions.moveUp());
+  const movedLocation = location.reducer(state[id], location.moveUp());
   return {
     ...state,
     [id]: movedLocation
@@ -73,7 +73,7 @@ function moveUpReducerAllIds(state: string[], action: actions.MoveUp): string[] 
 
 function moveDownReducerById(state: Locations, action: actions.MoveDown): Locations {
   const id = action.payload.id;
-  const movedLocation = location.reducer(state[id], location.actions.moveDown());
+  const movedLocation = location.reducer(state[id], location.moveDown());
   return {
     ...state,
     [id]: movedLocation
