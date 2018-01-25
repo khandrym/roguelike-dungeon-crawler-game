@@ -35,7 +35,7 @@ function deleteReducerAllIds(state: string[], action: actions.Delete): string[] 
 function decreaseHealthReducerById(state: DungeonMedicines, action: actions.DecreaseHealth): DungeonMedicines {
   const id = action.payload.id;
   const value = action.payload.value;
-  const modifiedDungeonMedicine = dungeonMedicine.reducer(state[id], dungeonMedicine.actions.decreaseHealth(value));
+  const modifiedDungeonMedicine = dungeonMedicine.reducer(state[id], dungeonMedicine.decreaseHealth(value));
   return {
     ...state,
     [id]: modifiedDungeonMedicine
