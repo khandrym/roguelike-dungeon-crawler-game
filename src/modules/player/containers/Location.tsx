@@ -69,16 +69,16 @@ function mergeProps(stateProps: StateProps, dispatchProps: DispatchProps): Merge
     onKeyPress: (event: KeyboardEvent) => {
       switch (event.key) {
         case 'ArrowRight':
-          dispatchProps.dispatch(locations.actions.moveRight(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveRight(stateProps.locationId));
           break;
         case 'ArrowLeft':
-          dispatchProps.dispatch(locations.actions.moveLeft(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveLeft(stateProps.locationId));
           break;
         case 'ArrowUp':
-          dispatchProps.dispatch(locations.actions.moveUp(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveUp(stateProps.locationId));
           break;
         case 'ArrowDown':
-          dispatchProps.dispatch(locations.actions.moveDown(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveDown(stateProps.locationId));
           break;
         default:
           return;
