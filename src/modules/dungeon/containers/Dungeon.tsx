@@ -26,7 +26,7 @@ function DungeonContainer(props: Props) {
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   return {
-    dungeon: dungeons.selectors.getDungeon(state, ownProps.id)
+    dungeon: dungeons.getDungeon(state, ownProps.id)
   };
 }
 
