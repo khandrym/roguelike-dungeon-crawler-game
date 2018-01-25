@@ -1,5 +1,1 @@
-import Info from './components/Info';
-
-export const components = {
-  Info: Info
-};
+export { default as components } from './components';
