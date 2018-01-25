@@ -1,4 +1,4 @@
-import { State, NAME } from '../location/model';
+import { State, NAME } from '../location';
 import idGenerator from '../idGenerator';
 import * as dungeon from './dungeon';
 

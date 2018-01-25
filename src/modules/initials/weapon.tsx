@@ -1,4 +1,4 @@
-import { State, NAME } from '../weapon/model';
+import { State, NAME } from '../weapon';
 import idGenerator from '../idGenerator';
 
 export const knife: State = {

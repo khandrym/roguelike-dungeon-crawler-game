@@ -1,4 +1,4 @@
-import { State } from '../weapons/model';
+import { State } from '../weapons';
 import * as weapon from './weapon';
 
 const weapons: State = {

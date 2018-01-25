@@ -1,4 +1,4 @@
-import { State } from '../store/model';
+import { State } from '../store';
 import player from './player';
 import dungeons from './dungeons';
 import locations from './locations';

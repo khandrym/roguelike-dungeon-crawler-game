@@ -1,4 +1,4 @@
-import { State, NAME } from '../medicine/model';
+import { State, NAME } from '../medicine';
 import idGenerator from '../idGenerator';
 
 export const water: State = {

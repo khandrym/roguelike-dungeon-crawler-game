@@ -1,4 +1,4 @@
-import { State } from '../player/model';
+import { State } from '../player';
 import * as location from './location';
 import * as weapon from './weapon';
 

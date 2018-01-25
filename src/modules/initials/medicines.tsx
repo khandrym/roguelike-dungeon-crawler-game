@@ -1,4 +1,4 @@
-import { State } from '../medicines/model';
+import { State } from '../medicines';
 import * as medicine from './medicine';
 
 const medicines: State = {

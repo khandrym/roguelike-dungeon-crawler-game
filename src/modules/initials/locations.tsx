@@ -1,4 +1,4 @@
-import { State } from '../locations/model';
+import { State } from '../locations';
 import * as location from './location';
 
 const locations: State = {
