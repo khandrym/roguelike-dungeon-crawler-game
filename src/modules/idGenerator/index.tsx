@@ -1,3 +1,3 @@
-import * as models from './model';
+import IdGenerator from './model';
 
-export default models.IdGenerator;
+export default IdGenerator;

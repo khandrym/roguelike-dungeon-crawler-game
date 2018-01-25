@@ -1,4 +1,4 @@
-export class IdGenerator {
+export default class IdGenerator {
   private static count = 0;
 
   public static generateId(baseName: string): string {
