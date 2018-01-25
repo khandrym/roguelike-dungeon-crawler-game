@@ -1,5 +1,1 @@
-import Map from './components/Map';
-
-export const components = {
-  Map: Map
-};
+export { default as components } from './components';
