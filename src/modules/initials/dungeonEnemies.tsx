@@ -1,4 +1,4 @@
-import { State } from '../dungeonEnemies/model';
+import { State } from '../dungeonEnemies';
 import * as dungeonEnemy from './dungeonEnemy';
 
 const dungeonEnemies: State = {

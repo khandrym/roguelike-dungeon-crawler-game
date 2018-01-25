@@ -1,4 +1,4 @@
-import { State, NAME } from '../dungeonWeapon/model';
+import { State, NAME } from '../dungeonWeapon';
 import idGenerator from '../idGenerator';
 import * as weapon from './weapon';
 import * as location from './location';

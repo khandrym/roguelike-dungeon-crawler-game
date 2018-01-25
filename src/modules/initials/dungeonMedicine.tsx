@@ -1,4 +1,4 @@
-import { State, NAME } from '../dungeonMedicine/model';
+import { State, NAME } from '../dungeonMedicine';
 import idGenerator from '../idGenerator';
 import * as medicine from './medicine';
 import * as location from './location';

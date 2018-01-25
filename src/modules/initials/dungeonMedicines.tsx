@@ -1,4 +1,4 @@
-import { State } from '../dungeonMedicines/model';
+import { State } from '../dungeonMedicines';
 import * as dungeonMedicine from './dungeonMedicine';
 
 const dungeonMedicines: State = {

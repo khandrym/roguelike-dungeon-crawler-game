@@ -1,4 +1,4 @@
-import { State, NAME } from '../enemy/model';
+import { State, NAME } from '../enemy';
 import idGenerator from '../idGenerator';
 import * as weapon from './weapon';
 

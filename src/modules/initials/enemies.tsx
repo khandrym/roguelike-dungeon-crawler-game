@@ -1,4 +1,4 @@
-import { State } from '../enemies/model';
+import { State } from '../enemies';
 import * as enemy from './enemy';
 
 const enemies: State = {

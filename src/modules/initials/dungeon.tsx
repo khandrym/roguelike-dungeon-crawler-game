@@ -1,4 +1,4 @@
-import { State, NAME } from '../dungeon/model';
+import { State, NAME } from '../dungeon';
 import idGenerator from '../idGenerator';
 
 export const gray: State = {
