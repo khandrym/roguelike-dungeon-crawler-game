@@ -19,6 +19,6 @@ export default combineReducers({
   [enemies.model.NAME]: enemies.reducer,
   [dungeonMedicines.model.NAME]: dungeonMedicines.reducer,
   [dungeonWeapons.model.NAME]: dungeonWeapons.reducer,
-  [dungeonEnemies.model.NAME]: dungeonEnemies.reducer,
+  [dungeonEnemies.NAME]: dungeonEnemies.reducer,
   [dungeonGates.model.NAME]: dungeonGates.reducer
 });
