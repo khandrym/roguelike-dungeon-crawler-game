@@ -1,7 +1,7 @@
 import { State } from '../dungeons/model';
 import * as dungeon from './dungeon';
 
-export const all: State = {
+const dungeons: State = {
   byId: {
     [dungeon.gray.id]: dungeon.gray,
     [dungeon.durk.id]: dungeon.durk,
@@ -13,3 +13,5 @@ export const all: State = {
     dungeon.black.id
   ]
 };
+
+export default dungeons;

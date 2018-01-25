@@ -1,7 +1,7 @@
 import { State } from '../dungeonWeapons/model';
 import * as dungeonWeapon from './dungeonWeapon';
 
-export const all: State = {
+const dungeonWeapons: State = {
   byId: {
     [dungeonWeapon.knife.id]: dungeonWeapon.knife,
     [dungeonWeapon.club.id]: dungeonWeapon.club
@@ -11,3 +11,5 @@ export const all: State = {
     dungeonWeapon.club.id
   ]
 };
+
+export default dungeonWeapons;

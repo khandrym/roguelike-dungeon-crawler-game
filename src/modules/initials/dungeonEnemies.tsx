@@ -1,7 +1,7 @@
 import { State } from '../dungeonEnemies/model';
 import * as dungeonEnemy from './dungeonEnemy';
 
-export const all: State = {
+const dungeonEnemies: State = {
   byId: {
     [dungeonEnemy.enemy1.id]: dungeonEnemy.enemy1,
     [dungeonEnemy.enemy2.id]: dungeonEnemy.enemy2
@@ -11,3 +11,5 @@ export const all: State = {
     dungeonEnemy.enemy2.id
   ]
 };
+
+export default dungeonEnemies;

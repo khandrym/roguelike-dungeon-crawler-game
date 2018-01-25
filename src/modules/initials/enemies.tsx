@@ -1,7 +1,7 @@
 import { State } from '../enemies/model';
 import * as enemy from './enemy';
 
-export const all: State = {
+const enemies: State = {
   byId: {
     [enemy.violentDrunkard.id]: enemy.violentDrunkard,
     [enemy.dirtyBouncer.id]: enemy.dirtyBouncer,
@@ -19,3 +19,5 @@ export const all: State = {
     enemy.blackKing.id
   ]
 };
+
+export default enemies;

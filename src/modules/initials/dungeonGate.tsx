@@ -1,6 +1,6 @@
 import { State, NAME } from '../dungeonGate/model';
-import * as location from './location';
 import idGenerator from '../idGenerator';
+import * as location from './location';
 
 export const gate1: State = {
   id: idGenerator.generateId(NAME),

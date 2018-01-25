@@ -1,7 +1,7 @@
 import { State, NAME } from '../dungeonMedicine/model';
+import idGenerator from '../idGenerator';
 import * as medicine from './medicine';
 import * as location from './location';
-import idGenerator from '../idGenerator';
 
 export const water1: State = {
   id: idGenerator.generateId(NAME),

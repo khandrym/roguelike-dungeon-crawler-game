@@ -1,7 +1,7 @@
 import { State, NAME } from '../dungeonWeapon/model';
+import idGenerator from '../idGenerator';
 import * as weapon from './weapon';
 import * as location from './location';
-import idGenerator from '../idGenerator';
 
 export const knife: State = {
   id: idGenerator.generateId(NAME),

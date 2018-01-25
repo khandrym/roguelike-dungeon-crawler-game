@@ -1,7 +1,7 @@
 import { State } from '../locations/model';
 import * as location from './location';
 
-export const all: State = {
+const locations: State = {
   byId: {
     [location.player.id]: location.player,
     [location.water1.id]: location.water1,
@@ -31,3 +31,5 @@ export const all: State = {
     location.gate2To.id
   ]
 };
+
+export default locations;

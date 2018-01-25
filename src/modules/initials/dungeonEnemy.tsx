@@ -1,7 +1,7 @@
 import { State, NAME } from '../dungeonEnemy/model';
+import idGenerator from '../idGenerator';
 import * as enemy from './enemy';
 import * as location from './location';
-import idGenerator from '../idGenerator';
 
 export const enemy1: State = {
   id: idGenerator.generateId(NAME),

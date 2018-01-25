@@ -1,7 +1,7 @@
 import { State } from '../medicines/model';
 import * as medicine from './medicine';
 
-export const all: State = {
+const medicines: State = {
   byId: {
     [medicine.water.id]: medicine.water,
     [medicine.herb.id]: medicine.herb,
@@ -13,3 +13,5 @@ export const all: State = {
     medicine.potion.id
   ]
 };
+
+export default medicines;

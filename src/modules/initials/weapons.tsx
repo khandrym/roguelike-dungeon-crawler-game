@@ -1,7 +1,7 @@
 import { State } from '../weapons/model';
 import * as weapon from './weapon';
 
-export const all: State = {
+const weapons: State = {
   byId: {
     [weapon.knife.id]: weapon.knife,
     [weapon.club.id]: weapon.club,
@@ -21,3 +21,5 @@ export const all: State = {
     weapon.axe.id
   ]
 };
+
+export default weapons;
