@@ -17,7 +17,7 @@ import * as _medicines from './medicines';
 import * as _weapon from './weapon';
 import * as _weapons from './weapons';
 import * as _player from './player';
-import * as _store from './store';
+import _store from './store';
 
 export const dungeon = _dungeon;
 export const dungeons = _dungeons;

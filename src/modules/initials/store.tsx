@@ -10,7 +10,7 @@ import * as dungeonWeapons from './dungeonWeapons';
 import * as dungeonEnemies from './dungeonEnemies';
 import * as dungeonGates from './dungeonGates';
 
-export const store: State = {
+const store: State = {
   player: player.hero,
   dungeons: dungeons.all,
   locations: locations.all,
@@ -22,3 +22,5 @@ export const store: State = {
   dungeonEnemies: dungeonEnemies.all,
   dungeonGates: dungeonGates.all
 };
+
+export default store;
