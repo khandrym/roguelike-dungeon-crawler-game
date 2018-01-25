@@ -11,7 +11,7 @@ import * as dungeonEnemies from '../dungeonEnemies';
 import * as dungeonGates from '../dungeonGates';
 
 export default combineReducers({
-  [player.model.NAME]: player.reducer,
+  [player.NAME]: player.reducer,
   [dungeons.NAME]: dungeons.reducer,
   [locations.NAME]: locations.reducer,
   [weapons.model.NAME]: weapons.reducer,

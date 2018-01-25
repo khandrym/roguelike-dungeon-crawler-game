@@ -1,5 +1,1 @@
-import Title from './components/Title';
-
-export const components = {
-  Title: Title
-};
+export { default as components } from './components';
