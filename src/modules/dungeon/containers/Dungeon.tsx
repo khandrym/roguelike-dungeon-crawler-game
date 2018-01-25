@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import * as store from '../../store';
-import * as dungeons from '../../dungeons';
-import Dungeon from '../components/Dungeon';
 import { State } from '../model';
+import components from '../components';
+import * as dungeons from '../../dungeons';
+import * as store from '../../store';
 
 interface OwnProps {
   id: string;
@@ -20,7 +20,7 @@ interface Props extends OwnProps, StateProps, DispatchProps { }
 
 function DungeonContainer(props: Props) {
   return (
-    <Dungeon dungeon={props.dungeon} />
+    <components.Dungeon dungeon={props.dungeon} />
   );
 }
 
