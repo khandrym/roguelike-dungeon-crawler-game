@@ -1,4 +1,3 @@
-* Add Medicine component and container
 * Add Enemy component and container
 
 
