@@ -8,7 +8,7 @@ interface Props {
 export default (props: Props) => {
   return (
     <Property>
-      Experience: {props.value}
+      Level: {Math.floor(props.value / 10.0)} (experience: {props.value})
     </Property>
   );
 };
