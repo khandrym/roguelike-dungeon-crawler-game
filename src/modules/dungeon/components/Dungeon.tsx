@@ -9,7 +9,7 @@ interface Props {
 export default (props: Props) => {
   return (
     <item.components.Property>
-      dungeon: {props.dungeon.name}
+      {props.dungeon.name} dungeon
     </item.components.Property>
   );
 };
