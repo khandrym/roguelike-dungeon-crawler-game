@@ -1,4 +1,6 @@
-* Refactor exports of all modules
+* Add Location component and container
+* Add Medicine component and container
+* Add Enemy component and container
 
 
 
