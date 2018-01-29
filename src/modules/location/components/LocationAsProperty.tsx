@@ -11,7 +11,7 @@ export default (props: Props) => {
   return (
     <item.components.Property>
       Location:
-      <dungeon.containers.Dungeon id={props.location.dungeonId} />
+      <dungeon.containers.DungeonAsLabel id={props.location.dungeonId} />
       [{props.location.x}, {props.location.y}]
     </item.components.Property>
   );

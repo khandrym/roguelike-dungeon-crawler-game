@@ -1,5 +1,5 @@
-import Dungeon from './Dungeon';
+import DungeonAsLabel from './DungeonAsLabel';
 
 export default {
-  Dungeon: Dungeon
+  DungeonAsLabel: DungeonAsLabel
 };

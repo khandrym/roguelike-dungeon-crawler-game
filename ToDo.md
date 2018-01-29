@@ -1,4 +1,4 @@
-* Rename Dungeon component to DungeonAsProperty component
+
 
 
 

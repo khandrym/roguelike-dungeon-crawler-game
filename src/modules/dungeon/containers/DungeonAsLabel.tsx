@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function Dungeon(props: Props) {
+function DungeonAsLabel(props: Props) {
   return (
-    <components.Dungeon dungeon={props.dungeon} />
+    <components.DungeonAsLabel dungeon={props.dungeon} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dungeon);
+export default connect(mapStateToProps, mapDispatchToProps)(DungeonAsLabel);
