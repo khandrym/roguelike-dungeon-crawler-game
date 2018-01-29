@@ -1,5 +1,5 @@
-import Weapon from './Weapon';
+import WeaponAsProperty from './WeaponAsProperty';
 
 export default {
-  Weapon: Weapon
+  WeaponAsProperty: WeaponAsProperty
 };

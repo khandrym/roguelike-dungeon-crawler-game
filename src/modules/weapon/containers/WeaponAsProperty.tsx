@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function Weapon(props: Props) {
+function WeaponAsProperty(props: Props) {
   return (
-    <components.Weapon weapon={props.weapon} />
+    <components.WeaponAsProperty weapon={props.weapon} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Weapon);
+export default connect(mapStateToProps, mapDispatchToProps)(WeaponAsProperty);

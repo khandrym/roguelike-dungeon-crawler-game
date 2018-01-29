@@ -1,5 +1,4 @@
-* Create WeaponAsProperty component and container inside the weapon module
-* Rename Weapon component to WeaponAsItem and refactor it to show it as a separate item
+* Create WeaponAsItem component and container inside the weapon module in order to show it as a separate item
 * Rename Location component to LocationAsProperty component
 * Rename Dungeon component to DungeonAsProperty component
 
