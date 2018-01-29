@@ -1,5 +1,5 @@
-import Location from './Location';
+import LocationAsProperty from './LocationAsProperty';
 
 export default {
-  Location: Location
+  LocationAsProperty: LocationAsProperty
 };

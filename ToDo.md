@@ -1,4 +1,3 @@
-* Rename Location component to LocationAsProperty component
 * Rename Dungeon component to DungeonAsProperty component
 
 

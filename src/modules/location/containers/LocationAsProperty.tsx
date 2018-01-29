@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function Location(props: Props) {
+function LocationAsProperty(props: Props) {
   return (
-    <components.Location location={props.location} />
+    <components.LocationAsProperty location={props.location} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Location);
+export default connect(mapStateToProps, mapDispatchToProps)(LocationAsProperty);
