@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function Medicine(props: Props) {
+function MedicineAsItem(props: Props) {
   return (
-    <components.Medicine medicine={props.medicine} />
+    <components.MedicineAsItem medicine={props.medicine} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Medicine);
+export default connect(mapStateToProps, mapDispatchToProps)(MedicineAsItem);

@@ -1,5 +1,5 @@
-import Medicine from './Medicine';
+import MedicineAsItem from './MedicineAsItem';
 
 export default {
-  Medicine: Medicine
+  MedicineAsItem: MedicineAsItem
 };
