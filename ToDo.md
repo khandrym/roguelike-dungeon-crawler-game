@@ -1,4 +1,4 @@
-
+* Remove Location component from item module
 
 
 

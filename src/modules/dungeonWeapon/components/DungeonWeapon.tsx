@@ -1,13 +1,12 @@
 import * as React from 'react';
 import Wrapper from './Wrapper';
 import * as item from '../../item';
+import * as location from '../../location';
 
 interface Props {
   readonly name: string;
   readonly attack: number;
-  readonly x: number;
-  readonly y: number;
-  readonly dungeonName: string;
+  readonly locationId: string;
 }
 
 export default (props: Props) => {
@@ -17,11 +16,7 @@ export default (props: Props) => {
       <item.components.Property>
         Attack: {props.attack}
       </item.components.Property>
-      <item.components.Location
-        x={props.x}
-        y={props.y}
-        dungeonName={props.dungeonName}
-      />
+      <location.containers.LocationAsProperty id={props.locationId} />
     </Wrapper>
   );
 };

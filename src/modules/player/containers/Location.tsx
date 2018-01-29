@@ -1,15 +1,12 @@
 import * as React from 'react';
 import { AnyAction } from 'redux';
 import { connect, Dispatch } from 'react-redux';
-import * as item from '../../item';
 import * as store from '../../store';
+import * as location from '../../location';
 import * as locations from '../../locations';
 
 interface StateProps {
   locationId: string;
-  dungeonName: string;
-  x: number;
-  y: number;
 }
 
 interface DispatchProps {
@@ -17,9 +14,7 @@ interface DispatchProps {
 }
 
 interface MergeProps {
-  dungeonName: string;
-  x: number;
-  y: number;
+  locationId: string;
   onKeyPress: (event: KeyboardEvent) => void;
 }
 
@@ -37,21 +32,14 @@ class Location extends React.Component<MergeProps, object> {
 
   public render() {
     return (
-      <item.components.Location
-        x={this.props.x}
-        y={this.props.y}
-        dungeonName={this.props.dungeonName}
-      />
+      <location.containers.LocationAsProperty id={this.props.locationId} />
     );
   }
 }
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    locationId: s.player.locationId,
-    dungeonName: s.dungeons.byId[s.locations.byId[s.player.locationId].dungeonId].name,
-    x: s.locations.byId[s.player.locationId].x,
-    y: s.locations.byId[s.player.locationId].y
+    locationId: s.player.locationId
   };
 }
 
@@ -63,9 +51,7 @@ function mapDispatchToProps(dispatch: Dispatch<AnyAction>): DispatchProps {
 
 function mergeProps(stateProps: StateProps, dispatchProps: DispatchProps): MergeProps {
   return {
-    dungeonName: stateProps.dungeonName,
-    x: stateProps.x,
-    y: stateProps.y,
+    locationId: stateProps.locationId,
     onKeyPress: (event: KeyboardEvent) => {
       switch (event.key) {
         case 'ArrowRight':
