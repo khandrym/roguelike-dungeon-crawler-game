@@ -18,7 +18,7 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function DungeonEnemy(props: Props) {
+function DungeonMedicine(props: Props) {
   return (
     <components.DungeonMedicine dungeonMedicine={props.dungeonMedicine} />
   );
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DungeonEnemy);
+export default connect(mapStateToProps, mapDispatchToProps)(DungeonMedicine);

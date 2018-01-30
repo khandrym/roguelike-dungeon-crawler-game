@@ -1,5 +1,5 @@
-import DungeonAsGate from './DungeonGate';
+import DungeonGate from './DungeonGate';
 
 export default {
-  DungeonAsGate: DungeonAsGate
+  DungeonGate: DungeonGate
 };

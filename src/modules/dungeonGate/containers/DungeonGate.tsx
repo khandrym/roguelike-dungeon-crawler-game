@@ -18,7 +18,7 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function DungeonAsLabel(props: Props) {
+function DungeonGate(props: Props) {
   return (
     <components.DungeonGate dungeonGate={props.dungeonGate} />
   );
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DungeonAsLabel);
+export default connect(mapStateToProps, mapDispatchToProps)(DungeonGate);
