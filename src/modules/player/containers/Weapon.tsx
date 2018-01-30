@@ -18,9 +18,9 @@ function Weapon(props: Props) {
   );
 }
 
-function mapStateToProps(s: store.State): StateProps {
+function mapStateToProps(state: store.State): StateProps {
   return {
-    weaponId: store.getPlayer(s).weaponId
+    weaponId: store.getPlayer(state).weaponId
   };
 }
 

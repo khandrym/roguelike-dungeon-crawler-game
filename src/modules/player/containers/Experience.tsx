@@ -18,9 +18,9 @@ function Experience(props: Props) {
   );
 }
 
-function mapStateToProps(s: store.State): StateProps {
+function mapStateToProps(state: store.State): StateProps {
   return {
-    value: store.getPlayer(s).experience
+    value: store.getPlayer(state).experience
   };
 }
 

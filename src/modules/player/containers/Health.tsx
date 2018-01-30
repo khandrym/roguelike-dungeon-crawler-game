@@ -18,9 +18,9 @@ function Health(props: Props) {
   );
 }
 
-function mapStateToProps(s: store.State): StateProps {
+function mapStateToProps(state: store.State): StateProps {
   return {
-    value: store.getPlayer(s).health
+    value: store.getPlayer(state).health
   };
 }
 
