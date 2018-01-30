@@ -20,7 +20,7 @@ function Name(props: Props) {
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    name: s.player.name
+    name: store.getPlayer(s).name
   };
 }
 

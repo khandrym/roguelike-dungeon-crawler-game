@@ -1,4 +1,4 @@
-* Refactor Player component and containger based on the State of the model
+
 
 
 * Add DungeonItem connector with position property according to player's position to dungeonItem module

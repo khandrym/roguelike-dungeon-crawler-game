@@ -20,7 +20,7 @@ function Health(props: Props) {
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    value: s.player.health
+    value: store.getPlayer(s).health
   };
 }
 
