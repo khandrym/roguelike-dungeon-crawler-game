@@ -20,7 +20,7 @@ function Weapon(props: Props) {
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    weaponId: store.selectors.getPlayer(s).weaponId
+    weaponId: store.getPlayer(s).weaponId
   };
 }
 

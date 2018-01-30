@@ -1,4 +1,3 @@
-* Refactor index file for store module
 * Remove Level component from item module
 
 

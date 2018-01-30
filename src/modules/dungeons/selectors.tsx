@@ -3,7 +3,7 @@ import * as store from '../store';
 import * as dungeon from '../dungeon';
 
 export function getDungeons(state: store.State): Dungeons {
-  return store.selectors.getDungeons(state).byId;
+  return store.getDungeons(state).byId;
 }
 
 export function getDungeon(state: store.State, id: string): dungeon.State {
