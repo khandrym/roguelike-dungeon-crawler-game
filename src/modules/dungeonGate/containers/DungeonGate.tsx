@@ -1,0 +1,37 @@
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { State } from '../model';
+import components from '../components';
+import * as dungeonGates from '../../dungeonGates';
+import * as store from '../../store';
+
+interface OwnProps {
+  id: string;
+}
+
+interface StateProps {
+  dungeonGate: State;
+}
+
+interface DispatchProps {
+}
+
+interface Props extends OwnProps, StateProps, DispatchProps { }
+
+function DungeonAsLabel(props: Props) {
+  return (
+    <components.DungeonGate dungeonGate={props.dungeonGate} />
+  );
+}
+
+function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
+  return {
+    dungeonGate: dungeonGates.getDungeonGate(state, ownProps.id)
+  };
+}
+
+function mapDispatchToProps(): DispatchProps {
+  return {};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DungeonAsLabel);
