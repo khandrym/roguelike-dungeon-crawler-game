@@ -1,20 +1,18 @@
 import * as React from 'react';
-import Wrapper from './Wrapper';
+import { State } from '../model';
+import * as medicine from '../../medicine';
 import * as item from '../../item';
 import * as location from '../../location';
 
 interface Props {
-  readonly name: string;
-  readonly health: number;
-  readonly locationId: string;
+  readonly dungeonMedicine: State;
 }
 
 export default (props: Props) => {
   return (
-    <Wrapper>
-      <item.components.Name name={props.name} />
-      <item.components.Health value={props.health} />
-      <location.containers.LocationAsProperty id={props.locationId} />
-    </Wrapper>
+    <medicine.containers.MedicineAsItem id={props.dungeonMedicine.medicineId} >
+      <item.components.Health value={props.dungeonMedicine.health} />
+      <location.containers.LocationAsProperty id={props.dungeonMedicine.locationId} />
+    </medicine.containers.MedicineAsItem>
   );
 };

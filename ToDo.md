@@ -1,4 +1,3 @@
-* Refactor DungeonMedicine component and add DungeonMedicine container to dungeonMedicine module
 * Refactor DungeonWeapon component and add DungeonWeapon container to dungeonWeapon module
 
 * Refactor Player component and containger based on the State of the model

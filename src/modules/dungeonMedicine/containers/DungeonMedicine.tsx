@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
 import components from '../components';
-import * as medicines from '../../medicines';
+import * as dungeonMedicines from '../../dungeonMedicines';
 import * as store from '../../store';
 
 interface OwnProps {
@@ -10,8 +10,7 @@ interface OwnProps {
 }
 
 interface StateProps {
-  medicine: State;
-  children?: JSX.Element;
+  dungeonMedicine: State;
 }
 
 interface DispatchProps {
@@ -19,17 +18,15 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function MedicineAsItem(props: Props) {
+function DungeonEnemy(props: Props) {
   return (
-    <components.MedicineAsItem medicine={props.medicine}>
-      {props.children}
-    </components.MedicineAsItem>
+    <components.DungeonMedicine dungeonMedicine={props.dungeonMedicine} />
   );
 }
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   return {
-    medicine: medicines.getMedicine(state, ownProps.id)
+    dungeonMedicine: dungeonMedicines.getDungeonMedicine(state, ownProps.id)
   };
 }
 
@@ -37,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MedicineAsItem);
+export default connect(mapStateToProps, mapDispatchToProps)(DungeonEnemy);
