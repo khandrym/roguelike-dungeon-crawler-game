@@ -10,9 +10,9 @@ export default () => {
   return (
     <Wrapper>
       <Name />
-      <Health />
       <Experience />
       <Weapon />
+      <Health />
       <Location />
     </Wrapper>
   );

@@ -1,25 +1,18 @@
 import * as React from 'react';
-import Wrapper from './Wrapper';
-import * as item from '../../item';
-import * as weapon from '../../weapon';
+import { State } from '../model';
+import * as enemy from '../../enemy';
 import * as location from '../../location';
+import * as item from '../../item';
 
 interface Props {
-  readonly name: string;
-  readonly health: number;
-  readonly experience: number;
-  readonly weaponId: string;
-  readonly locationId: string;
+  readonly dungeonEnemy: State;
 }
 
 export default (props: Props) => {
   return (
-    <Wrapper>
-      <item.components.Name name={props.name} />
-      <item.components.Health value={props.health} />
-      <item.components.Experience value={props.experience} />
-      <weapon.containers.WeaponAsProperty id={props.weaponId} />
-      <location.containers.LocationAsProperty id={props.locationId} />
-    </Wrapper>
+    <enemy.containers.Enemy id={props.dungeonEnemy.enemyId}>
+      <item.components.Health value={props.dungeonEnemy.health} />
+      <location.containers.LocationAsProperty id={props.dungeonEnemy.locationId} />
+    </enemy.containers.Enemy>
   );
 };

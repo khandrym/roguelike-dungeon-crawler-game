@@ -1,4 +1,8 @@
+* Refactor DungeonGate component and add DungeonGate container to dungeonGate module
+* Refactor DungeonMedicine component and add DungeonMedicine container to dungeonMedicine module
+* Refactor DungeonWeapon component and add DungeonWeapon container to dungeonWeapon module
 
+* Refactor Player component and containger based on the State of the model
 
 
 * Add DungeonItem connector with position property according to player's position to dungeonItem module
