@@ -1,4 +1,4 @@
-* Remove Level component from item module
+
 
 
 * Add DungeonItem connector with position property according to player's position to dungeonItem module

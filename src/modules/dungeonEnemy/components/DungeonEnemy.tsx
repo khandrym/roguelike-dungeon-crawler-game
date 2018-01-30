@@ -17,7 +17,6 @@ export default (props: Props) => {
     <Wrapper>
       <item.components.Name name={props.name} />
       <item.components.Health value={props.health} />
-      <item.components.Level experience={props.experience} />
       <item.components.Experience value={props.experience} />
       <weapon.containers.WeaponAsProperty id={props.weaponId} />
       <location.containers.LocationAsProperty id={props.locationId} />
