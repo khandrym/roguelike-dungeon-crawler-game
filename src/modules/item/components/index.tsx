@@ -4,7 +4,6 @@ import Health from './Health';
 import Level from './Level';
 import Name from './Name';
 import Property from './Property';
-import Weapon from './Weapon';
 
 export default {
   Wrapper: Wrapper,
@@ -12,6 +11,5 @@ export default {
   Health: Health,
   Level: Level,
   Name: Name,
-  Property: Property,
-  Weapon: Weapon
+  Property: Property
 };

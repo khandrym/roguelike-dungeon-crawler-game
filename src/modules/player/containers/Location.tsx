@@ -39,7 +39,7 @@ class Location extends React.Component<MergeProps, object> {
 
 function mapStateToProps(s: store.State): StateProps {
   return {
-    locationId: s.player.locationId
+    locationId: store.selectors.getPlayer(s).locationId
   };
 }
 
