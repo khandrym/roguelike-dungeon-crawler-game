@@ -10,7 +10,7 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function DungeonGate(props: Props) {
+function Container(props: Props) {
   return (
     <div></div>
   );
@@ -25,4 +25,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DungeonGate);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
