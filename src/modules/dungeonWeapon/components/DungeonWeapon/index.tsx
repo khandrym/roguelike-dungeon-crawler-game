@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { State } from '../model';
-import * as weapon from '../../weapon';
-import * as location from '../../location';
+import { State } from '../../model';
+import * as weapon from '../../../weapon';
+import * as location from '../../../location';
 
 interface Props {
   readonly dungeonWeapon: State;

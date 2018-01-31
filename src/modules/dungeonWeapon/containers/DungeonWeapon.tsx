@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
-import components from '../components';
+import DungeonWeapon from '../components/DungeonWeapon';
 import * as dungeonWeapons from '../../dungeonWeapons';
 import * as store from '../../store';
 
@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function DungeonWeapon(props: Props) {
+function Container(props: Props) {
   return (
-    <components.DungeonWeapon dungeonWeapon={props.dungeonWeapons} />
+    <DungeonWeapon dungeonWeapon={props.dungeonWeapons} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DungeonWeapon);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
