@@ -1,8 +1,4 @@
-.map-Map {
-  border-collapse: collapse;
-}
-
-.map-Map-cell {
+.map-Cell {
   width: 5px;
   height: 5px;
   border-width: 1px;
@@ -11,38 +7,38 @@
   border-collapse: collapse;
 }
 
-.map-Map-cell-player {
+.map-Cell-player {
   background-color: var(--color-primary);
 }
 
-.map-Map-cell-darkness {
+.map-Cell-darkness {
   background-color: var(--color-darkness);
 }
 
-.map-Map-cell-ground {
+.map-Cell-ground {
   background-color: var(--color-ground);
 }
 
-.map-Map-cell-wall {
+.map-Cell-wall {
   background-color: var(--color-wall);
 }
 
-.map-Map-cell-enemy {
+.map-Cell-enemy {
   background-color: var(--color-enemy);
 }
 
-.map-Map-cell-weapon {
+.map-Cell-weapon {
   background-color: var(--color-weapon);
 }
 
-.map-Map-cell-medicine {
+.map-Cell-medicine {
   background-color: var(--color-medicine);
 }
 
-.map-Map-cell-gate {
+.map-Cell-gate {
   background-color: var(--color-gate);
 }
 
-.map-Map-cell-default {
+.map-Cell-default {
   background-color: white;
 }

@@ -1,28 +1,13 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import * as store from '../../store';
+import Cell from '../containers/Cell';
 import './Map.css';
 
-interface MapStateProps {
-  playerX: number;
-  playerY: number;
-}
-
-interface MapDispatchProps {
-}
-
-interface MapProps extends MapStateProps, MapDispatchProps { }
-
-function Map(props: MapProps) {
+export default () => {
   const rows = [];
   for (let j = 0; j < 100; j++) {
     var cells = [];
     for (let i = 0; i < 100; i++) {
-      if (i === props.playerX && j === props.playerY) {
-        cells[i] = <td className="MapCell MapCell-player" key={i} />;
-      } else {
-        cells[i] = <td className="MapCell MapCell-ground" key={i} />;
-      }
+      cells[i] = <Cell x={i} y={j} key={i} />;
     }
     rows[j] = (
       <tr key={j}>
@@ -33,29 +18,11 @@ function Map(props: MapProps) {
 
   return (
     <div>
-      <table className="Map">
+      <table className="map-Map">
         <tbody>
           {rows}
         </tbody>
       </table>
-      <table className="Map">
-        <tbody>
-          {}
-        </tbody>
-      </table>
     </div>
   );
-}
-
-function mapStateToProps(s: store.State): MapStateProps {
-  return {
-    playerX: s.locations.byId[s.player.locationId].x,
-    playerY: s.locations.byId[s.player.locationId].y
-  };
-}
-
-function mapDispatchToProps(): MapDispatchProps {
-  return {};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Map);
+};
