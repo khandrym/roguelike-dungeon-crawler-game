@@ -2,10 +2,14 @@ import { DungeonGates } from './model';
 import * as store from '../store';
 import * as dungeonGate from '../dungeonGate';
 
-export function getDungeonGates(state: store.State): DungeonGates {
+export function getAllIds(state: store.State): string[] {
+  return store.getDungeonGates(state).allIds;
+}
+
+export function getAll(state: store.State): DungeonGates {
   return store.getDungeonGates(state).byId;
 }
 
-export function getDungeonGate(state: store.State, id: string): dungeonGate.State {
-  return getDungeonGates(state)[id];
+export function getOne(state: store.State, id: string): dungeonGate.State {
+  return getAll(state)[id];
 }

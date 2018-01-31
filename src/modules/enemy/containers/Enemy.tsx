@@ -29,7 +29,7 @@ function Container(props: Props) {
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   return {
-    enemy: enemies.getEnemy(state, ownProps.id)
+    enemy: enemies.getOne(state, ownProps.id)
   };
 }
 

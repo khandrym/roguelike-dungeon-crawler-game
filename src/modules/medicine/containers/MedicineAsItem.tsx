@@ -29,7 +29,7 @@ function Component(props: Props) {
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   return {
-    medicine: medicines.getMedicine(state, ownProps.id)
+    medicine: medicines.getOne(state, ownProps.id)
   };
 }
 

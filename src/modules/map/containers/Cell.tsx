@@ -33,13 +33,13 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
     ownProps.y === player.getLocation(state).y) {
     itemType = ItemTypes.PLAYER;
   }
-  for (let dungeonEnemyId of Object.keys(dungeonEnemies.getDungeonEnemies(state))) {
-    const location = dungeonEnemy.getLocation(state, dungeonEnemyId);
-    if (ownProps.x === location.x &&
-      ownProps.y === location.y) {
+  dungeonEnemies.getAllIds(state).forEach((dungeonEnemyId) => {
+    const dungeonEnemyLocation = dungeonEnemy.getLocation(state, dungeonEnemyId);
+    if (ownProps.x === dungeonEnemyLocation.x &&
+      ownProps.y === dungeonEnemyLocation.y) {
       itemType = ItemTypes.ENEMY;
     }
-  }
+  });
 
   return {
     itemType: itemType

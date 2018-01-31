@@ -26,7 +26,7 @@ function Container(props: Props) {
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   return {
-    location: locations.getLocation(state, ownProps.id)
+    location: locations.getOne(state, ownProps.id)
   };
 }
 
