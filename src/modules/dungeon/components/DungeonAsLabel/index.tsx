@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { State } from '../model';
+import { State } from '../../model';
 
 interface Props {
   dungeon: State;
