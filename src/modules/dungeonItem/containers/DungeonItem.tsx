@@ -12,7 +12,9 @@ interface Props extends StateProps, DispatchProps { }
 
 function Container(props: Props) {
   return (
-    <div></div>
+    <div>
+      Dungeon Item
+    </div>
   );
 }
 
