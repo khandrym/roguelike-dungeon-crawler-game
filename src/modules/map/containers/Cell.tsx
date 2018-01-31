@@ -35,12 +35,7 @@ function Container(props: Props) {
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   var itemType = ItemTypes.GROUND;
-
   const playerLocation = player.getLocation(state);
-  if (ownProps.x === playerLocation.x &&
-    ownProps.y === playerLocation.y) {
-    itemType = ItemTypes.PLAYER;
-  }
 
   dungeonEnemies.getAllIds(state).forEach((dungeonEnemyId) => {
     const dungeonEnemyLocation = dungeonEnemy.getLocation(state, dungeonEnemyId);
@@ -77,6 +72,11 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
       itemType = ItemTypes.WEAPON;
     }
   });
+
+  if (ownProps.x === playerLocation.x &&
+    ownProps.y === playerLocation.y) {
+    itemType = ItemTypes.PLAYER;
+  }
 
   return {
     itemType: itemType
