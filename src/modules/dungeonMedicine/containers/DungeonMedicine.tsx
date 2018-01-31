@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
-import components from '../components';
+import DungeonMedicine from '../components/DungeonMedicine';
 import * as dungeonMedicines from '../../dungeonMedicines';
 import * as store from '../../store';
 
@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function DungeonMedicine(props: Props) {
+function Container(props: Props) {
   return (
-    <components.DungeonMedicine dungeonMedicine={props.dungeonMedicine} />
+    <DungeonMedicine dungeonMedicine={props.dungeonMedicine} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DungeonMedicine);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);

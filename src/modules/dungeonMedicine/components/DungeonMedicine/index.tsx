@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { State } from '../model';
-import * as medicine from '../../medicine';
-import * as item from '../../item';
-import * as location from '../../location';
+import { State } from '../../model';
+import * as medicine from '../../../medicine';
+import * as item from '../../../item';
+import * as location from '../../../location';
 
 interface Props {
   readonly dungeonMedicine: State;
