@@ -1,8 +1,8 @@
 import * as React from 'react';
-import * as item from '../../item';
-import './Wrapper.css';
+import * as item from '../../../item';
+import './index.css';
 
-const Wrapper: React.StatelessComponent = (props) => {
+const Component: React.StatelessComponent = (props) => {
   return (
     <item.components.Wrapper>
       <div className="enemy-Wrapper">
@@ -12,4 +12,4 @@ const Wrapper: React.StatelessComponent = (props) => {
   );
 };
 
-export default Wrapper;
+export default Component;

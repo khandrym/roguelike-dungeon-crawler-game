@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
-import components from '../components';
+import Enemy from '../components/Enemy';
 import * as enemies from '../../enemies';
 import * as store from '../../store';
 
@@ -19,11 +19,11 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function Enemy(props: Props) {
+function Container(props: Props) {
   return (
-    <components.Enemy enemy={props.enemy}>
+    <Enemy enemy={props.enemy}>
       {props.children}
-    </components.Enemy>
+    </Enemy>
   );
 }
 
@@ -37,4 +37,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Enemy);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { State } from '../model';
-import Wrapper from './Wrapper';
-import * as item from '../../item';
-import * as weapon from '../../weapon';
+import { State } from '../../model';
+import Wrapper from '../Wrapper';
+import * as item from '../../../item';
+import * as weapon from '../../../weapon';
 
 interface Props {
   enemy: State;
