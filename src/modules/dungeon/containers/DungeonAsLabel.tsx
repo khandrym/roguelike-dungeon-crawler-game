@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
-import components from '../components';
+import DungeonAsLabel from '../components/DungeonAsLabel';
 import * as dungeons from '../../dungeons';
 import * as store from '../../store';
 
@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function DungeonAsLabel(props: Props) {
+function Container(props: Props) {
   return (
-    <components.DungeonAsLabel dungeon={props.dungeon} />
+    <DungeonAsLabel dungeon={props.dungeon} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DungeonAsLabel);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
