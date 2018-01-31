@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
-import components from '../components';
+import LocationAsLabel from '../components/LocationAsLabel';
 import * as locations from '../../locations';
 import * as store from '../../store';
 
@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function LocationAsProperty(props: Props) {
+function Container(props: Props) {
   return (
-    <components.LocationAsLabel location={props.location} />
+    <LocationAsLabel location={props.location} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LocationAsProperty);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
