@@ -1,7 +1,7 @@
 import * as React from 'react';
-import './Wrapper.css';
+import './index.css';
 
-const Wrapper: React.StatelessComponent = (props) => {
+const component: React.StatelessComponent = (props) => {
   return (
     <div className="app-Wrapper">
       {props.children}
@@ -9,4 +9,4 @@ const Wrapper: React.StatelessComponent = (props) => {
   );
 };
 
-export default Wrapper;
+export default component;

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Wrapper from './Wrapper';
-import * as title from '../../title';
-import * as map from '../../map';
-import * as info from '../../info';
+import Wrapper from '../Wrapper';
+import * as title from '../../../title';
+import * as map from '../../../map';
+import * as info from '../../../info';
 
 export default () => {
   return (
