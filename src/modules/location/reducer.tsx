@@ -19,14 +19,14 @@ function moveLeftReducer(state: State, action: actions.MoveLeft): State {
 function moveUpReducer(state: State, action: actions.MoveUp): State {
   return {
     ...state,
-    y: state.y + 1
+    y: state.y - 1
   };
 }
 
 function moveDownReducer(state: State, action: actions.MoveDown): State {
   return {
     ...state,
-    y: state.y - 1
+    y: state.y + 1
   };
 }
 

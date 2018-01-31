@@ -19,7 +19,7 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function Component(props: Props) {
+function Container(props: Props) {
   return (
     <MedicineAsItem medicine={props.medicine}>
       {props.children}
@@ -37,4 +37,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Component);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
