@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { State } from '../model';
-import * as enemy from '../../enemy';
-import * as location from '../../location';
-import * as item from '../../item';
+import { State } from '../../model';
+import * as enemy from '../../../enemy';
+import * as location from '../../../location';
+import * as item from '../../../item';
 
 interface Props {
   readonly dungeonEnemy: State;
