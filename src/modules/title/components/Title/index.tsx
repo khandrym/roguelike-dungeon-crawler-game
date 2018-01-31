@@ -1,9 +1,9 @@
 import * as React from 'react';
-import './Title.css';
+import './index.css';
 
 export default () => {
   return (
-    <div className="Title">
+    <div className="title-Title">
       Roguelike Dungeon Crawler Game
     </div>
   );
