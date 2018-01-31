@@ -4,6 +4,8 @@ import Cell from '../components/Cell';
 import ItemTypes from '../../itemTypes';
 import * as store from '../../store';
 import * as player from '../../player';
+import * as dungeonEnemies from '../../dungeonEnemies';
+import * as dungeonEnemy from '../../dungeonEnemy';
 
 interface OwnProps {
   x: number;
@@ -30,6 +32,13 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   if (ownProps.x === player.getLocation(state).x &&
     ownProps.y === player.getLocation(state).y) {
     itemType = ItemTypes.PLAYER;
+  }
+  for (let dungeonEnemyId of Object.keys(dungeonEnemies.getDungeonEnemies(state))) {
+    const location = dungeonEnemy.getLocation(state, dungeonEnemyId);
+    if (ownProps.x === location.x &&
+      ownProps.y === location.y) {
+      itemType = ItemTypes.ENEMY;
+    }
   }
 
   return {

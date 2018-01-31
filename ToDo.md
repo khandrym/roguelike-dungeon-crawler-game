@@ -1,4 +1,4 @@
-* Refactor components in order to follow the same code structure
+
 
 
 * Add DungeonItem container with position property according to player's position to dungeonItem module
