@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Name.css';
+import './index.css';
 
 interface Props {
   name: string;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Property from './Property';
+import Property from '../Property';
 
 interface Props {
   value: number;
@@ -8,7 +8,7 @@ interface Props {
 export default (props: Props) => {
   return (
     <Property>
-      Level: {Math.floor(props.value / 10.0)} (experience: {props.value})
+      Health: {props.value}
     </Property>
   );
 };

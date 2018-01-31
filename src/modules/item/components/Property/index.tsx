@@ -1,7 +1,7 @@
 import * as React from 'react';
-import './Property.css';
+import './index.css';
 
-const ItemProperty: React.StatelessComponent = (props) => {
+const Component: React.StatelessComponent = (props) => {
   return (
     <div className="item-Property">
       {props.children}
@@ -9,4 +9,4 @@ const ItemProperty: React.StatelessComponent = (props) => {
   );
 };
 
-export default ItemProperty;
+export default Component;
