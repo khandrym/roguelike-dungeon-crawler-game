@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
-import components from '../components';
+import WeaponAsProperty from '../components/WeaponAsProperty';
 import * as weapons from '../../weapons';
 import * as store from '../../store';
 
@@ -18,9 +18,9 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function WeaponAsProperty(props: Props) {
+function Container(props: Props) {
   return (
-    <components.WeaponAsProperty weapon={props.weapon} />
+    <WeaponAsProperty weapon={props.weapon} />
   );
 }
 
@@ -34,4 +34,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WeaponAsProperty);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
