@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Cell from '../containers/Cell';
-import './Map.css';
+import Cell from '../../containers/Cell';
+import './index.css';
 
 export default () => {
   const rows = [];

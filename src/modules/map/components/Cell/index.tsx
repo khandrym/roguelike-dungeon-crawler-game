@@ -1,6 +1,6 @@
 import * as React from 'react';
-import ItemTypes from '../../itemTypes';
-import './Cell.css';
+import ItemTypes from '../../../itemTypes';
+import './index.css';
 
 interface Props {
   x: number;
