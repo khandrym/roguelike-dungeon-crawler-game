@@ -6,6 +6,8 @@ import * as store from '../../store';
 import * as player from '../../player';
 import * as dungeonEnemies from '../../dungeonEnemies';
 import * as dungeonEnemy from '../../dungeonEnemy';
+import * as dungeonGates from '../../dungeonGates';
+import * as dungeonGate from '../../dungeonGate';
 
 interface OwnProps {
   x: number;
@@ -29,15 +31,28 @@ function Container(props: Props) {
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   var itemType = ItemTypes.GROUND;
-  if (ownProps.x === player.getLocation(state).x &&
-    ownProps.y === player.getLocation(state).y) {
+
+  const playerLocation = player.getLocation(state);
+  if (ownProps.x === playerLocation.x &&
+    ownProps.y === playerLocation.y) {
     itemType = ItemTypes.PLAYER;
   }
+
   dungeonEnemies.getAllIds(state).forEach((dungeonEnemyId) => {
     const dungeonEnemyLocation = dungeonEnemy.getLocation(state, dungeonEnemyId);
-    if (ownProps.x === dungeonEnemyLocation.x &&
+    if (playerLocation.dungeonId === dungeonEnemyLocation.dungeonId &&
+      ownProps.x === dungeonEnemyLocation.x &&
       ownProps.y === dungeonEnemyLocation.y) {
       itemType = ItemTypes.ENEMY;
+    }
+  });
+
+  dungeonGates.getAllIds(state).forEach((dungeonGateId) => {
+    const dungeonGateFromLocation = dungeonGate.getFromLocation(state, dungeonGateId);
+    if (playerLocation.dungeonId === dungeonGateFromLocation.dungeonId &&
+      ownProps.x === dungeonGateFromLocation.x &&
+      ownProps.y === dungeonGateFromLocation.y) {
+      itemType = ItemTypes.GATE;
     }
   });
 
