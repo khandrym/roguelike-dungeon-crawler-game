@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { State } from '../model';
-import Wrapper from './Wrapper';
-import * as item from '../../item';
+import { State } from '../../model';
+import Wrapper from '../Wrapper';
+import * as item from '../../../item';
 
 interface Props {
   medicine: State;

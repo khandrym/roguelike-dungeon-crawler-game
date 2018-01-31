@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../model';
-import components from '../components';
+import MedicineAsItem from '../components/MedicineAsItem';
 import * as medicines from '../../medicines';
 import * as store from '../../store';
 
@@ -19,11 +19,11 @@ interface DispatchProps {
 
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
-function MedicineAsItem(props: Props) {
+function Component(props: Props) {
   return (
-    <components.MedicineAsItem medicine={props.medicine}>
+    <MedicineAsItem medicine={props.medicine}>
       {props.children}
-    </components.MedicineAsItem>
+    </MedicineAsItem>
   );
 }
 
@@ -37,4 +37,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MedicineAsItem);
+export default connect(mapStateToProps, mapDispatchToProps)(Component);
