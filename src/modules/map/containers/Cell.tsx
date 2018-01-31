@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Cell from '../components/Cell';
 import ItemTypes from '../../itemTypes';
 import * as store from '../../store';
-import * as locations from '../../locations';
+import * as player from '../../player';
 
 interface OwnProps {
   x: number;
@@ -27,8 +27,8 @@ function Container(props: Props) {
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   var itemType = ItemTypes.GROUND;
-  if (ownProps.x === locations.getLocation(state, store.getPlayer(state).locationId).x &&
-    ownProps.y === locations.getLocation(state, store.getPlayer(state).locationId).y) {
+  if (ownProps.x === player.getLocation(state).x &&
+    ownProps.y === player.getLocation(state).y) {
     itemType = ItemTypes.PLAYER;
   }
 
