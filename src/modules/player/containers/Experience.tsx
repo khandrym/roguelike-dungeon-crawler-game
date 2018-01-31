@@ -12,7 +12,7 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function Experience(props: Props) {
+function Container(props: Props) {
   return (
     <item.components.Experience value={props.value} />
   );
@@ -28,4 +28,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Experience);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);

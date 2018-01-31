@@ -12,7 +12,7 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function Health(props: Props) {
+function Container(props: Props) {
   return (
     <item.components.Health value={props.value} />
   );
@@ -28,4 +28,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Health);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);

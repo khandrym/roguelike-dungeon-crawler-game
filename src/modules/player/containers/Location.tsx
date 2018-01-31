@@ -18,7 +18,7 @@ interface MergeProps {
   onKeyPress: (event: KeyboardEvent) => void;
 }
 
-class Location extends React.Component<MergeProps, object> {
+class Container extends React.Component<MergeProps, object> {
 
   // !!! Is it correct to add event listener with props function?
   // !!! Will the function be removed correctly when component be unmounted?
@@ -73,4 +73,4 @@ function mergeProps(stateProps: StateProps, dispatchProps: DispatchProps): Merge
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(Location);
+export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(Container);

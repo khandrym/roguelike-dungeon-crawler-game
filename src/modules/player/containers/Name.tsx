@@ -12,7 +12,7 @@ interface DispatchProps {
 
 interface Props extends StateProps, DispatchProps { }
 
-function Name(props: Props) {
+function Container(props: Props) {
   return (
     <item.components.Name name={props.name} />
   );
@@ -28,4 +28,4 @@ function mapDispatchToProps(): DispatchProps {
   return {};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Name);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);
