@@ -8,6 +8,8 @@ import * as dungeonEnemies from '../../dungeonEnemies';
 import * as dungeonEnemy from '../../dungeonEnemy';
 import * as dungeonGates from '../../dungeonGates';
 import * as dungeonGate from '../../dungeonGate';
+import * as dungeonMedicines from '../../dungeonMedicines';
+import * as dungeonMedicine from '../../dungeonMedicine';
 
 interface OwnProps {
   x: number;
@@ -53,6 +55,15 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
       ownProps.x === dungeonGateFromLocation.x &&
       ownProps.y === dungeonGateFromLocation.y) {
       itemType = ItemTypes.GATE;
+    }
+  });
+
+  dungeonMedicines.getAllIds(state).forEach((dungeonMedicineId) => {
+    const dungeonMedicineLocation = dungeonMedicine.getLocation(state, dungeonMedicineId);
+    if (playerLocation.dungeonId === dungeonMedicineLocation.dungeonId &&
+      ownProps.x === dungeonMedicineLocation.x &&
+      ownProps.y === dungeonMedicineLocation.y) {
+      itemType = ItemTypes.MEDICINE;
     }
   });
 
