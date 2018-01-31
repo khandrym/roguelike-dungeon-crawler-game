@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './index.css';
 
-const component: React.StatelessComponent = (props) => {
+const Component: React.StatelessComponent = (props) => {
   return (
     <div className="app-Wrapper">
       {props.children}
@@ -9,4 +9,4 @@ const component: React.StatelessComponent = (props) => {
   );
 };
 
-export default component;
+export default Component;
