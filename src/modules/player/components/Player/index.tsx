@@ -1,19 +1,22 @@
 import * as React from 'react';
 import Wrapper from '../Wrapper';
-import Name from '../../containers/Name';
-import Health from '../../containers/Health';
-import Experience from '../../containers/Experience';
-import Location from '../../containers/Location';
-import Weapon from '../../containers/Weapon';
+import { State } from '../../model';
+import * as item from '../../../item';
+import * as weapon from '../../../weapon';
+import * as location from '../../../location';
 
-export default () => {
+interface Props {
+  player: State;
+}
+
+export default (props: Props) => {
   return (
     <Wrapper>
-      <Name />
-      <Experience />
-      <Weapon />
-      <Health />
-      <Location />
+      <item.components.Name name={props.player.name} />
+      <item.components.Experience value={props.player.experience} />
+      <weapon.containers.WeaponAsProperty id={props.player.weaponId} />
+      <item.components.Health value={props.player.health} />
+      <location.containers.LocationAsProperty id={props.player.locationId} />
     </Wrapper>
   );
 };

@@ -31,7 +31,7 @@ function isVisibleAtLeft(playerLocation: location.State, itemLocation: location.
 export default () => {
   return (
     <Wrapper>
-      <player.components.Player />
+      <player.containers.Player />
       <dungeonItem.containers.DungeonItem isVisible={isVisibleAtTop} />
       <dungeonItem.containers.DungeonItem isVisible={isVisibleAtBottom} />
       <dungeonItem.containers.DungeonItem isVisible={isVisibleAtRight} />

@@ -7,3 +7,7 @@ export interface State {
   locationId: string;
   weaponId: string;
 }
+
+export function move() {
+  return null;
+}

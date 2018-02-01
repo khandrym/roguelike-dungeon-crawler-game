@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { AnyAction } from 'redux';
 import { connect, Dispatch } from 'react-redux';
+import { State } from '../model';
+import Player from '../components/Player';
 import * as store from '../../store';
-import * as location from '../../location';
 import * as locations from '../../locations';
 
 interface StateProps {
-  locationId: string;
+  player: State;
 }
 
 interface DispatchProps {
@@ -14,7 +15,7 @@ interface DispatchProps {
 }
 
 interface MergeProps {
-  locationId: string;
+  player: State;
   onKeyPress: (event: KeyboardEvent) => void;
 }
 
@@ -32,14 +33,14 @@ class Container extends React.Component<MergeProps, object> {
 
   public render() {
     return (
-      <location.containers.LocationAsProperty id={this.props.locationId} />
+      <Player player={this.props.player} />
     );
   }
 }
 
 function mapStateToProps(state: store.State): StateProps {
   return {
-    locationId: store.getPlayer(state).locationId
+    player: store.getPlayer(state)
   };
 }
 
@@ -51,20 +52,20 @@ function mapDispatchToProps(dispatch: Dispatch<AnyAction>): DispatchProps {
 
 function mergeProps(stateProps: StateProps, dispatchProps: DispatchProps): MergeProps {
   return {
-    locationId: stateProps.locationId,
+    player: stateProps.player,
     onKeyPress: (event: KeyboardEvent) => {
       switch (event.key) {
         case 'ArrowRight':
-          dispatchProps.dispatch(locations.moveRight(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveRight(stateProps.player.locationId));
           break;
         case 'ArrowLeft':
-          dispatchProps.dispatch(locations.moveLeft(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveLeft(stateProps.player.locationId));
           break;
         case 'ArrowUp':
-          dispatchProps.dispatch(locations.moveUp(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveUp(stateProps.player.locationId));
           break;
         case 'ArrowDown':
-          dispatchProps.dispatch(locations.moveDown(stateProps.locationId));
+          dispatchProps.dispatch(locations.moveDown(stateProps.player.locationId));
           break;
         default:
           return;
