@@ -1,7 +1,4 @@
-
-
-
-* Implement move function for player module
+* Add intaraction of player with intaraction item to move function
 
 
 

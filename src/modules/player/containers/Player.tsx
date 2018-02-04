@@ -1,13 +1,17 @@
 import * as React from 'react';
 import { AnyAction } from 'redux';
 import { connect, Dispatch } from 'react-redux';
-import { State } from '../model';
+import { State, MovementTypes, move } from '../model';
 import Player from '../components/Player';
 import * as store from '../../store';
-import * as locations from '../../locations';
+import * as neighbourItem from '../../neighbourItem';
 
 interface StateProps {
   player: State;
+  neighbourItemAtTop: neighbourItem.State;
+  neighbourItemAtBottom: neighbourItem.State;
+  neighbourItemAtRight: neighbourItem.State;
+  neighbourItemAtLeft: neighbourItem.State;
 }
 
 interface DispatchProps {
@@ -40,7 +44,11 @@ class Container extends React.Component<MergeProps, object> {
 
 function mapStateToProps(state: store.State): StateProps {
   return {
-    player: store.getPlayer(state)
+    player: store.getPlayer(state),
+    neighbourItemAtTop: neighbourItem.getNeighbourItemAtTop(state),
+    neighbourItemAtBottom: neighbourItem.getNeighbourItemAtBottom(state),
+    neighbourItemAtRight: neighbourItem.getNeighbourItemAtRight(state),
+    neighbourItemAtLeft: neighbourItem.getNeighbourItemAtLeft(state)
   };
 }
 
@@ -56,19 +64,35 @@ function mergeProps(stateProps: StateProps, dispatchProps: DispatchProps): Merge
     onKeyPress: (event: KeyboardEvent) => {
       switch (event.key) {
         case 'ArrowRight':
-          dispatchProps.dispatch(locations.moveRight(stateProps.player.locationId));
+          move(
+            dispatchProps.dispatch,
+            stateProps.player,
+            stateProps.neighbourItemAtRight,
+            MovementTypes.RIGHT);
           break;
         case 'ArrowLeft':
-          dispatchProps.dispatch(locations.moveLeft(stateProps.player.locationId));
+          move(
+            dispatchProps.dispatch,
+            stateProps.player,
+            stateProps.neighbourItemAtLeft,
+            MovementTypes.LEFT);
           break;
         case 'ArrowUp':
-          dispatchProps.dispatch(locations.moveUp(stateProps.player.locationId));
+          move(
+            dispatchProps.dispatch,
+            stateProps.player,
+            stateProps.neighbourItemAtTop,
+            MovementTypes.UP);
           break;
         case 'ArrowDown':
-          dispatchProps.dispatch(locations.moveDown(stateProps.player.locationId));
+          move(
+            dispatchProps.dispatch,
+            stateProps.player,
+            stateProps.neighbourItemAtBottom,
+            MovementTypes.DOWN);
           break;
         default:
-          return;
+          break;
       }
     }
   };
