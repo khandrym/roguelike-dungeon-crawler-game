@@ -1,5 +1,22 @@
 import { AnyAction } from 'redux';
 import ActionTypes from './actionTypes';
+import { State } from './model';
+
+export interface Set extends AnyAction {
+  readonly type: ActionTypes.SET;
+  readonly payload: {
+    location: State;
+  };
+}
+
+export function set(location: State): Set {
+  return {
+    type: ActionTypes.SET,
+    payload: {
+      location: location
+    }
+  }
+}
 
 export interface MoveRight extends AnyAction {
   readonly type: ActionTypes.MOVE_RIGHT;
@@ -55,6 +72,7 @@ interface Other extends AnyAction {
 }
 
 export type Action =
+  | Set
   | MoveRight
   | MoveLeft
   | MoveUp

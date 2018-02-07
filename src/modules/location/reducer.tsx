@@ -2,6 +2,16 @@ import { State } from './model';
 import * as actions from './actions';
 import ActionTypes from './actionTypes';
 
+function setReducer(state: State, action: actions.Set): State {
+  const location = action.payload.location;
+  return {
+    ...state,
+    dungeonId: location.dungeonId,
+    x: location.x,
+    y: location.y
+  }
+}
+
 function moveRightReducer(state: State, action: actions.MoveRight): State {
   return {
     ...state,
@@ -32,6 +42,8 @@ function moveDownReducer(state: State, action: actions.MoveDown): State {
 
 export default (state: State, action: actions.Action): State => {
   switch (action.type) {
+    case ActionTypes.SET:
+      return setReducer(state, action);
     case ActionTypes.MOVE_RIGHT:
       return moveRightReducer(state, action);
     case ActionTypes.MOVE_LEFT:

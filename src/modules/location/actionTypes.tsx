@@ -1,4 +1,5 @@
 enum ActionTypes {
+  SET = 'location/SET',
   MOVE_RIGHT = 'location/MOVE_RIGHT',
   MOVE_LEFT = 'location/MOVE_LEFT',
   MOVE_UP = 'location/MOVE_UP',
