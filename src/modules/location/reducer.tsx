@@ -9,7 +9,7 @@ function setReducer(state: State, action: actions.Set): State {
     dungeonId: location.dungeonId,
     x: location.x,
     y: location.y
-  }
+  };
 }
 
 function moveRightReducer(state: State, action: actions.MoveRight): State {

@@ -1,6 +1,7 @@
 enum ActionTypes {
   ADD = 'locations/ADD',
   DELETE = 'locations/DELETE',
+  SET = 'locations/SET',
   MOVE_RIGHT = 'locations/MOVE_RIGHT',
   MOVE_LEFT = 'locations/MOVE_LEFT',
   MOVE_UP = 'locations/MOVE_UP',

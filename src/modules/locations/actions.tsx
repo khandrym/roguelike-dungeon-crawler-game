@@ -34,6 +34,24 @@ export function del(id: string): Delete {
   };
 }
 
+export interface Set extends AnyAction {
+  readonly type: ActionTypes.SET;
+  readonly payload: {
+    readonly id: string;
+    readonly locationToSet: location.State;
+  };
+}
+
+export function set(id: string, locationToSet: location.State): Set {
+  return {
+    type: ActionTypes.SET,
+    payload: {
+      id: id,
+      locationToSet: locationToSet
+    }
+  };
+}
+
 export interface MoveRight extends AnyAction {
   readonly type: ActionTypes.MOVE_RIGHT;
   readonly payload: {
@@ -106,6 +124,7 @@ interface Other extends AnyAction {
 export type Action =
   | Add
   | Delete
+  | Set
   | MoveRight
   | MoveLeft
   | MoveUp

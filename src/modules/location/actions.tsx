@@ -5,7 +5,7 @@ import { State } from './model';
 export interface Set extends AnyAction {
   readonly type: ActionTypes.SET;
   readonly payload: {
-    location: State;
+    readonly location: State;
   };
 }
 
@@ -15,7 +15,7 @@ export function set(location: State): Set {
     payload: {
       location: location
     }
-  }
+  };
 }
 
 export interface MoveRight extends AnyAction {
