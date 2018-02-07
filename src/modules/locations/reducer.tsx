@@ -32,16 +32,18 @@ function deletReducerAllIds(state: string[], action: actions.Delete): string[] {
   });
 }
 
-function setReducerById(state: Locations, action: actions.Set): Locations {
+function moveToReducerById(state: Locations, action: actions.MoveTo): Locations {
   const id = action.payload.id;
-  const settedLocation = location.reducer(state[id], location.set(action.payload.locationToSet));
+  const settedLocation = location.reducer(
+    state[id],
+    location.set(state[action.payload.moveToLocationId]));
   return {
     ...state,
     [id]: settedLocation
   };
 }
 
-function setReducerAllIds(state: string[], action: actions.Set): string[] {
+function moveToReducerAllIds(state: string[], action: actions.MoveTo): string[] {
   return state;
 }
 
@@ -103,8 +105,8 @@ function reducerById(state: Locations = {}, action: actions.Action): Locations {
       return addReducerById(state, action);
     case ActionTypes.DELETE:
       return deleteReducerById(state, action);
-    case ActionTypes.SET:
-      return setReducerById(state, action);
+    case ActionTypes.MOVE_TO:
+      return moveToReducerById(state, action);
     case ActionTypes.MOVE_RIGHT:
       return moveRightReducerById(state, action);
     case ActionTypes.MOVE_LEFT:
@@ -124,8 +126,8 @@ function reducerAllIds(state: string[] = [], action: actions.Action): string[] {
       return addReducerAllIds(state, action);
     case ActionTypes.DELETE:
       return deletReducerAllIds(state, action);
-    case ActionTypes.SET:
-      return setReducerAllIds(state, action);
+    case ActionTypes.MOVE_TO:
+      return moveToReducerAllIds(state, action);
     case ActionTypes.MOVE_RIGHT:
       return moveRightReducerAllIds(state, action);
     case ActionTypes.MOVE_LEFT:

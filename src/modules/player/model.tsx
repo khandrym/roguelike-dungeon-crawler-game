@@ -2,6 +2,7 @@ import { AnyAction } from 'redux';
 import { Dispatch } from 'react-redux';
 import * as neighbourItem from '../neighbourItem';
 import * as locations from '../locations';
+import * as dungeonEnemy from '../dungeonEnemy';
 
 export const NAME = 'player';
 
@@ -41,5 +42,15 @@ export function move(
       break;
     default:
       break;
+  }
+}
+
+export function interactWithDungeonEnemy(
+  dispatch: Dispatch<AnyAction>,
+  player: State,
+  enemy: dungeonEnemy.State):
+  void {
+  if (enemy.health <= 0) {
+    dispatch(locations.moveTo(player.locationId, enemy.locationId));
   }
 }
