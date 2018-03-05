@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { State } from './model';
 import * as player from '../player';
 import * as dungeons from '../dungeons';
 import * as locations from '../locations';
@@ -10,7 +11,7 @@ import * as dungeonWeapons from '../dungeonWeapons';
 import * as dungeonEnemies from '../dungeonEnemies';
 import * as dungeonGates from '../dungeonGates';
 
-export default combineReducers({
+export default combineReducers<State>({
   [player.NAME]: player.reducer,
   [dungeons.NAME]: dungeons.reducer,
   [locations.NAME]: locations.reducer,
