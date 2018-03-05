@@ -1,9 +1,8 @@
+* Refactor interaction and player modules in order to move player from interaction module
+
+
+
 * Add set action to location and locations modules
-
-* Create functions inside player model in order to specify the logic of interaction of player with other items.
-
-
-* Add intaraction of player with intaraction item to move function
 
 
 

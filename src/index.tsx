@@ -5,6 +5,7 @@ import * as ReactRedux from 'react-redux';
 import './index.css';
 import store from './modules/store';
 import * as app from './modules/app';
+import './modules/interaction';
 
 ReactDOM.render(
   <ReactRedux.Provider store={store}>
