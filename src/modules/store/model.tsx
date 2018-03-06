@@ -1,3 +1,7 @@
+import * as Redux from 'redux';
+import { devToolsEnhancer } from 'redux-devtools-extension/logOnlyInProduction';
+import reducer from './reducer';
+import initials from '../initials';
 import * as player from '../player';
 import * as dungeons from '../dungeons';
 import * as locations from '../locations';
@@ -21,3 +25,10 @@ export interface State {
   dungeonEnemies: dungeonEnemies.State;
   dungeonGates: dungeonGates.State;
 }
+
+export const entity = Redux.createStore<State>(
+  reducer,
+  initials,
+  devToolsEnhancer({}));
+export const getState = entity.getState;
+export const dispatch = entity.dispatch;

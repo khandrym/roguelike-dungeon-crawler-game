@@ -1,5 +1,4 @@
 import { State } from './model';
-import store from '.';
 import * as player from '../player';
 import * as dungeons from '../dungeons';
 import * as locations from '../locations';
@@ -10,10 +9,6 @@ import * as dungeonMedicines from '../dungeonMedicines';
 import * as dungeonWeapons from '../dungeonWeapons';
 import * as dungeonEnemies from '../dungeonEnemies';
 import * as dungeonGates from '../dungeonGates';
-
-export const getState = (): State => {
-  return store.getState();
-};
 
 export function getPlayer(state: State): player.State {
   return state.player;
