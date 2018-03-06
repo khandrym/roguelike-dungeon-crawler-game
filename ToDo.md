@@ -1,4 +1,4 @@
-* Refactor interaction and player modules in order to move player from interaction module
+* Implement interaction of player with items
 
 
 

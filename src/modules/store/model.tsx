@@ -26,9 +26,10 @@ export interface State {
   dungeonGates: dungeonGates.State;
 }
 
-export const entity = Redux.createStore<State>(
+const store = Redux.createStore<State>(
   reducer,
   initials,
   devToolsEnhancer({}));
-export const getState = entity.getState;
-export const dispatch = entity.dispatch;
+export const getState = store.getState;
+export const dispatch = store.dispatch;
+export default store;

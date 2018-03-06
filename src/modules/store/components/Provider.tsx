@@ -1,9 +1,9 @@
 import * as React from 'react';
 import * as ReactRedux from 'react-redux';
-import { entity } from '../model';
+import store from '../model';
 
 const Provider: React.StatelessComponent = (props) => (
-  <ReactRedux.Provider store={entity}>
+  <ReactRedux.Provider store={store}>
     {props.children}
   </ReactRedux.Provider >
 );
