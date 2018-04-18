@@ -1,7 +1,10 @@
+@import '_theme.scss';
+
 .app-Wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  color: #00c800; }
+  color: $color-primary;
+}

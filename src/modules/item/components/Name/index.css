@@ -1,6 +1,5 @@
 .item-Name {
-  font-size: var(--font-size-item-name);
+  font-size: 1.6rem;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  margin-bottom: 10px;
-}
+  margin-bottom: 1.2rem; }

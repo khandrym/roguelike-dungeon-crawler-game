@@ -1,0 +1,18 @@
+@import '_theme.scss';
+@import '_fonts.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: $m-size;
+  background-color: rgb(20,20,20);
+}

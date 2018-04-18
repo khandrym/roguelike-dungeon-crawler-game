@@ -3,42 +3,32 @@
   height: 5px;
   border-width: 1px;
   border-style: solid;
-  border-color: var(--color-border);
-  border-collapse: collapse;
-}
+  border-color: #3c3c3c;
+  border-collapse: collapse; }
 
 .map-Cell-player {
-  background-color: var(--color-primary);
-}
+  background-color: #00c800; }
 
 .map-Cell-darkness {
-  background-color: var(--color-darkness);
-}
+  background-color: #141414; }
 
 .map-Cell-ground {
-  background-color: var(--color-ground);
-}
+  background-color: #323232; }
 
 .map-Cell-wall {
-  background-color: var(--color-wall);
-}
+  background-color: #464646; }
 
 .map-Cell-enemy {
-  background-color: var(--color-enemy);
-}
+  background-color: red; }
 
 .map-Cell-weapon {
-  background-color: var(--color-weapon);
-}
+  background-color: orange; }
 
 .map-Cell-medicine {
-  background-color: var(--color-medicine);
-}
+  background-color: #3296ff; }
 
 .map-Cell-gate {
-  background-color: var(--color-gate);
-}
+  background-color: purple; }
 
 .map-Cell-default {
-  background-color: white;
-}
+  background-color: white; }
