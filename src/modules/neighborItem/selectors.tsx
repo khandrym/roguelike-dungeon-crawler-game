@@ -36,7 +36,7 @@ function isAtLeft(playerLocation: location.State, itemLocation: location.State):
     playerLocation.y === itemLocation.y);
 }
 
-function getNeighbourItem(
+function getNeighborItem(
   state: store.State,
   isAtPosition: (
     playerLocation: location.State,
@@ -92,18 +92,18 @@ function getNeighbourItem(
   return dungeonItem;
 }
 
-export function getNeighbourItemAtTop(state: store.State): State {
-  return getNeighbourItem(state, isAtTop);
+export function getNeighborItemAtTop(state: store.State): State {
+  return getNeighborItem(state, isAtTop);
 }
 
-export function getNeighbourItemAtBottom(state: store.State): State {
-  return getNeighbourItem(state, isAtBottom);
+export function getNeighborItemAtBottom(state: store.State): State {
+  return getNeighborItem(state, isAtBottom);
 }
 
-export function getNeighbourItemAtRight(state: store.State): State {
-  return getNeighbourItem(state, isAtRight);
+export function getNeighborItemAtRight(state: store.State): State {
+  return getNeighborItem(state, isAtRight);
 }
 
-export function getNeighbourItemAtLeft(state: store.State): State {
-  return getNeighbourItem(state, isAtLeft);
+export function getNeighborItemAtLeft(state: store.State): State {
+  return getNeighborItem(state, isAtLeft);
 }

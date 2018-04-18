@@ -9,11 +9,11 @@ import * as dungeonMedicine from '../../dungeonMedicine';
 import * as dungeonWeapon from '../../dungeonWeapon';
 
 interface OwnProps {
-  getNeighbourItem: (state: store.State) => State;
+  getNeighborItem: (state: store.State) => State;
 }
 
 interface StateProps {
-  neighbourItemView: JSX.Element;
+  neighborItemView: JSX.Element;
 }
 
 interface DispatchProps {
@@ -22,31 +22,31 @@ interface DispatchProps {
 interface Props extends OwnProps, StateProps, DispatchProps { }
 
 function Container(props: Props) {
-  return props.neighbourItemView;
+  return props.neighborItemView;
 }
 
 function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
-  let neighbourItemView: JSX.Element;
-  const neighbourItem = ownProps.getNeighbourItem(state);
-  switch (neighbourItem.itemType) {
+  let neighborItemView: JSX.Element;
+  const neighborItem = ownProps.getNeighborItem(state);
+  switch (neighborItem.itemType) {
     case ItemTypes.ENEMY:
-      neighbourItemView = <dungeonEnemy.containers.DungeonEnemy id={neighbourItem.itemId} />;
+      neighborItemView = <dungeonEnemy.containers.DungeonEnemy id={neighborItem.itemId} />;
       break;
     case ItemTypes.GATE:
-      neighbourItemView = <dungeonGate.containers.DungeonGate id={neighbourItem.itemId} />;
+      neighborItemView = <dungeonGate.containers.DungeonGate id={neighborItem.itemId} />;
       break;
     case ItemTypes.MEDICINE:
-      neighbourItemView = <dungeonMedicine.containers.DungeonMedicine id={neighbourItem.itemId} />;
+      neighborItemView = <dungeonMedicine.containers.DungeonMedicine id={neighborItem.itemId} />;
       break;
     case ItemTypes.WEAPON:
-      neighbourItemView = <dungeonWeapon.containers.DungeonWeapon id={neighbourItem.itemId} />;
+      neighborItemView = <dungeonWeapon.containers.DungeonWeapon id={neighborItem.itemId} />;
       break;
     default:
-      neighbourItemView = <div />;
+      neighborItemView = <div />;
       break;
   }
   return {
-    neighbourItemView: neighbourItemView
+    neighborItemView: neighborItemView
   };
 }
 
