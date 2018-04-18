@@ -11,7 +11,7 @@ import * as dungeonWeapons from '../dungeonWeapons';
 import * as dungeonEnemies from '../dungeonEnemies';
 import * as dungeonGates from '../dungeonGates';
 
-export default combineReducers<State>({
+const reducer = combineReducers<State>({
   [player.NAME]: player.reducer,
   [dungeons.NAME]: dungeons.reducer,
   [locations.NAME]: locations.reducer,
@@ -23,3 +23,5 @@ export default combineReducers<State>({
   [dungeonEnemies.NAME]: dungeonEnemies.reducer,
   [dungeonGates.NAME]: dungeonGates.reducer
 });
+
+export default reducer;

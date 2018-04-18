@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactRedux from 'react-redux';
-import store from '../model';
+import store from '../../model';
 
 const Provider: React.StatelessComponent = (props) => (
   <ReactRedux.Provider store={store}>
