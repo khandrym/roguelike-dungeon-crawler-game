@@ -3,6 +3,7 @@ import * as locations from '../locations';
 import * as neighborItem from '../neighborItem';
 import ItemTypes from '../itemTypes';
 import * as dungeonEnemies from '../dungeonEnemies';
+import * as dungeonMedicines from '../dungeonMedicines';
 
 const onKeyPress = (event: KeyboardEvent) => {
   const state = store.getState();
@@ -40,6 +41,10 @@ const onKeyPress = (event: KeyboardEvent) => {
       case ItemTypes.DUNGEON_GATE:
         break;
       case ItemTypes.DUNGEON_MEDICINE:
+        const dungeonMedicine = dungeonMedicines.getOne(state, neighbor.itemId);
+        if (dungeonMedicine.health <= 0) {
+          store.dispatch(playerMovement(player.locationId));
+        }
         break;
       case ItemTypes.DUNGEON_WEAPON:
         break;
