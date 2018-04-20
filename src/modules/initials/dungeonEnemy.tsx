@@ -5,7 +5,7 @@ import * as location from './location';
 
 export const enemy1: State = {
   id: idGenerator.generateId(NAME),
-  health: 100,
+  health: 0,
   enemyId: enemy.violentDrunkard.id,
   locationId: location.enemy1.id
 };

@@ -2,6 +2,7 @@ import * as store from '../../modules/store';
 import * as locations from '../locations';
 import * as neighborItem from '../neighborItem';
 import ItemTypes from '../itemTypes';
+import * as dungeonEnemies from '../dungeonEnemies';
 
 const onKeyPress = (event: KeyboardEvent) => {
   const state = store.getState();
@@ -31,6 +32,10 @@ const onKeyPress = (event: KeyboardEvent) => {
   if (neighbor && playerMovement) {
     switch (neighbor.itemType) {
       case ItemTypes.DUNGEON_ENEMY:
+        const dungeonEnemy = dungeonEnemies.getOne(state, neighbor.itemId);
+        if (dungeonEnemy.health <= 0) {
+          store.dispatch(playerMovement(player.locationId));
+        }
         break;
       case ItemTypes.DUNGEON_GATE:
         break;
