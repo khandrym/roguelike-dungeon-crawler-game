@@ -53,7 +53,7 @@ function getNeighborItem(
     const dungeonEnemyLocation = dungeonEnemy.getLocation(state, dungeonEnemyId);
     if (isAtPosition(playerLocation, dungeonEnemyLocation)) {
       dungeonItem = {
-        itemType: ItemTypes.ENEMY,
+        itemType: ItemTypes.DUNGEON_ENEMY,
         itemId: dungeonEnemyId
       };
     }
@@ -63,7 +63,7 @@ function getNeighborItem(
     const dungeonGateLocation = dungeonGate.getFromLocation(state, dungeonGateId);
     if (isAtPosition(playerLocation, dungeonGateLocation)) {
       dungeonItem = {
-        itemType: ItemTypes.GATE,
+        itemType: ItemTypes.DUNGEON_GATE,
         itemId: dungeonGateId
       };
     }
@@ -73,7 +73,7 @@ function getNeighborItem(
     const dungeonMedicineLocation = dungeonMedicine.getLocation(state, dungeonMedicineId);
     if (isAtPosition(playerLocation, dungeonMedicineLocation)) {
       dungeonItem = {
-        itemType: ItemTypes.MEDICINE,
+        itemType: ItemTypes.DUNGEON_MEDICINE,
         itemId: dungeonMedicineId
       };
     }
@@ -83,7 +83,7 @@ function getNeighborItem(
     const dungeonWeaponLocation = dungeonWeapon.getLocation(state, dungeonWeaponId);
     if (isAtPosition(playerLocation, dungeonWeaponLocation)) {
       dungeonItem = {
-        itemType: ItemTypes.WEAPON,
+        itemType: ItemTypes.DUNGEON_WEAPON,
         itemId: dungeonWeaponId
       };
     }

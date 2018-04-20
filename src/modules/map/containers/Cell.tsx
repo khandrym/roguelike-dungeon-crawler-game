@@ -42,7 +42,7 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
     if (playerLocation.dungeonId === dungeonEnemyLocation.dungeonId &&
       ownProps.x === dungeonEnemyLocation.x &&
       ownProps.y === dungeonEnemyLocation.y) {
-      itemType = ItemTypes.ENEMY;
+      itemType = ItemTypes.DUNGEON_ENEMY;
     }
   });
 
@@ -51,7 +51,7 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
     if (playerLocation.dungeonId === dungeonGateFromLocation.dungeonId &&
       ownProps.x === dungeonGateFromLocation.x &&
       ownProps.y === dungeonGateFromLocation.y) {
-      itemType = ItemTypes.GATE;
+      itemType = ItemTypes.DUNGEON_GATE;
     }
   });
 
@@ -60,7 +60,7 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
     if (playerLocation.dungeonId === dungeonMedicineLocation.dungeonId &&
       ownProps.x === dungeonMedicineLocation.x &&
       ownProps.y === dungeonMedicineLocation.y) {
-      itemType = ItemTypes.MEDICINE;
+      itemType = ItemTypes.DUNGEON_MEDICINE;
     }
   });
 
@@ -69,13 +69,13 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
     if (playerLocation.dungeonId === dungeonWeaponLocation.dungeonId &&
       ownProps.x === dungeonWeaponLocation.x &&
       ownProps.y === dungeonWeaponLocation.y) {
-      itemType = ItemTypes.WEAPON;
+      itemType = ItemTypes.DUNGEON_WEAPON;
     }
   });
 
   if (ownProps.x === playerLocation.x &&
     ownProps.y === playerLocation.y) {
-    itemType = ItemTypes.PLAYER;
+    itemType = ItemTypes.DUNGEON_PLAYER;
   }
 
   return {

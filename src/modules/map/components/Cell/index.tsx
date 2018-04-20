@@ -14,25 +14,25 @@ export default (props: Props) => {
     case ItemTypes.DARKNESS:
       classType = 'map-Cell-darkness';
       break;
-    case ItemTypes.ENEMY:
+    case ItemTypes.DUNGEON_ENEMY:
       classType = 'map-Cell-enemy';
       break;
-    case ItemTypes.GATE:
+    case ItemTypes.DUNGEON_GATE:
       classType = 'map-Cell-gate';
       break;
     case ItemTypes.GROUND:
       classType = 'map-Cell-ground';
       break;
-    case ItemTypes.MEDICINE:
+    case ItemTypes.DUNGEON_MEDICINE:
       classType = 'map-Cell-medicine';
       break;
-    case ItemTypes.PLAYER:
+    case ItemTypes.DUNGEON_PLAYER:
       classType = 'map-Cell-player';
       break;
     case ItemTypes.WALL:
       classType = 'map-Cell-wall';
       break;
-    case ItemTypes.WEAPON:
+    case ItemTypes.DUNGEON_WEAPON:
       classType = 'map-Cell-weapon';
       break;
     default:

@@ -29,16 +29,16 @@ function mapStateToProps(state: store.State, ownProps: OwnProps): StateProps {
   let neighborItemView: JSX.Element;
   const neighborItem = ownProps.getNeighborItem(state);
   switch (neighborItem.itemType) {
-    case ItemTypes.ENEMY:
+    case ItemTypes.DUNGEON_ENEMY:
       neighborItemView = <dungeonEnemy.containers.DungeonEnemy id={neighborItem.itemId} />;
       break;
-    case ItemTypes.GATE:
+    case ItemTypes.DUNGEON_GATE:
       neighborItemView = <dungeonGate.containers.DungeonGate id={neighborItem.itemId} />;
       break;
-    case ItemTypes.MEDICINE:
+    case ItemTypes.DUNGEON_MEDICINE:
       neighborItemView = <dungeonMedicine.containers.DungeonMedicine id={neighborItem.itemId} />;
       break;
-    case ItemTypes.WEAPON:
+    case ItemTypes.DUNGEON_WEAPON:
       neighborItemView = <dungeonWeapon.containers.DungeonWeapon id={neighborItem.itemId} />;
       break;
     default:
