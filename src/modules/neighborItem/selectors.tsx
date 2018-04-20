@@ -26,13 +26,13 @@ function isAtBottom(playerLocation: location.State, itemLocation: location.State
 
 function isAtRight(playerLocation: location.State, itemLocation: location.State): boolean {
   return (playerLocation.dungeonId === itemLocation.dungeonId &&
-    playerLocation.x === itemLocation.x + 1 &&
+    playerLocation.x === itemLocation.x - 1 &&
     playerLocation.y === itemLocation.y);
 }
 
 function isAtLeft(playerLocation: location.State, itemLocation: location.State): boolean {
   return (playerLocation.dungeonId === itemLocation.dungeonId &&
-    playerLocation.x === itemLocation.x - 1 &&
+    playerLocation.x === itemLocation.x + 1 &&
     playerLocation.y === itemLocation.y);
 }
 
