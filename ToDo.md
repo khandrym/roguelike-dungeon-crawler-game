@@ -1,6 +1,3 @@
-* Rename modules in order to use PascalCase for them
-
-
 * Implement interaction of player with items
 * Add set action to location and locations modules
 
