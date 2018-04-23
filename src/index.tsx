@@ -2,14 +2,14 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
-import * as store from './modules/store';
-import * as app from './modules/app';
-import './modules/interaction';
+import * as Store from './modules/_store';
+import * as App from './modules/_app';
+import './modules/_interaction';
 
 ReactDOM.render(
-  <store.components.Provider>
-    <app.components.App />
-  </store.components.Provider>,
+  <Store.components.Provider>
+    <App.components.App />
+  </Store.components.Provider>,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();

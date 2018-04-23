@@ -1,6 +1,4 @@
-* Add increaseHealth and decreaseHealth to dungeonEnemies module
-* Implement interaction of player with dungeonEnemy
-* Rename module in order to use PascalCase for them
+* Rename modules in order to use PascalCase for them
 
 
 * Implement interaction of player with items
