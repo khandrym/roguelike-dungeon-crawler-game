@@ -34,6 +34,42 @@ export function del(id: string): Delete {
   };
 }
 
+export interface IncreaseHealth extends AnyAction {
+  readonly type: ActionTypes.INCREASE_HEALTH;
+  readonly payload: {
+    readonly id: string;
+    readonly value: number;
+  };
+}
+
+export function increaseHealth(id: string, value: number): IncreaseHealth {
+  return {
+    type: ActionTypes.INCREASE_HEALTH,
+    payload: {
+      id: id,
+      value: value
+    }
+  };
+}
+
+export interface DecreaseHealth extends AnyAction {
+  readonly type: ActionTypes.DECREASE_HEALTH;
+  readonly payload: {
+    readonly id: string;
+    readonly value: number;
+  };
+}
+
+export function decreaseHealth(id: string, value: number): DecreaseHealth {
+  return {
+    type: ActionTypes.DECREASE_HEALTH,
+    payload: {
+      id: id,
+      value: value
+    }
+  };
+}
+
 interface Other extends AnyAction {
   readonly type: ActionTypes.OTHER;
   readonly payload: {};
@@ -42,4 +78,6 @@ interface Other extends AnyAction {
 export type Action =
   | Add
   | Delete
+  | IncreaseHealth
+  | DecreaseHealth
   | Other;

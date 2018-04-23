@@ -4,6 +4,9 @@ import * as neighborItem from '../neighborItem';
 import ItemTypes from '../itemTypes';
 import * as dungeonEnemies from '../dungeonEnemies';
 import * as dungeonMedicines from '../dungeonMedicines';
+import * as weapons from '../weapons';
+import * as enemies from '../enemies';
+import * as Player from '../player';
 
 const onKeyPress = (event: KeyboardEvent) => {
   const state = store.getState();
@@ -36,6 +39,15 @@ const onKeyPress = (event: KeyboardEvent) => {
         const dungeonEnemy = dungeonEnemies.getOne(state, neighbor.itemId);
         if (dungeonEnemy.health <= 0) {
           store.dispatch(playerMovement(player.locationId));
+        } else {
+          const playerExperience = player.experience;
+          const playerAttack = weapons.getOne(state, player.weaponId).attack;
+          const enemyExperience = enemies.getOne(state, dungeonEnemy.enemyId).experience;
+          const enemyAttack = weapons.getOne(state, enemies.getOne(state, dungeonEnemy.enemyId).weaponId).attack;
+          const damageToPlayer = (enemyAttack + enemyExperience * (0.5)) / (playerExperience / 10);
+          const damageToEnemy = (playerAttack + playerExperience * (0.5)) / (enemyExperience / 10);
+          store.dispatch(Player.decreaseHealth(damageToPlayer));
+          store.dispatch(dungeonEnemies.decreaseHealth(dungeonEnemy.id, damageToEnemy));
         }
         break;
       case ItemTypes.DUNGEON_GATE:
