@@ -3,7 +3,7 @@ import './index.css';
 
 const Component: React.StatelessComponent = (props) => {
   return (
-    <div className="app-Wrapper">
+    <div className="App-Wrapper">
       {props.children}
     </div>
   );

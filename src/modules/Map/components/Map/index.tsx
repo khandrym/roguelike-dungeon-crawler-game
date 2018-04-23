@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <div>
-      <table className="map-Map">
+      <table className="Map-Map">
         <tbody>
           {rows}
         </tbody>

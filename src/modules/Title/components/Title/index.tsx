@@ -3,7 +3,7 @@ import './index.css';
 
 export default () => {
   return (
-    <div className="title-Title">
+    <div className="Title-Title">
       Roguelike Dungeon Crawler Game
     </div>
   );

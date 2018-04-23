@@ -1,6 +1,6 @@
 @import '_theme.scss';
 
-.map-Cell {
+.Map-Cell {
   width: 5px;
   height: 5px;
   border-width: 1px;
@@ -9,38 +9,38 @@
   border-collapse: collapse;
 }
 
-.map-Cell-player {
+.Map-Cell-player {
   background-color: $color-primary;
 }
 
-.map-Cell-darkness {
+.Map-Cell-darkness {
   background-color: $color-darkness;
 }
 
-.map-Cell-ground {
+.Map-Cell-ground {
   background-color: $color-ground;
 }
 
-.map-Cell-wall {
+.Map-Cell-wall {
   background-color: $color-wall;
 }
 
-.map-Cell-enemy {
+.Map-Cell-enemy {
   background-color: $color-enemy;
 }
 
-.map-Cell-weapon {
+.Map-Cell-weapon {
   background-color: $color-weapon;
 }
 
-.map-Cell-medicine {
+.Map-Cell-medicine {
   background-color: $color-medicine;
 }
 
-.map-Cell-gate {
+.Map-Cell-gate {
   background-color: $color-gate;
 }
 
-.map-Cell-default {
+.Map-Cell-default {
   background-color: white;
 }

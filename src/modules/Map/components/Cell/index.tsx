@@ -12,35 +12,35 @@ export default (props: Props) => {
   var classType;
   switch (props.itemType) {
     case ItemTypes.DARKNESS:
-      classType = 'map-Cell-darkness';
+      classType = 'Map-Cell-darkness';
       break;
     case ItemTypes.DUNGEON_ENEMY:
-      classType = 'map-Cell-enemy';
+      classType = 'Map-Cell-enemy';
       break;
     case ItemTypes.DUNGEON_GATE:
-      classType = 'map-Cell-gate';
+      classType = 'Map-Cell-gate';
       break;
     case ItemTypes.GROUND:
-      classType = 'map-Cell-ground';
+      classType = 'Map-Cell-ground';
       break;
     case ItemTypes.DUNGEON_MEDICINE:
-      classType = 'map-Cell-medicine';
+      classType = 'Map-Cell-medicine';
       break;
     case ItemTypes.DUNGEON_PLAYER:
-      classType = 'map-Cell-player';
+      classType = 'Map-Cell-player';
       break;
     case ItemTypes.WALL:
-      classType = 'map-Cell-wall';
+      classType = 'Map-Cell-wall';
       break;
     case ItemTypes.DUNGEON_WEAPON:
-      classType = 'map-Cell-weapon';
+      classType = 'Map-Cell-weapon';
       break;
     default:
-      classType = 'map-Cell-default';
+      classType = 'Map-Cell-default';
       break;
   }
 
   return (
-    <td className={'map-Cell ' + classType} />
+    <td className={'Map-Cell ' + classType} />
   );
 };

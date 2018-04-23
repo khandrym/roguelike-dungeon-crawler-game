@@ -7,7 +7,7 @@ interface Props {
 
 export default (props: Props) => {
   return (
-    <div className="item-Name">
+    <div className="Item-Name">
       {props.name}
     </div>
   );

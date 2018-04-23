@@ -5,7 +5,7 @@ import './index.css';
 const Component: React.StatelessComponent = (props) => {
   return (
     <Item.components.Wrapper>
-      <div className="medicine-Wrapper">
+      <div className="Medicine-Wrapper">
         {props.children}
       </div>
     </Item.components.Wrapper>

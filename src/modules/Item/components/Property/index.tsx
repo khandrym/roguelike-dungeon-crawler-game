@@ -3,7 +3,7 @@ import './index.css';
 
 const Component: React.StatelessComponent = (props) => {
   return (
-    <div className="item-Property">
+    <div className="Item-Property">
       {props.children}
     </div>
   );
