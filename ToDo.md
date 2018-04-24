@@ -1,5 +1,4 @@
 * Implement interaction of player with items
-* Add set action to location and locations modules
 
 
 

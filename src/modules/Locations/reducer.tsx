@@ -25,7 +25,7 @@ function deleteReducerById(state: Locations, action: actions.Delete): Locations 
   return newState;
 }
 
-function deletReducerAllIds(state: string[], action: actions.Delete): string[] {
+function deleteReducerAllIds(state: string[], action: actions.Delete): string[] {
   const id = action.payload.id;
   return state.filter((val) => {
     return val !== id;
@@ -34,12 +34,12 @@ function deletReducerAllIds(state: string[], action: actions.Delete): string[] {
 
 function moveToReducerById(state: Locations, action: actions.MoveTo): Locations {
   const id = action.payload.id;
-  const settedLocation = Location.reducer(
+  const newLocation = Location.reducer(
     state[id],
     Location.set(state[action.payload.moveToLocationId]));
   return {
     ...state,
-    [id]: settedLocation
+    [id]: newLocation
   };
 }
 
@@ -125,7 +125,7 @@ function reducerAllIds(state: string[] = [], action: actions.Action): string[] {
     case ActionTypes.ADD:
       return addReducerAllIds(state, action);
     case ActionTypes.DELETE:
-      return deletReducerAllIds(state, action);
+      return deleteReducerAllIds(state, action);
     case ActionTypes.MOVE_TO:
       return moveToReducerAllIds(state, action);
     case ActionTypes.MOVE_RIGHT:
