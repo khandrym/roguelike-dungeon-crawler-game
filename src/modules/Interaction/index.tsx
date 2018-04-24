@@ -63,6 +63,18 @@ const onKeyPress = (event: KeyboardEvent) => {
         const dungeonMedicine = DungeonMedicines.getOne(state, neighborItem.itemId);
         if (dungeonMedicine.health <= 0) {
           Store.dispatch(playerMovement(player.locationId));
+        } else {
+          const playerHealthNeed = 100 - player.health;
+          const medicineHealth = dungeonMedicine.health;
+          var deliveredHealth;
+          if (playerHealthNeed >= medicineHealth) {
+            deliveredHealth = medicineHealth;
+          } else {
+            deliveredHealth = playerHealthNeed;
+          }
+          Store.dispatch(Player.increaseHealth(deliveredHealth));
+          Store.dispatch(DungeonMedicines.decreaseHealth(dungeonMedicine.id, deliveredHealth));
+          Store.dispatch(playerMovement(player.locationId));
         }
         break;
       case ItemTypes.DUNGEON_WEAPON:
