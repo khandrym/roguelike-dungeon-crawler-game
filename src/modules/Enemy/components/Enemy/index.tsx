@@ -13,9 +13,8 @@ export default (props: Props) => {
   return (
     <Wrapper>
       <Item.components.Name name={props.enemy.name} />
-      <Item.components.Experience value={props.enemy.experience} />
-      <Weapon.containers.WeaponAsProperty id={props.enemy.weaponId} />
       {props.children}
+      <Weapon.containers.WeaponAsProperty id={props.enemy.weaponId} />
     </Wrapper>
   );
 };

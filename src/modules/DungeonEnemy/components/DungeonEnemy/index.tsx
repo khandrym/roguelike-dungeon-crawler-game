@@ -12,6 +12,7 @@ export default (props: Props) => {
   return (
     <Enemy.containers.Enemy id={props.dungeonEnemy.enemyId}>
       <Item.components.Health value={props.dungeonEnemy.health} />
+      <Item.components.Experience value={props.dungeonEnemy.experience} />
       <Location.containers.LocationAsProperty id={props.dungeonEnemy.locationId} />
     </Enemy.containers.Enemy>
   );

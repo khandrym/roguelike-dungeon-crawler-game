@@ -13,10 +13,10 @@ export default (props: Props) => {
   return (
     <Wrapper>
       <Item.components.Name name={props.player.name} />
-      <Item.components.Experience value={props.player.experience} />
-      <Weapon.containers.WeaponAsProperty id={props.player.weaponId} />
       <Item.components.Health value={props.player.health} />
+      <Item.components.Experience value={props.player.experience} />
       <Location.containers.LocationAsProperty id={props.player.locationId} />
+      <Weapon.containers.WeaponAsProperty id={props.player.weaponId} />
     </Wrapper>
   );
 };

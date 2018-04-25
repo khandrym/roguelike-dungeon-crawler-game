@@ -1,3 +1,7 @@
+* Add increaseExperience action to dungeonEnemy and dungeonEnemies modules
+* Add player and enemy experience change after their fighting
+
+
 * Implement interaction of player with items
 
 
